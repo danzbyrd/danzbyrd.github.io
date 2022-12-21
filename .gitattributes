@@ -1,6 +1,7 @@
 *.html filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp3 filter=lfs diff=lfs merge=lfs -text
+*.gz filter=lfs diff=lfs merge=lfs -text
 *.txt filter=lfs diff=lfs merge=lfs -text
 *.js filter=lfs diff=lfs merge=lfs -text
 *.jsonp filter=lfs diff=lfs merge=lfs -text
@@ -15,7 +16,6 @@
 *.svg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg@trans%3Fquality=40&auto=webp&dpr=2&width=auto filter=lfs diff=lfs merge=lfs -text
-*.gz filter=lfs diff=lfs merge=lfs -text
 *.js@campaign_code=bc89944219 filter=lfs diff=lfs merge=lfs -text
 *.orig filter=lfs diff=lfs merge=lfs -text
 *.css filter=lfs diff=lfs merge=lfs -text
