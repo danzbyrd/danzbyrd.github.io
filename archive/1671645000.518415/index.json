@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518415",
+    "base_url": "vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=vulcanpost.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/index.html"
+    },
+    "domain": "vulcanpost.com",
+    "extension": "",
+    "hash": "1E4CZZERPHE5MF0DQVPV",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:54:20.751108+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221195419/https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:54:07.108865+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:51:39.975293+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:51:33.980428+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=vulcanpost.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:49:56.166241+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:49:56.007299+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:49:58.841958+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:49:56.178639+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:54:07.084282+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:54:03.835037+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:54:03.831222+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:53:57.795057+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:51:28.381625+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:50:53.467741+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpri_ag1gx",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:53:57.790978+00:00",
+                "index_texts": [
+                    "\nRecently, global personal growth platform Mindvalley had its Kuala Lumpur headquarters recognised by Inc. as one of the World\u2019s Most Beautiful Offices 2019.\nTo bring the company\u2019s innovative office design to life, Mindvalley\u2019s Workspace Experience Designer, Luke Anthony Myers and his team collaborated with design firm IDEAWORKSHOP.\nThe redesigned space,\nnow called the \u201cTemple of Light\u201d, was officially unveiled in December 2018.\nAfter an invitation to\nexplore their office, we were able to see for ourselves the functionality and\naesthetics of the place. There, we also learnt about what Luke calls \u201cdata-driven,\nconscious design\u201d.\nHere are some of the\ndesign elements that we learnt could impact the employee experience in a\npositive way.\n1. Have More Natural Sunlight Where Possible\nBased on the concept of environmental productivity, lighting could play a significant impact on one\u2019s energy throughout the day. \nNatural light supposedly\nkeeps you more alert and productive throughout the day, which is why Mindvalley\u2019s\nnew office design is full of glass structures.\nImage Credit: Heart Patrick / ArchDaily\nThese let more daylight into the space, and the glass is also covered with a dichroic film which gives it kaleidoscopic properties in the sunlight.\nDuring the day, you\u2019ll\nsee splashes of colour across the white ceiling, walls and the floor. When the\nsun goes down, you\u2019ll find yourself surrounded by colourful glass structures.\nThe office after sundown.\nBut Mindvalley didn\u2019t\nuse to look like that. Its ceiling used to be painted black, and the space was\nlit up with fluorescent lighting because not enough daylight was coming\nthrough.\nWith the new design,\nLuke also switched out the fluorescent lighting for 4000K LED bulbs that are\nalso low-wattage. \nAccording to him, the\nLED bulbs closely resemble sunlight, so when the sun sets, the space is still\nlit up brightly with lighting that doesn\u2019t drain one\u2019s energy.\n2. Have More Plants In The Office\nStudies done on the benefits of having plants in the office point out that they help to reduce noise levels, stress, sickness, and absence rates. They also increase productivity, creativity, and air cleanliness.\nWhen Luke first joined\nMindvalley, there were only 12 plants in the office. Today, they\u2019ve got around\n800 plants in total.\nThe green wall.\nAbout 600 of the plants\nare actually located on their green wall, which is self-irrigating,\nself-fertilising, and has UV light on a timer.\nIt\u2019s been helpful for\nimproving the office\u2019s air quality, as Luke said, \u201cI\njust had an air purifier specialist come into the office to test the air\nquality. And for this area, he said it would have needed two large machines but\nbecause of the air quality due to the plants, compared to other areas of the\noffice, we\u2019d only need one.\u201d\nThey also have potted plants.\nA green wall seems unnecessary for smaller offices, so here\u2019s the good news: there have been reports on how just having a small potted plant per work desk is also beneficial.\n3. Splitting Areas Into Zones For Different Purposes\nMindvalley\u2019s layout is\ndesigned to provide dedicated spaces for specific activities, be it for\nmeetings, counselling, napping or working.\nFor example, the\nmeeting rooms are all located in one area, off to the side. Similarly, the office\ndesks are condensed into a specific area instead of being scattered throughout\nthe space.\nBehind this glass is a meeting room.\nLuke managed to lower\ntheir open office space from 75% to about 55%, balancing out the percentage of\nopen space to closed space by creating different zones.\nHe did this by breaking\ndown the areas into a quadrant. \u201cThere\u2019s focus, learn, collaboration, and social.\nIf you don\u2019t have adequate time as an individual to focus and learn, your\ncollaboration and social will collapse,\u201d he explained.\n4. Provide Relaxation Areas For Short Breaks\nNapping rooms or pods are becoming a common benefit in larger companies. For example, Fave is just one of several companies in Malaysia who already provide the amenity to employees.\nBeing able to power nap when that afternoon sleepiness is apparently beneficial because it increases morale, creativity, and alertness.\nMake your way up to Pillow Heaven.\nWith that in mind, Mindvalley\nprovides its employees with dedicated sleep pods that it calls \u201cPillow Heaven\u201d,\nas each one is full of differently sized pillows. There are also curtains one\ncould draw closed to block out light for optimum napping. \n6. Hide Storage Compartments For The Illusion Of More Space\nOne thing we noticed\nwas that there weren\u2019t any lockers or drawers in sight when we entered the office\nspace.\nIt gave the space a\nvery open, clutter-free atmosphere. Luke then revealed that their lockers were\nactually hidden behind the glass walls of the walkway.\nThe hidden lockers. / A view of the hidden lockers from the mezzanine level.\nHe said that he designed\nthem this way so that they don\u2019t take up more space than necessary while still\nserving their purpose.\nBesides hiding the\nlockers, the glass walls also serve another function: they\u2019re basically giant\nglass whiteboards for employees to scribble things onto.\nAdditionally, he also\ndesigned some of the platforms for their jungle gym inspired office space to\nact as extra, hidden storage space.\nUnless you were an\nemployee at Mindvalley, you\u2019d never have known there was all this storage capacity\nhidden in plain sight.\n6. Maximise The Usability Of The Space\nBy studying the space,\nLuke identified areas that could be put to better use. \n The split-level mezzanine platform. \nMindvalley\u2019s high\nceiling allowed Luke and his team to build upwards instead of outwards, which\nresulted in the split-level mezzanine platforms where employees are seated.\n\u201cIt\u2019s a 4,000 square\nfeet office space, and by building the mezzanine level, we\u2019ve multiplied that\nby 1.5 and made 6,000 square feet of usable space. We\u2019ve doubled our desk\ncapacity and meeting room capacity,\u201d Luke said.\nAnother view of the split-level mezzanine platform.\nCoupled with the\nzoning, this has allowed employees to work in an open office space, while being\nseparated from spaces with a lot of footfall like hallways. \u201cPeople have their\nown space, but they\u2019re not boxed in,\u201d Luke described. \nThis design also\nlowers both the audible and \u201cvisual\u201d noise so that employees can stay focused.\n-//-\nHaving a beautiful\noffice is one thing that may attract new employees and keep existing ones happy,\nbut at the end of the day, functionality comes first. \nOne thing that Luke\nhighlighted was how he relied on feedback from employees to improve the space.\nBefore he redesigned\nthe space, he personally went around the office to interview employees. He\nasked them, \u201cWhat are three things that you love about the office space and\nwhat are three things you\u2019d like to see?\u201d\nFrom their feedback,\nhe was able to design a functional space that catered to their needs. \nIt\u2019s understandable\nthat not every office has the space or the budget to mirror the elements of\nMindvalley\u2019s office design. \nNonetheless, smaller offices can still take inspiration from it and scale down the elements to suit their needs.\nYou can read more of our office-related articles here.\n\n"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:53:39.595834+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:51:33.943875+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:51:28.437890+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:50:53.458391+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:49:58.882817+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:53:39.592319+00:00",
+                "index_texts": null,
+                "output": "6 Design Inspirations Malaysian Offices Could Take From Mindvalley",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:53:39.550346+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518415/warc/1671652299",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:53:39.534438+00:00",
+                "index_texts": null,
+                "output": "vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/index.html",
+                "pwd": "/data/archive/1671645000.518415",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:51:39.979597+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221195419/https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "6 Design Inspirations Malaysian Offices Could Take From Mindvalley",
+        "warc": null,
+        "wget": "vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/index.html"
+    },
+    "link_dir": "/data/archive/1671645000.518415",
+    "newest_archive_date": "2022-12-21T19:54:07.108865+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T19:49:56.007299+00:00",
+    "path": "/677363/mindvalley-malaysian-office-design-inspiration/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "c62d8fc6-9ffe-4c90-827c-338f877819be",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518415",
+    "title": "6 Design Inspirations Malaysian Offices Could Take From Mindvalley",
+    "updated": "2022-12-21T19:49:56.007170+00:00",
+    "updated_date": "2022-12-21 19:49",
+    "url": "https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/"
+}

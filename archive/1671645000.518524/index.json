@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518524",
+    "base_url": "www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.forbes.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/index.html@sh=283bb89e17a8.html"
+    },
+    "domain": "www.forbes.com",
+    "extension": "",
+    "hash": "17QGRG37Q3J7099R8MNH",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:16:47.055891+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221191651/https://buy.tinypass.com/checkout/template/cacheableShow?aid=Yj2fRrCPpu&templateId=OTSKWFAWOVON&templateVariantId=OTVKX1L1AH8AY&offerId=fakeOfferId&experienceId=EX9SJ9TTBVAM&iframeId=offer_e6ced888860949bdf9c3-0&displayMode=inline&pianoIdUrl=https%3A%2F%2Fauth.forbes.com%2Fid%2F&widget=template&url=https%3A%2F%2Fwww.forbes.com",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:27.725626+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:16:18.253638+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--dump-dom', 'https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:14:18.054272+00:00",
+                "status": "failed"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.forbes.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:11:47.400832+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:11:47.251318+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:11:47.533420+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:11:47.419489+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:16:27.711509+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:25.269430+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:16:25.265751+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:23.278992+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:14:09.031315+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:12:08.845342+00:00",
+                "status": "failed"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpvsgoth84",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:16:23.274842+00:00",
+                "index_texts": [
+                    "Ten years ago, Alex Cattoni went from living the dream as a top marketing executive for Mindvalley in Malaysia to sleeping on an air mattress in her friend\u2019s spare room in Canada. And she did it by choice.\u00a0\n\n\u201cFrom the outside, anyone who heard about me quitting my job would\u2019ve wondered what was wrong with me,\u201d says Cattoni, whose fun and fast-paced work overseas had been coupled with island-hopping to white sandy beaches and exclusive business masterminds with the giants of the marketing industry. She had started working for the rapidly-growing, eight-figure personal development brand as a customer service intern in 2008 and quickly rose through the ranks to become the creative director. \u201cBut I had this nagging feeling that I was meant to do more,\u201d says Cattoni. \u201cI wanted to shake up the male-dominated marketing industry. But I had no freaking idea what that looked like.\u201d\u00a0\u00a0\n\nHow This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success | Stephanie BurnsJaxson Howell\nFor the next eight years Alex was a successful freelance copywriter and the driving force behind many multi-million dollar brands until she knew it was time to come out from behind-the-scenes. Using her decade of direct marketing and copywriting skills, she launched the Copy Posse. In just 12 months, her company raked in seven-figures teaching students how to craft compelling sales copy by bridging the gap between proven direct response marketing principles and authentic brand storytelling. And she did it all without buying a single ad. \u201cMy mission is to rally the raddest, baddest crew of copywriters around the world to help get more messages that matter to the masses and support brands and businesses that genuinely help people,\u201d explains Cattoni.\n\n\nI sat down with the edgy and innovative wordsmith to learn more about how she broke the typical rules to propel her business to success, why every entrepreneur needs to upgrade their persuasive writing skills this year and how any female entrepreneur can step into her true purpose.\n\nStephanie Burns: How did you start making money after leaving your full-time job?\nAlexandra Cattoni: By taking on clients. I started out freelancing as a marketing consultant. But over time, my clients kept asking me if I could do copywriting for them as well. Even though I had spent years learning from the old-school marketing and copywriting legends, I still didn\u2019t consider myself a copywriter. So many entrepreneurs struggle with imposter syndrome, myself included.\u00a0 At the time, I\u2019d tell my clients, \u201cSure, I can write copy for you. But it might not be that good.\u201d Except it was and I started getting referrals. Within a few years, I was making more than $300K a year as a freelance copywriter.\u00a0\n\n\nBurns: What made you decide to switch gears to found The Copy Posse. What was your inspiration?\nCattoni: I felt like copywriting was getting a bad rap. There are so many misconceptions about it being sleazy selling or reserved only for Madison Avenue execs writing Super Bowl commercials. In reality, every business on the planet needs copywriting. Copywriting is just words used for the sake of engagement and sales. But those words need to be savvy to tell a story, create a connection, build trust and, ultimately, inspire someone to take action. I started to notice the internet getting crowded with bad copywriting, so I decided to do something about it.\u00a0\n\n\n            \n            \n                PLAY\n                \n                    \n                        \n                        \n                            \n                                \n                \n                \n            \n                \n                    \n                \n                    \n                        \n                            Forbes Leadership\n                        \n                    \n                \n            \n                    \n                \n            \n                \n            \n                            \n                            \n                                \n                \n                    \n\n                \n            \n                                \n                            \n                        \n                    \n                    \n                        \n        \n            \n                \n                    \n                \n            \n            \n        \n            \n\n            \n\n        \n    \n            \n                \n                    \n                \n            \n            \n        \n    \n                    \n                    \n                        \n        \n        \n        \n        01:12\n        \n                        \n                    \n                    \n                    \n                    \n                    \n                \n                    \n                    \n                    \n                \n                    \n\n                    About Connatix\n                    V209100\n                \n                \n            \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n                \n            The EU\u2019s Sustainability-Reporting Directive: ThreeKey Questions\n            \n        \n        \n                \n                    \n                        \n                            \n                                \n\n                                1/1\n                            \n                            \n                        \n                        \n                    \n                    \n                        \n        \n            \n\n            \n\n        \n    \n                        \n        \n            \n        \n        \n            \n        \n    \n                        \n                    \n                    Skip\u00a0in 4s\n                    \n                    \n                    \n                \n                \n                    \n                    \n                \n                \n            Burns: What steps did you take to skyrocket your business to seven-figures in just one year\u2014and how did those steps go against the rules of success?\nCattoni: I started by building a passionate and engaged following. Back in 2019, I created a YouTube channel on copywriting. Experts told me I was going too niche\u2014that I\u2019d likely never hit \u201cbig numbers\u201d on such a narrow topic. They suggested I talk about more general stuff, like digital marketing and social media because that\u2019s what everyone else was doing, but I stuck to my guns.\nIt was hard work, but by being consistent with my content and always focusing on providing value first, I finally got to 1,000 subscribers after six months. Now I have 84,000 and I didn\u2019t buy a single ad to grow my channel\u2014another business rule I ignored. In fact, I just spent my first dollar on ads a few months ago.\nBurns: How did you monetize your list?\nCattoni: A year after I started my channel, I launched my first course and, again, broke the typical rules of direct response marketing. My very first program was $2,000 and all I had was an email list of exactly 2,350 people. People said that no one would buy a course that expensive through email alone. I was told to do a webinar or sales calls and that I should start with a low-priced \u201centry-level\u201d product.\nBut they were wrong. Dozens of people signed up for Season 1 of my eight-week coaching program because I had spent time adding value, building trust and creating a community that I knew wanted what I had created\u2014because they told me. A year later, I raised the price for Season 2 and had 128 students join.\u00a0\nBurns: How do you know when you should break the business \u201crules\u201d and ignore the advice others are sharing with you?\nCattoni: You have to trust your intuition\u2014and your audience. All the things people were saying I \u201cshould\u201d do felt out of alignment with what I wanted to do. And all the \u201crules\u201d didn\u2019t match up with what I knew about my followers. I was in the weeds reading every YouTube comment, every Instagram DM, every email. I knew that what I was saying resonated with the people following me and that they were hungry to learn more. They told me what their biggest challenges were, the doubts that held them back, and what they needed to feel supported. Then I created exactly what they asked for.How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success | Stephanie BurnsJaxson Howell\nBurns: Why does everyone\u2019s approach to copywriting need to be radically different in 2021?\nCattoni: As a collective, we are experiencing more uncertainty and division than ever before. Therefore, the challenges, struggles and core values of your audience have likely shifted in a massive way. So if you\u2019re relying on outdated marketing or copy that was written five years ago, you want to revisit that. Figure out what\u2019s top of mind for your audience right now\u2014because it\u2019s likely very different from what it used to be\u2014and hone in on that with a major dose of empathy.\u00a0\nFocus your marketing on bringing people together to rally behind a common cause that feels empowering and uplifting\u2014this is more important now than ever. People want to buy from brands and businesses that share their values. It\u2019s as simple as that. Having the best product is no longer enough. Having the cheapest product is no longer the only positioning tactic. Think about what you stand for, then show up in integrity.\u00a0\nBurns: What are some ways to be persuasive without being pushy in your content creation?\nCattoni: When you write marketing messaging, ask yourself if it\u2019s valuable in and of itself. I never want someone reading my copy to feel like it was a waste of their time. Even if they don\u2019t buy from me, I hope they leave feeling inspired, educated or entertained by what I\u2019ve written. That doesn\u2019t mean that you never use the words \u201cbuy now\u201d or \u201climited-time discount,\u201d but once you\u2019ve built rapport those words are insanely more powerful. Pushy marketing leads with the offer, which is all about you, not the customer. Being persuasive is about understanding your customer and valuing their time and experience with your brand.How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success | Stephanie BurnsJaxson Howell\nBurns: It seems like you\u2019ve found your purpose in the world of copywriting. What advice do you have for other entrepreneurs looking for theirs?\nCattoni: I used to hate it when people asked me what my purpose was because I felt it had to be some epic altruistic mission. And if it wasn\u2019t, that meant I wasn\u2019t evolved, passionate or driven enough. I want entrepreneurs to know that it\u2019s alright if your purpose right now is simply surviving until your next check. Or upgrading from an air mattress on the floor. Or never having to get a 9-5 job again. That was mine for a long time. Your purpose can evolve over time. I\u2019m sure Elon Musk didn\u2019t start his first business with the purpose of revolutionizing space travel. You have to start somewhere and it doesn\u2019t have to be creating a seven-figure company\u2014I think there\u2019s an over-glamorization of that anyway. Sure, money is important, but what about working at home so you can spend more time with your kids? Or crossing that epic adventure off your bucket list? Or turning your passion into an income stream that replaces your 9-5? Check in with what feels like a win for you and don\u2019t let anyone tell you it isn\u2019t freakin\u2019 epic enough. Trust your gut and don\u2019t be afraid to break a few rules.\n"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:20.015007+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:14:17.554112+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:14:09.113848+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:12:08.826131+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:11:47.537183+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:16:20.011485+00:00",
+                "index_texts": null,
+                "output": "How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:19.966624+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518524/warc/1671650178",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:16:19.948464+00:00",
+                "index_texts": null,
+                "output": "www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/index.html@sh=283bb89e17a8.html",
+                "pwd": "/data/archive/1671645000.518524",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:18.280185+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221191651/https://buy.tinypass.com/checkout/template/cacheableShow?aid=Yj2fRrCPpu&templateId=OTSKWFAWOVON&templateVariantId=OTVKX1L1AH8AY&offerId=fakeOfferId&experienceId=EX9SJ9TTBVAM&iframeId=offer_e6ced888860949bdf9c3-0&displayMode=inline&pianoIdUrl=https%3A%2F%2Fauth.forbes.com%2Fid%2F&widget=template&url=https%3A%2F%2Fwww.forbes.com",
+        "dom": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--dump-dom', 'https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8']' timed out after 120 seconds",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8']' timed out after 120 seconds",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success",
+        "warc": null,
+        "wget": "www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/index.html@sh=283bb89e17a8.html"
+    },
+    "link_dir": "/data/archive/1671645000.518524",
+    "newest_archive_date": "2022-12-21T19:16:27.725626+00:00",
+    "num_failures": 2,
+    "num_outputs": 10,
+    "oldest_archive_date": "2022-12-21T19:11:47.251318+00:00",
+    "path": "/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "a7e85fb4-8a60-4d5a-a983-a561e6a21a3a",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518524",
+    "title": "How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success",
+    "updated": "2022-12-21T19:11:47.251179+00:00",
+    "updated_date": "2022-12-21 19:11",
+    "url": "https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8"
+}

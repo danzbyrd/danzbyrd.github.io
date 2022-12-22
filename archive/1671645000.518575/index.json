@@ -1,0 +1,329 @@
+{
+    "archive_path": "archive/1671645000.518575",
+    "base_url": "handwiki.org/wiki/Company:Mindvalley",
+    "basename": "Company:Mindvalley",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/handwiki.org/wiki/Company:Mindvalley",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=handwiki.org",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "handwiki.org/wiki/Company%3AMindvalley.html"
+    },
+    "domain": "handwiki.org",
+    "extension": "",
+    "hash": "1W7YK7MZ6R3BPJWYHWKX",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:58:53.465490+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221185853/https://handwiki.org/wiki/Company:Mindvalley",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:41.023886+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:58:35.762750+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:34.542373+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=handwiki.org"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:57:24.341782+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:57:24.147992+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:57:24.666720+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:57:24.354085+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T18:58:41.003693+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:39.288543+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:58:32.849810+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:31.267877+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:58:34.508532+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:32.855794+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://handwiki.org/wiki/Company:Mindvalley",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T18:58:31.249354+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:57:24.670614+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:58:39.284879+00:00",
+                "index_texts": null,
+                "output": "Company:Mindvalley - HandWiki",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:39.249588+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518575/warc/1671649115",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://handwiki.org/wiki/Company:Mindvalley"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T18:58:39.232100+00:00",
+                "index_texts": null,
+                "output": "handwiki.org/wiki/Company%3AMindvalley.html",
+                "pwd": "/data/archive/1671645000.518575",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:35.767127+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221185853/https://handwiki.org/wiki/Company:Mindvalley",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Company:Mindvalley - HandWiki",
+        "warc": null,
+        "wget": "handwiki.org/wiki/Company%3AMindvalley.html"
+    },
+    "link_dir": "/data/archive/1671645000.518575",
+    "newest_archive_date": "2022-12-21T18:58:41.023886+00:00",
+    "num_failures": 0,
+    "num_outputs": 17,
+    "oldest_archive_date": "2022-12-21T18:57:24.147992+00:00",
+    "path": "/wiki/Company:Mindvalley",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "db4a403c-1a01-4471-b333-45fbe0ccb3ba",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518575",
+    "title": "Company:Mindvalley - HandWiki",
+    "updated": "2022-12-21T18:57:24.147855+00:00",
+    "updated_date": "2022-12-21 18:57",
+    "url": "https://handwiki.org/wiki/Company:Mindvalley"
+}

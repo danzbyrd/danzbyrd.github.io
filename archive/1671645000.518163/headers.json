@@ -1,0 +1,17 @@
+{
+    "Status-Code": 200,
+    "Date": "Wed, 21 Dec 2022 20:28:08 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Connection": "keep-alive",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "cross-origin-window-policy": "deny",
+    "x-content-type-options": "nosniff",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-request-id": "432b050ddcc5192916c6c507e163a900",
+    "x-xss-protection": "1; mode=block",
+    "set-cookie": "_mv_stories_key=SFMyNTY.g3QAAAABbQAAAAtfY3NyZl90b2tlbm0AAAAYMjBKX1NpQTJHYU9CMmRVUGZsVXhJanpG.BlZ4CGpMAELkQVZS5Tm2H2wYOuJ8rDyNrUfkjKSSMCU; path=/; HttpOnly",
+    "Strict-Transport-Security": "max-age=15724800; includeSubDomains",
+    "Content-Encoding": "br"
+}

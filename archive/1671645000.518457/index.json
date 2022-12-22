@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518457",
+    "base_url": "www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.businesstravelerusa.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/index.html"
+    },
+    "domain": "www.businesstravelerusa.com",
+    "extension": "",
+    "hash": "18W0RK1HKW5JQ189401V",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:37:02.786891+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221193700/https://businesstravelerusa.com/lifestylewell-being/wellness-mindfulness-now-a-burgeoning-focus-for-apps/",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:36:07.727422+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:35:49.826584+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:48.468605+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.businesstravelerusa.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:35:28.703796+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:28.558969+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:35:29.753721+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:28.723510+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:36:07.713054+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:36:05.266161+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:36:05.261704+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:36:01.889678+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:35:46.040623+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:44.039550+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpxevik8_t",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:36:01.884756+00:00",
+                "index_texts": [
+                    "\n                                \nThe world\u2019s interest in Mindfulness Meditation Apps is expected to grow at a CAGR of 48.1 percent from 2021-2027 to reach $6,478.5 million by 2027. At least that is for forecast by UnivDatos Market Insights, a market research firm and subsidiary of Universal Data Solutions.\nAt its most basic, a mindfulness meditation app is an application that helps the end-users to meditate, calm down, and attain mental peace, to improve their mental health. Mindfulness meditation applications help the consumers to understand their behaviors, emotions and assist them in enhancing their self-awareness and self-regulation.\u00a0\nWith the increased workload, environmental stress, and family problems, mental health disorder issues and mental stress growing among various age groups, the findings are not surprising. According to Perkbox, 79 percent of the employed adults in 2020 were suffering from work-related stress, marking a 20 percent spike compared to surveys in 2018.\u00a0\nA 2017 Harris poll found stress mostly caused by money and work, resulting in seeking ready, convenient and cost-effective solutions for mitigating these afflictions through apps. The\u00a0North America\u00a0region has so far dominate the Mindfulness Meditation Apps market, the report notes.\nMajor players in this appscape include:\n\nCalm\u00a0\nHeadspace\u00a0\nBreethe\u00a0\nInsight Timer\u00a0\nWaking Up\u00a0\nMeditopia\u00a0\nBetterMe\u00a0\nSimple Habit\u00a0\nAura Health\u00a0\nMoov\n\nZen of Frequent Flying\nAnother, often overlooked player in this field is Mindvalley, which offers a robust app called Omvana and recently partnered with Emirates Airlines to start offering a variety of stress-busting, meditation and mind-boosting courses to their onboard entertainment selection so that passengers, often flying for business and en-route to stressful meetings and events, can learn some helpful and empowering skills. Mindful travel can make a welcome friend in the in-between hours.\n\nBusiness Traveler sat down with Mindvalley founder Vishen Lakhiani to get a sense of just how important this market, these skills and the awareness of inward solutions can be for those who are getting back to business after a decimating global pandemic.\n1) Please address why business travelers in particular should know about your company and programs\nWhile traveling for work, we tend to face all types of stress and challenges, and may also have some down time, especially while flying\u2014so it\u2019s great that Emirates passengers have access to some of our best Mindvalley courses.\nBusiness travelers and all travelers alike can also take advantage of Mindvalley content 24 hours a day, seven days a week, not just while flying. While we have a lot of free content available on our YouTube channel Mindvalley Talks and free Masterclasses on Mindvalley.com, the Mindvalley membership costs around $2 a day and you\u2019ll develop skills to help you thrive in life and work.\nIt\u2019s a known fact that 85 percent of employees are not engaged in the workplace, 81 percent of employees are considering leaving their jobs, and 69 percent of employees say they would commit more to their work if they were appreciated more. We must invest in personal growth for ourselves because life is short and we should love what we do.\n2) How did your partnership with EK come about?\nEmirates is one of my favorite airlines and, I knew that if we collaborated with them, they\u2019d be the perfect vehicle to bring fresh and incredible content to help us continue our mission of touching one billion lives. So we brought this idea to them and they loved our catalog of high quality content \u2014 Mindvalley programs bring a new type of feature that no other airlines currently have, and they saw the value this would bring for their customers. Now I\u2019m proud to say that Emirates and Mindvalley are providing premium transformational growth content to millions of passengers every year, as COVID restrictions slowly lift and traveling continues to open up.\n3) Please describe the decision to offer Quests, vs. regular meditation programming?\nQuests are programs designed on our signature online learning platform and combine community and daily microlearning to transform you in ways traditional education never could. One of the Quests available in-flight to all Emirates travelers is the 6-Phase Meditation \u2014 it is practiced by millions including celebrities and athletes. Meditation can do much more than just clear your mind to achieve relaxation. The 6 Phase covers 6 mental frameworks, from forgiveness to manifestation, to get you feeling more balanced than ever before.\nThe other Quests available in-flight are:\n\nConscious Parenting by Dr. Shefali Tsabary \u2013 Receive the tools and perspective needed to nurture more authentic, fulfilled, and self-aware children.\nSuper Brain and 5 Steps to Powerful Memory by Jim Kwik \u2013 Activate your brain\u2019s limitless potential.\nSpeak & Inspire by Lisa Nichols \u2013 Learn the power of good communication skills from the world\u2019s most advanced public speaking course.\nBecoming Extraordinary by Vishen Lakhiani \u2013 Become extraordinary by evolving the level of consciousness you operate from.\n7 Days to Breaking Up with Sugar by Eric Edmeades \u2014 permanently eliminate your sugar cravings\n6 Phase Meditation with Vishen Lakhiani \u2014 teaches you how to meditate\n5 Steps to Discover your Life Purpose by Michael Beckwith \u2014learn the principles that go beyond traditional goal setting and manifesting\n\n4) Please describe what Quests are and their purpose.\nMindvalley Quests are programs designed on our signature online learning platform to transform you in ways traditional education never could. From longevity and wellness, to peak performance and spirituality, you\u2019ll learn skills designed by the world\u2019s best teachers, authors and visionaries, available on one platform and accessible from your Smartphone, TV or Desktop. Using our unique Quest methodology, our programs combine community and daily microlearning and are designed to be as addictive and fun as computer games, yielding 500 percent better completion rates than traditional online webinars. Hundreds to Thousands of students take classes together and engage in supportive communities. You\u2019re never alone and you might even make a close friend or two.\n5) These Quests are complimentary now? Will that last? Are they complimentary to all passengers? On all EK flights? If not, what routes?\nAs of now, Mindvalley\u2019s Quests will be available indefinitely on all Emirates flights and routes on its inflight entertainment system, Ice.\n6) Are Quests also available to everyone on the App? Is that the Omvana app or another? Are they only available on these flights?\nAll Quests and Mindvalley content are available on The Mindvalley app and on the Mindvalley website to anyone, across the world. This also includes all content from our performance meditation app, Omvana.\n7) Is MV looking to expand this program to other air brands? If so, what would that look like?\nWe are always looking for and open to partnerships that can help spread personal growth to the world, and in-flight is just one of many ways. It\u2019s our mission to support life-long learners in their growth\u00a0 journeys.\n8) Will you be continuing to roll out new Quests?\nSoon, Emirates will add the following courses to the roster:\n\nMoney EQ by Ken Honda \u2013 Transform your relationship with money and open the floodgates to a life of free-flowing wealth and prosperity.\nEveryday Bliss by Paul McKenna, PhD \u2013 Become your calmer and more resilient self.\n\nAnd as a brand, Mindvalley adds new Quests every month. Check Instagram @Mindvalley to stay in the loop.\n9) Can you remark on why business travelers in particular stand to benefit significantly from using meditation, relaxation and Quest recordings on their flights? Do you imagine that such amenities will be widespread in the industry in the next few years?\nEspecially given the stress and grief of the last year, the return to travel may cause anxiety for even the most frequent flyers. Through Quests, which focus on personal growth and development, we believe we can help ease some of that anxiety and help flyers find fulfillment and growth throughout their travels. It will also be a welcome distraction for anxious flyers. We\u2019ve seen such an uptick in the desire to prioritize self-growth in the last year, and we want to help travelers continue on the path to fulfillment. I believe we are at the forefront of this trend, as we will certainly see personal growth and wellness tools cropping up on more inflight entertainment offerings and in airports.\n10) Please describe what Mindvalley is, how it came about, what its core purpose is and its success in accomplishing that purpose.\nMindvalley is reinventing our outdated education system so that learning is relevant, engaging and affordable in today\u2019s age of automation. As the leading personal growth brand in the world, we are filling the learning gap with courses that connect people all over the world through deeply engaging educational experiences. Our advanced learning technology called \u2018Quest\u2019 features science-based learning theories from the world\u2019s top instructors brought to life through great storytelling. Over the years, Mindvalley has amassed a dedicated following of 15 million growth-seekers and has truly become the only destination for lifelong learning to advance and unite humanity.\n\n                            "
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:36:01.041540+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:35:48.460293+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:46.057802+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:35:44.012759+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:29.757433+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:36:01.037588+00:00",
+                "index_texts": null,
+                "output": "Wellness, Mindfulness Now a Burgeoning Focus for Apps - Business Traveler USA",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:36:00.999788+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518457/warc/1671651349",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:36:00.992844+00:00",
+                "index_texts": null,
+                "output": "www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/index.html",
+                "pwd": "/data/archive/1671645000.518457",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:35:49.830723+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221193700/https://businesstravelerusa.com/lifestylewell-being/wellness-mindfulness-now-a-burgeoning-focus-for-apps/",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Wellness, Mindfulness Now a Burgeoning Focus for Apps - Business Traveler USA",
+        "warc": null,
+        "wget": "www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/index.html"
+    },
+    "link_dir": "/data/archive/1671645000.518457",
+    "newest_archive_date": "2022-12-21T19:36:07.727422+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T19:35:28.558969+00:00",
+    "path": "/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "1623152f-8813-4193-8a96-9b744a460ec6",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518457",
+    "title": "Wellness, Mindfulness Now a Burgeoning Focus for Apps - Business Traveler USA",
+    "updated": "2022-12-21T19:35:28.558854+00:00",
+    "updated_date": "2022-12-21 19:35",
+    "url": "https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/"
+}

@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.518163",
+    "base_url": "stories.mindvalley.com",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/stories.mindvalley.com",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=stories.mindvalley.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "stories.mindvalley.com/index.html"
+    },
+    "domain": "stories.mindvalley.com",
+    "extension": "",
+    "hash": "3EX9HC445HJB5EKGQE9P",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:30:04.628908+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: Failed to find \"content-location\" URL header in Archive.org response.",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:29:16.041170+00:00",
+                "status": "failed"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:28:12.730783+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:28:11.639016+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=stories.mindvalley.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:27:58.859497+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:58.677616+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:27:59.106095+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:58.864643+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T20:29:16.026400+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:29:13.750831+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T20:29:13.746119+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:29:05.758537+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:28:09.640315+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:28:06.874578+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpnzl3ey3y",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T20:29:05.754323+00:00",
+                "index_texts": [
+                    "\n    \nStories from our Community\n    \n    \nLearn how Mindvalley impacts people\n    \n\n    \n  \n\n\n      \n        \n\n  17,717\nstories for you\n\n        \n      \n\n      \n    \n\n\n    \nFeatured Story\n    \n\n\n      \n\n\n            \n              \n            \n\n\n        \n          \n            \nLifebook Online\n            \n          \n          \n            \n\"I'm excited to implement this into my life\"\n            \n          \n          \nI was really surprised that the Mindvalley assessment showed a great improvement from before to after. I have some areas in my life that I'm very worried about and it alleviated a lot of my fears just seeing that in this short amount of time I'm already improving in those categories. I'm exc...\n            \n\n  \nKarena\n  \n\n    Voiceover Actor\n\n  Canada\n\n\n            \nRead more\n            \n        \n      \n\n  \n\n\n          \nMindvalley is fueled by your stories\n          \n          \nOur community runs on voices like yours. It keep us going, and keeps us grounded.\n            \nTell us like it is. What's your story?\n          \n          \nTell us your Story\n          \n        \n\n\n  \n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nLifebook Online\n      \n    \n    \n      \n\"Loved the program and excited to keep moving forward, beat cancer and have the life I envisioned!\"\n      \n    \n    \nIn March of 2022, I discovered that I had breast cancer and the health journey has been challenging.  I was looking for something that would keep me inspired, help me go through chemo, and make it worth going thru treatments to \"make it to the other side\" of this.  Cancer and tr...\n      \n\n      \nRead more\n      \n\n  \nPatty Cruz\n  \n\n    Consultant\n\n  Austin, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nWILDFIT\n      \n    \n    \n      \n\"At 60 years old, I feel better today than I have in the last 5+ years, and I think it shows\"\n      \n    \n    \nI've lost 26lbs., 4 inches off my chest, 4 inches off my mid-section, 3.75 inches off my waist, 3.5 inches off my hips. My body fat has decreased by 11% and my BMI has dropped significantly...\n      \n\n      \nRead more\n      \n\n  \nDeborah Braxton\n  \n\n    Consultant\n\n  Rossville, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nBe Extraordinary\n      \n    \n    \n      \n\"Silva and Be Extraordinary quest have definitely changed my life\"\n      \n    \n    \nThank you Vishen for Mindvalley, Silva method and Be Extraordinary quest. I feel these quests summarize the most important tools for self actualization and personal growth. Silva and Be Extraordinary quest has definitely changed my life and my level. I am getting clarity on my life vision...\n      \n\n      \nRead more\n      \n\n  \nDr Ritu Dabas\n  \n\n    Internal Medicine Physician\n\n  San Jose, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nLifebook Online\n      \n    \n    \n      \n\"I was able to organize my thinking, renew my vision for my life and gain clarity on my life\"\n      \n    \n    \nI was experiencing some burnout from the struggle to take two non profits through COVID. One survived the other did not. I retired from a 30 year career as an award winning therapist and business woman and bestselling author feeling rather depleted. I took about 5 months to travel, rest a...\n      \n\n      \nRead more\n      \n\n  \nMarianne  Clyde\n  \n\n    Retired\n\n  Warrenton, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nLifebook Online\n      \n    \n    \n      \n\"This program has allowed putting a structure on improvement, a plan for an entire life!\"\n      \n    \n    \nI\u2019ve been working on consciously improving my life over more than decade, and every challenge and experience has been fantastic. \nThis program has allowed to put a structure on improvement, a plan for an entire life! My life! It has allowed me to reconnect with my deepest desires and tale...\n      \n\n      \nRead more\n      \n\n  \nKarin Steinfort\n  \n\n    Dentist\n\n  Santiago, Chile\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nDuality\n      \n    \n    \n      \n\"This course is probably one of those things that after you do them, you are changed forever\"\n      \n    \n    \nBefore this Quest, it was really hard to navigate my life. I felt like my life was a constant battlefield. I had so many struggles and didn&#39;t have the tools to help me.\nAfter taking this Quest I feel more in flow. I find life to be so much more fun and amusing. I stopped being so seri...\n      \n\n      \nRead more\n      \n\n  \nLorena  Vuki\u0107\n  \n\n    Student\n\n  Zagreb, Croatia\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nLifebook Online\n      \n    \n    \n      \n\"Within the six-week journey, my eyes opened to the subtleties that have been holding me back for years\"\n      \n    \n    \nBefore Lifebook, I was actually doing great, scoring 111 (Excellent). However, after going through the process, I realized that I probably would have just maintained the status quo without the awareness that Lifebook brought me. Staying at the Excellent level would have been fine, right?...\n      \n\n      \nRead more\n      \n\n  \nKaren McFarlane Holman\n  \n\n    Inorganic Chemistry Professor\n\n  Salem, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nSuper Reading\n      \n    \n    \n      \n\"I've pretty much tripled my reading speed in 3 weeks\"\n      \n    \n    \nI've always considered myself a good reader, but definitely not a great reader.\nBut now as I'm an adult, husband, business owner and one day father, I see the value in reading educational books, like about business, relationships or spirituality.\nBefore this program I would read a...\n      \n\n      \nRead more\n      \n\n  \nJonathan Knight\n  \n\n    COO\n\n  Tyler, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nCoaching Love Relationships\n      \n    \n    \n      \n\"It got me to go into a whole other level inside the relationship I had with myself\"\n      \n    \n    \nBefore this program Mindvalley had been in my life for 2 years after I graduated as a physician. I felt the progress I\u2019d done couldn\u2019t get any better. The education I\u2019ve gained in Mindvalley has definitely impacted on the decision I\u2019ve made not to pursue the usual medical specialty but to...\n      \n\n      \nRead more\n      \n\n  \nAndrey Alexandrovich Sank\u00f3 Posada\n  \n\n    Physician\n\n  Bogota, Colombia\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nMaye Musk's 7 Rules of Life\n      \n    \n    \n      \n\"It felt like having the opportunity to have a one-on-one with Maye Musk\"\n      \n    \n    \nA 1-1 with Maye\nThis quest has been a pleasant and inspiring journey for me. I really enjoyed it. It felt like having the opportunity to have a one-on-one with Maye Musk. \nKnowing Maye as an iconic supermodel and mother of three extraordinary humans I was always fascinated by her. \nBut I...\n      \n\n      \nRead more\n      \n\n  \nInken  Stolley\n  \n\n    Entrepreneur\n\n  Abu Dhabi, United Arab Emirates\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nSixth Sense Superpower\n      \n    \n    \n      \n\"I found out not only the light at the end of the tunnel but also I feel much safer with the torch that they gave me\"\n      \n    \n    \nGreeting to all,\nIn my life, as a Middle Eastern woman I had many many obstacles that I passed them mostly all by myself but now a days with all those pressures I realized that I wont be able to continue this way anymore. I felt most of the time lonely and lost. Somehow I came across the...\n      \n\n      \nRead more\n      \n\n  \nLeyla\n  \n\n    Actress\n\n  Los Angeles, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nMoney EQ \n      \n    \n    \n      \n\"This program has allowed me to overcome the childhood money wounds\"\n      \n    \n    \nI started this program because i was facing problems with my business and my money flow ! before this program i was constantly worrying about money and  by enrolling to this program I wanted to learn how i can improve my relationship with money because deep inside i felt maybe the problem...\n      \n\n      \nRead more\n      \n\n  \nVianee BASTALINGUM\n  \n\n    Business Owner\n\n  Luxembourg, Luxembourg\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nA Yogi's Guide to Joy\n      \n    \n    \n      \n\"Sadghuru really enriched my spiritual life\"\n      \n    \n    \nI might sound a little too enthusiastic for YOU (valuable reader), which is typically not me ... skepticism is my smart companion ... but in this case, I am really happy to have found so much useful information, support, wisdom and methods...\n      \n\n      \nRead more\n      \n\n  \nSiegmar Weegen\n  \n\n    Entrepreneur\n\n  Bremerhaven, Germany\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nThe Silva Ultramind System\n      \n    \n    \n      \n\"I treated my multi-drug resistant UTI with this\"\n      \n    \n    \nHi beautiful souls,\nBefore this program I was always stressed out and anxious. This quest showed me how to meditate which is awesome! The mental screen technique is so powerful and I treated my multi drug resistant UTI with this. I want to continually evolve and make some meaningful contr...\n      \n\n      \nRead more\n      \n\n  \nDr Ritu Dabas\n  \n\n    Internal Medicine Physician\n\n  San Jose, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nCertified HoloBody Coach\n      \n    \n    \n      \n\"I became much more aware of my biological needs and developed my body intelligence immensely\"\n      \n    \n    \nWhen I started my journey through this certification, my goal was to gain more skills and improve my skills in terms of my Coaching practice. The fact of choosing this certification had to do with verifying that in this work presented by this fantastic team, the knowledge of Coaching, spi...\n      \n\n      \nRead more\n      \n\n  \nMiguel Goncalves\n  \n\n    Psychologist\n\n  Portimao, Portugal\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nMindvalley\n      \n    \n    \n      \n\"The most positive part of moving along this journey is finding abundance in everything in life once again\"\n      \n    \n    \nMy life had come to a complete stop. After a cascade of traumatic events and running the rat race in life I burned out right at the moment I had begun the most fulfilling career I could have ever imagined.  It was at this moment I stopped and started searching for a way to reconnect with...\n      \n\n      \nRead more\n      \n\n  \nErin tayles\n  \n\n    Massage Therapist\n\n  Kelowna, Canada\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nUltra Presence\n      \n    \n    \n      \n\"This course amplified my instincts and skills to tap into my internal awareness\"\n      \n    \n    \nYou will not believe the information I am about to share with you. So let's start with my journey coming into this quest. The emotions were excitement, uncertainty, sceptical, fear and gratefulness, to name a fear. I had seen Juanpa on social media and his talks, but I did not know wh...\n      \n\n      \nRead more\n      \n\n  \nFaraaz Ali\n  \n\n    Leadership Coach\n\n  Oslo, Norway\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nMindvalley University\n      \n    \n    \n      \n\"My learning and growth was compressed from 1 year to 10 days and I witnessed a unique form of magic\"\n      \n    \n    \nAs a personal growth junkie, I take my transformation to the next level super seriously. It is an inherent component of my life. I firmly believe that I can only serve at my highest potential if I constantly learn and upgrade myself.\nHence I signed up for an adventure which I had my eyes...\n      \n\n      \nRead more\n      \n\n  \nKanika Jain\n  \n\n    Health Coach\n\n  Manama, Bahrain\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nUltra Presence\n      \n    \n    \n      \n\"If anyone embodies ultra presence, it\u2019s Juan Pablo. He\u2019s electrifying\"\n      \n    \n    \nI love this quest. If anyone embodies ultra presence, it\u2019s Juan Pablo. He\u2019s electrifying. \nCheck this out\u2026when I was in Estonia I was walking home late at night. There was an air of expectancy all around. As I walked there was a light mist in the air & I imagined sexy, seductive music...\n      \n\n      \nRead more\n      \n\n  \nKerry Fisher\n  \n\n    Author\n\n  Melville, United States\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nMindvalley University\n      \n    \n    \n      \n\"I experienced massive transformation in just a few weeks\"\n      \n    \n    \nMindvalley University was one of the best investments I have ever made. I experienced massive transformation in just a few weeks. I felt like I was growing in all areas of my life at an exponential rate.\nThe community has such a high vibration that I could physically feel it. I formed dee...\n      \n\n      \nRead more\n      \n\n  \nKris Konsap\n  \n\n    Entrepreneur\n\n  Voru, Estonia\n\n\n    \n  \n\n\n\n\n\n      \n        \n      \n\n\n  \n    \n      \nCoaching Love Relationships\n      \n    \n    \n      \n\"I can't recommend this quest enough to anybody who works with human beings\"\n      \n    \n    \nDidn\u2019t plan to do the Love Quest as I didn\u2019t think it was relevant. Today, I am finishing Week 3. It\u2019s remarkable! Having done Life, Transformational and Spiritual quests, this one polishes the previous knowledge giving it an even deeper perspective. The session with Angela is groundbreak...\n      \n\n      \nRead more\n      \n\n  \nErin\n  \n\n    Coach\n\n  United Kingdom\n\n\n    \n  \n\n\n      \n"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:29:03.567446+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:28:11.613300+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:28:09.676600+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://stories.mindvalley.com/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T20:28:06.866551+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:59.109926+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:29:03.562384+00:00",
+                "index_texts": null,
+                "output": "Stories -  Mindvalley Stories",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:29:03.522989+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518163/warc/1671654492",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://stories.mindvalley.com/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T20:29:03.518568+00:00",
+                "index_texts": null,
+                "output": "stories.mindvalley.com/index.html",
+                "pwd": "/data/archive/1671645000.518163",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:28:12.734883+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "ArchiveError: Failed to find \"content-location\" URL header in Archive.org response.",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Stories -  Mindvalley Stories",
+        "warc": null,
+        "wget": "stories.mindvalley.com/index.html"
+    },
+    "link_dir": "/data/archive/1671645000.518163",
+    "newest_archive_date": "2022-12-21T20:29:16.041170+00:00",
+    "num_failures": 1,
+    "num_outputs": 11,
+    "oldest_archive_date": "2022-12-21T20:27:58.677616+00:00",
+    "path": "/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "fa94a781-cc44-4c99-aa42-7aa619302edf",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518163",
+    "title": "Stories -  Mindvalley Stories",
+    "updated": "2022-12-21T20:27:58.677120+00:00",
+    "updated_date": "2022-12-21 20:27",
+    "url": "https://stories.mindvalley.com/"
+}

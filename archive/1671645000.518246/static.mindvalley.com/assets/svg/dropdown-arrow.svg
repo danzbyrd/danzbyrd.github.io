@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Storefront-Mobile" transform="translate(-329.000000, -457.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="filter-4" transform="translate(24.000000, 435.000000)">
+                <g id="Search">
+                    <g id="Categories-Pill" transform="translate(20.000000, 14.000000)">
+                        <g id="btn-category">
+                            <path d="M287.302954,7.43280619 C286.96646,7.08032458 286.979421,6.52179999 287.331903,6.18530659 C287.684384,5.84881319 288.242909,5.86177419 288.579402,6.21425579 L292.697049,10.5275492 C293.033811,10.8803122 293.020522,11.4393725 292.667379,11.7757361 L288.549732,15.6977365 C288.196871,16.0338318 287.638362,16.0202404 287.302266,15.6673792 C286.966171,15.3145179 286.979762,14.7560083 287.332624,14.419913 L290.810637,11.1071544 L287.302954,7.43280619 Z" id="arrow" transform="translate(290.000001, 10.941178) rotate(90.000000) translate(-290.000001, -10.941178) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.51837",
+    "base_url": "www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+    "basename": "7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.businessinsider.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1.html"
+    },
+    "domain": "www.businessinsider.com",
+    "extension": "",
+    "hash": "GJ8XR0JG3QD8JAJ041MV",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:47:17.395506+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221194716/https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:04.705525+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:46:58.430437+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:46:57.811606+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.businessinsider.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:44:27.094686+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:44:26.956025+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:44:27.332381+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:44:27.101114+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:47:04.693522+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:04.154401+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:47:04.150747+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:02.042395+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:44:57.671948+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:44:56.582791+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmp0o3g1uaf",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:47:02.037827+00:00",
+                "index_texts": [
+                    "\n                                Since we started Mindvalley, we\u2019ve blossomed to over 100 employees and revenues past $15 million a year (50 million in Malaysian Ringgit).\n                        \n                        We\u2019ve become one of the biggest sellers of educational content online (mostly in\u00a0meditation and personal growth,\u00a0but we\u2019re expanding fast into other fields). We just hit 1.3 million subscribers and our 200,000th paying student.Best of all, we\u2019ve done it all without ever having to take any funds or loans. Which means I currently still own 100 percent of my business.It did not happen fast. Mindvalley took nine years to build. Some years were fun. Some years were brutal.I started with $2,000, lost money in the first two months, became profitable in the third month and just kept reinvesting profits into the company.\n                        \n                        The upside is a company that is built around\u00a0my passions \u2013 meditation, personal growth, play, culture, travel and epic interior design (our offices are magical). And having total ownership means I\u2019m not pressured by partners, boards or investors to deliver something that I\u2019m not passionate about.But the climb was hard and long. And I almost lost it all on multiple occasions.\u00a0I\u2019ve made dumb mistakes. I\u2019ve had\u00a0dizzying\u00a0successes. I\u2019ve been depressed and I\u2019ve been high.Most of all \u2014 I\u2019ve learned and\u00a0grown. And I want to share some advice.If I could advise younger entrepreneurs who are starting out so they avoid the dumb mistakes I made, here\u2019s what I would say:\n                        \n                        1. Your college degree is meaningless (and sometimes a liability).I (barely) graduated from the University of Michigan School of Electrical Engineering and Computer Science. My GPA was just over 2.5. I just could not focus on my engineering classes completely.So what did I focus on in university? Volunteer work, traveling and working abroad, pouring through books on business and entrepreneurship, learning photography, and working with theater troupes. I never got good at ONE thing. But having exposure to many different things helped give me an edge as an entrepreneur.I think I was lucky to be a\u00a0mediocre\u00a0engineer. If I was successful I might be trapped in a 9-to-5 job as an engineer. The best employees are specialists. The best entrepreneurs tend to be generalists.\n                        \n                        Don\u2019t waste your time pursuing a perfect GPA. Instead, embrace the idea of a generalist education. I majored in Computer Engineering and minored in Performing Arts. My best subject was digital photography. And I spent more time volunteering for the local chapter of AIESEC (a foreign work exchange program) than actually studying.All, in retrospect, were smart decisions:\u00a0Having basic knowledge of programming (my programming grades were usually a C) still allowed me to build Mindvalley\u2019s early websites myself. Minoring in drama helped me learn stage presence and become a good speaker. Photography gave me an eye for aesthetics and design. \u00a0And volunteering allowed me to see the world and meet other cultures.Steve Jobs said you can\u2019t connect the dots looking forward, only backwards. Today it appears that everything I chose to study played a key role in my life and business success.Your college degree is meaningless. Your college EXPERIENCE is what matters. Don\u2019t waste it pursuing a high GPA at the expense of soaking up everything college life has to offer.\n                        \n                        2. Don\u2019t quit your day job too soon.In the early days, quitting your day job is one of the dumbest mistakes I\u2019ve seen entrepreneurs make. You\u2019re going to need cash flow to survive, to travel, and to buy services like hosting and email solutions. And you won\u2019t know how long it will take to get funding or generate cash flow. Unless you\u2019ve got cash to live off, sooner or later those funds will run out.But the real problem happens when you start worrying about money.\u00a0Your flow breaks. You start second guessing your ideas. You stay up in bed at night worried about paying the bills.Don\u2019t quit your day job. It provides security and cash flow till you can break even or get funding. Of course, make sure you have a day job that doesn\u2019t require you to work ludicrous hours.\n                        \n                        If you have a job that you enjoy, it\u2019s even dumber to quit cold. The loneliness of striking it out on your own and the boredom of working at home for eight hours a day will get to you. Juggle both till you have cash flow coming in that allows you to survive.I started my business on December 22nd, 2002 while still holding a day job. I would work eight-hour days and then come home and put in another two hours on what would eventually become Mindvalley. I only quit my day job in November 2003 when I found myself generating $4,000 a month, which was enough to cover my day-to-day expenses.This is important: My first goal was never to make a million dollars. It was simply to generate $4,000 a month, which was the minimum monthly income I needed to survive in New York. I set a minimalistic goal that was within grasp. This took away the pressure. Once I hit this goal, I quit my day job and set a new goal \u2014 to build a million-dollar-a-year business.The early stage between conceiving your idea and generating positive cash flow that\u2019s enough to live on is the\u00a0most\u00a0crucial stage. Screw this up and you\u2019re dead before you begin.\n                        \n                        People think entrepreneurs are risk takers. That\u2019s not completely true. Dumb entrepreneurs take the most risk. Good ones look for safe, sure bets, plan ahead and manage cashflow well.3. Business plans are mostly unnecessary.My first two companies failed. Both were planned out in detail on business plans. They were tech startups I tried to get funding for in the Valley back when I lived in Mountain View in 2001.Yet Mindvalley (at first) had no plan and no vision beyond two years out. It was a simple idea scratched out on a napkin. It was about diving into the pit and selling. I never raised money, never got too complicated. I just hustled.\n                        \n                        The goal was not\u00a0millions, nor was it build and flip. It was about figuring out a way to hack together a business that would make me the $4,000 a month I needed to survive so I could quit my day job, marry my girlfriend and then dream up bigger ideas while not having to hold down a 9-to-5. I now cringe every time someone asks me to explain my business plan.Instead, every year on January 1st, I borrow my son\u2019s color pencils and draw a 5-year diagram of where I want to take the company. I then share this vision with my team and we start hacking our way to it.Start with a vision. Preferably, in the words of Joe Vitale: \u201cOne that SCARES you a little and EXCITES you a lot.\u201dThen, develop a model to make that vision a reality.\u00a0Work tirelessly towards building a beta \u2014 but be prepared to test, pivot and move rapidly as you learn. In the words of Steve Blank: \u201cNo business plan survives first contact with customers.\u201d\n                        \n                        4. Control your equity.I goofed early: I was too generous with equity and ended up giving up half my company. I was unconfident and felt I needed a business partner to make things work. I was so dumb I gave up equity without asking for investment. If I had been smarter, I would have saved on equity and instead created a performance-based bonus scheme.I also did not put in a vesting period nor create a shareholders agreement \u2014 mistakes that cost me close to $5 million dollars.As I mentioned earlier, owning the majority of my company is important to me. Having total ownership means I\u2019m not pressured by partners, boards or investors to deliver something that I\u2019m not passionate about.\n                        \n                        Take\u00a0Awesomeness Fest,\u00a0for example. It makes absolutely no business sense. It\u2019s a huge distraction from making money. And while it\u2019s profitable, we give away all our proceeds to charity and made it community-driven. No board would have approved it.Money matters. But so does freedom and ownership and having a little fun while running your business.Here\u2019s what you need to know about ownership:Never go 50/50. Always make a list of what each partner is bringing to the table and split accordingly. 50/50 partnerships are done by amateurs.Don\u2019t just give away a part of your business to a friend just to have a company. Always ask for investment. Make them buy their stake and put their money on the line.Use a vesting period: This means that your partner commits to X number of years and only earns the equity upon completing those years. We go for a 5-year vesting period.Have a shareholders agreement that stipulates exactly\u00a0how\u00a0much to buy back each share when the time comes to part ways (in more cases than not, this\u00a0will\u00a0happen). Typically 6x the last 12 month\u2019s profit is fair.\n                        \n                        5. Forge networks and learn to connect.I join a lot of networking groups. Much of my inspiration comes from the people I\u2019ve met in these groups. I\u2019m amazed at how many entrepreneurs suggest that conferences or networking groups are useless. The trick is to get into the right ones.I didn\u2019t join my first group until 2008, five years after I started out. My business exploded as a result. It wasn\u2019t just the contacts. It was seeing people\u00a0already\u00a0doing the things you dreamed of doing. It made your dreams seem so much easier easy and more possible. I call this the Bannister Effect. Before Roger Bannister ran the four-minute mile, few people thought it was possible. But after he finished, in that same year in the 1930s, dozens of people completed four-minute miles.Whether this story is true or not is irrelevant \u2014 the point is that you can accelerate your business by meeting others who inspire you because they\u2019ve already done the things you dream of.\n                        \n                        Here are the groups I\u2019ve joined that have given me amazing value:Yanik Silver\u2019s Mavericks: A group of guys that come together a few times a year to do crazy, dangerous things like Halo Skydiving or flying MIGs in Russia. If you have money and a death wish, this is the group for you. More on\u00a0www.Maverick1000.com.Joe Polish\u2019s 25K: As the name suggests, I spend the equivalent of an annual college education to be part of this group of entrepreneurs that meets 4-5 times a year for a private mastermind, but Joe is an amazing connector. Through this group I\u2019ve met men like Richard Branson, Peter Diamandis and Ray Kurzweil. More on\u00a0www.geniusnetworkmastermind.com.Awesomeness Fest: I started this event to bring together 200 people every year on a paradise location for fun and bonding. No other event I know is as much fun or creates bonds as close as this one. More on\u00a0www.AwesomenessFest.com.Mindvalley Insights Mastermind: This is an experimental group I started. A couple of hundred online business owners connect online and share their website optimization tests, learnings, case studies and more. If you own an online business, the knowledge here is worth millions. Email\u00a0insights@mindvalley.com\u00a0for details on how to join. You must have an existing business.6. No other skill is as important as sales and marketing.We all have different skills. But there\u2019s one skill I feel is most crucial to entrepreneurial success, and it\u2019s the ability to\u00a0sell. I scoffed at the idea of marketing and sales. As a Computer Engineer, my vision of the world was \u201cbuild epic stuff and the crowds will beat a path to your door.\u201d\n                        \n                        Rubbish. Tesla was an amazing engineer. He ended up broke and depressed as the Engineer-Salesman Edison took his ideas and made them count.I failed at my first two businesses too \u2014 because I was terrible at sales, so I decided I needed a job. But my timing was off \u2014 it was April 2001. The bubble burst in Silicon Valley: 14,000 people lost their jobs. I was attending pink-slip parties, being sure to buy just one glass of wine (to save cash) and sip it really slowly to make sure it lasted the night.No one was hiring so I blasted my resume to every company that was posting a Bay Area job ad on Craigslist. I finally got a job at a startup selling technology to law firms. The catch? It was pure sales. If I could not close, I would not get paid. In short, close or starve.Ever see the movie \u201cBoiler Room?\u201d There were days that reminded me of that movie. It was awful work that made it hard to get out of bed in the morning. But boy, did I learn to sell and market. That made ALL the difference.\n                        \n                        Exactly one year later on December 22nd, 2002 I started Mindvalley. I was profitable by the third month.My new edge? Selling.7. Don\u2019t build crap for the sake of making a buck.I believe companies like Coke, McDonalds, etc. were started by entrepreneurs with good intentions but now exist for stockholder value. But are they actually pushing humanity forward?\n                        \n                        In that famous Apple ad, \u201cHere\u2019s to the Crazy Ones,\u201d Steve Jobs actually contributed just one line. It was, \u201cPush humanity forward.\u201d That\u2019s what real entrepreneurs do. Peter Diamandis is taking mankind to space. Branson adds fun, quality service and cheekiness to old entrenched industries. Tony Hsieh \u201cdelivers happiness.\u201d I believe in teaching the world new things that enrich the human potential.I\u2019m not asking you to dedicate your life to changing the world. I\u2019m just asking you to not launch businesses that sell crap, pillage the environment, take advantage of developing nations or like Coke \u2013 market junk that lead to childhood obesity and other health disasters.You don\u2019t have to save the world \u2014 just try not to mess it up for our children.Know the difference between and entrepreneur and a businessman? Here\u2019s the difference:\u00a0Business people do it for the dollars.\n                        \n                        But real entrepreneurs\u00a0push the human race forward.Are you?A version of this post originally appeared on the author\u2019s blog.Vishen Lakhiani is the founder of Mindvalley.\u00a0He builds and invests in businesses that are focused on education and personal growth.\u00a0\n                        \n                        The\u00a0Young Entrepreneur Council (YEC)\u00a0is an invite-only nonprofit organization comprised of the world\u2019s most promising young entrepreneurs. In partnership with Citi, the YEC recently launched\u00a0#StartupLab, a free virtual mentorship program that helps millions of entrepreneurs start and grow businesses via live video chats, an expert content library and email lessons.Read more posts on Young Entrepreneur Council \u00bb\n                    "
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:00.764062+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:46:57.801964+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:44:57.678707+00:00",
+                "status": "failed"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:44:56.560030+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:44:27.340059+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:47:00.760423+00:00",
+                "index_texts": null,
+                "output": "7 Lessons From Bootstrapping a $15M Lifestyle Business",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:00.730731+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.51837/warc/1671652018",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:47:00.726814+00:00",
+                "index_texts": null,
+                "output": "www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1.html",
+                "pwd": "/data/archive/1671645000.51837",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:46:58.434700+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221194716/https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1']' timed out after 120 seconds",
+        "singlefile": "singlefile.html",
+        "title": "7 Lessons From Bootstrapping a $15M Lifestyle Business",
+        "warc": null,
+        "wget": "www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1.html"
+    },
+    "link_dir": "/data/archive/1671645000.51837",
+    "newest_archive_date": "2022-12-21T19:47:04.705525+00:00",
+    "num_failures": 1,
+    "num_outputs": 11,
+    "oldest_archive_date": "2022-12-21T19:44:26.956025+00:00",
+    "path": "/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "8cf4cfcc-072d-4d25-b292-53d9ecb084f7",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.51837",
+    "title": "7 Lessons From Bootstrapping a $15M Lifestyle Business",
+    "updated": "2022-12-21T19:44:26.955906+00:00",
+    "updated_date": "2022-12-21 19:44",
+    "url": "https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1"
+}

@@ -1,0 +1,12 @@
+{
+    "Status-Code": 200,
+    "Content-Type": "text/html; charset=utf-8",
+    "Vary": "Accept-Encoding, Accept-Encoding",
+    "ETag": "W/\"6c0b4-4ar5BuyJMW9r67EXnqk6wWM3sPs\"",
+    "Content-Encoding": "gzip",
+    "X-Cloud-Trace-Context": "a2e0b31eadf0856fc08d70e6f98d6c5f",
+    "Date": "Wed, 21 Dec 2022 20:22:43 GMT",
+    "Server": "Google Frontend",
+    "Cache-Control": "private",
+    "Transfer-Encoding": "chunked"
+}

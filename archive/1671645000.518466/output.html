@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- style -->
+   
+<!-- Search Engine Optimization by Rank Math - https://s.rankmath.com/home -->
+<title>What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA</title>
+<meta name="description" content="Emirates teams up with Mindvalley to offer flyers helpful courses for enhancing their lives and skills">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA">
+<meta property="og:description" content="Emirates teams up with Mindvalley to offer flyers helpful courses for enhancing their lives and skills">
+<meta property="og:url" content="https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/">
+<meta property="og:site_name" content="Business Traveler USA">
+<meta property="article:publisher" content="https://www.facebook.com/businesstravelerUS">
+<meta property="og:updated_time" content="2022-09-26T17:15:40+00:00">
+<meta property="og:image" content="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png">
+<meta property="og:image:secure_url" content="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="450">
+<meta property="og:image:alt" content="What To Do on a Long Flight? Learn New Personal Growth Skills, of Course!">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:published_time" content="2021-04-28T23:00:00+00:00">
+<meta property="article:modified_time" content="2022-09-26T17:15:40+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA">
+<meta name="twitter:description" content="Emirates teams up with Mindvalley to offer flyers helpful courses for enhancing their lives and skills">
+<meta name="twitter:site" content="@BizTraveler_USA">
+<meta name="twitter:creator" content="@BizTraveler_USA">
+<meta name="twitter:image" content="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png">
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["NewsMediaOrganization","Organization"],"@id":"https://businesstravelerusa.com/#organization","name":"Business Traveler USA","url":"https://businesstravelerusa.com","logo":{"@type":"ImageObject","@id":"https://businesstravelerusa.com/#logo","url":"https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg","contentUrl":"https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg","caption":"Business Traveler USA","inLanguage":"en-US"}},{"@type":"WebSite","@id":"https://businesstravelerusa.com/#website","url":"https://businesstravelerusa.com","name":"Business Traveler USA","publisher":{"@id":"https://businesstravelerusa.com/#organization"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png","url":"https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png","width":"800","height":"450","inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://businesstravelerusa.com","name":"Home"}},{"@type":"ListItem","position":"2","item":{"@id":"https://businesstravelerusa.com/categories/business-traveler-usa-story/","name":"Business Traveler USA Story"}},{"@type":"ListItem","position":"3","item":{"@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/","name":"What To Do on a Long Flight? Learn New Personal Growth Skills, of Course!"}}]},{"@type":"WebPage","@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/#webpage","url":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/","name":"What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA","datePublished":"2021-04-28T23:00:00+00:00","dateModified":"2022-09-26T17:15:40+00:00","isPartOf":{"@id":"https://businesstravelerusa.com/#website"},"primaryImageOfPage":{"@id":"https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png"},"inLanguage":"en-US","breadcrumb":{"@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/#breadcrumb"}},{"@type":"Person","@id":"https://businesstravelerusa.com/author/lewis/","name":"lewis","url":"https://businesstravelerusa.com/author/lewis/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/17dbc81f0707d0972bf85bfaea75a0db?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/17dbc81f0707d0972bf85bfaea75a0db?s=96&amp;d=mm&amp;r=g","caption":"lewis","inLanguage":"en-US"},"worksFor":{"@id":"https://businesstravelerusa.com/#organization"}},{"@type":"Article","headline":"What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA","datePublished":"2021-04-28T23:00:00+00:00","dateModified":"2022-09-26T17:15:40+00:00","articleSection":"Business Traveler USA Story, Well Being","author":{"@id":"https://businesstravelerusa.com/author/lewis/"},"publisher":{"@id":"https://businesstravelerusa.com/#organization"},"description":"Emirates teams up with Mindvalley to offer flyers helpful courses for enhancing their lives and skills","name":"What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA","@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/#richSnippet","isPartOf":{"@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/#webpage"},"image":{"@id":"https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Business Traveler USA » What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! Comments Feed" href="https://businesstravelerusa.com/lifestylewell-being/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/feed/">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://businesstravelerusa.com/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://businesstravelerusa.com/wp-includes/css/classic-themes.min.css?ver=1" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel="stylesheet" id="cookie-law-info-css" href="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-public.css?ver=1671516246" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="cookie-law-info-gdpr-css" href="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-gdpr.css?ver=1671516246" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="mainCss-css" href="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/themes/businesstraveller/assets/css/style.css?ver=1671516246" type="text/css" media="all">
+<link rel="stylesheet" id="magnificPopup-css" href="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/css/magnific-popup/magnific-popup.min.css?ver=6.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="animateCss-css" href="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/css/animate.min.css?ver=6.1.1" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="swiperCss-css" href="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/themes/businesstraveller/assets/css/swiper/swiper-bundle.min.css?ver=1671516246" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="custom-css-css" href="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/themes/businesstraveller/assets/css/custom.css?ver=1671516246" type="text/css" media="all">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js" defer=""></script>
+<script type="text/javascript" id="cookie-law-info-js-extra">
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#FFF","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#dedfe0","button_3_button_hover":"#b2b2b3","button_3_link_colour":"#333333","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#dedfe0","button_4_button_hover":"#b2b2b3","button_4_link_colour":"#333333","button_4_as_button":"1","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#fff","button_7_as_button":"","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#333333","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https:\/\/businesstravelerusa.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/public/js/cookie-law-info-public.js?ver=1671516246" id="cookie-law-info-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/themes/businesstraveller/assets/js/player.js?ver=1671516246" id="vimeo-player-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/js/magnific-popup/jquery.magnific-popup.min.js?ver=6.1.1" id="magnificJquery-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://businesstravelerusa.com/wp-json/"><link rel="alternate" type="application/json" href="https://businesstravelerusa.com/wp-json/wp/v2/articles/1462"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://businesstravelerusa.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://businesstravelerusa.com/wp-includes/wlwmanifest.xml">
+<link rel="shortlink" href="https://businesstravelerusa.com/?p=1462">
+<link rel="alternate" type="application/json+oembed" href="https://businesstravelerusa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbusinesstravelerusa.com%2Flifestylewell-being%2Fwhat-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://businesstravelerusa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbusinesstravelerusa.com%2Flifestylewell-being%2Fwhat-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course%2F&amp;format=xml">
+<!-- There is no amphtml version available for this URL. --><link rel="icon" href="https://businesstravelerusa.com/wp-content/uploads/2022/09/cropped-cropped-BT_BUG_2-32x32.png" sizes="32x32">
+<link rel="icon" href="https://businesstravelerusa.com/wp-content/uploads/2022/09/cropped-cropped-BT_BUG_2-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://businesstravelerusa.com/wp-content/uploads/2022/09/cropped-cropped-BT_BUG_2-180x180.png">
+<meta name="msapplication-TileImage" content="https://businesstravelerusa.com/wp-content/uploads/2022/09/cropped-cropped-BT_BUG_2-270x270.png">
+		<style type="text/css" id="wp-custom-css">
+			.tv-slider .ratio {
+    z-index: -1;
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    <script type="rocketlazyloadscript" data-minify="1" async="" src="https://businesstravelerusa.com/wp-content/cache/min/1/tag/js/gpt.js?ver=1671516246"></script>
+
+    <script type="rocketlazyloadscript">
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/22246689465/BTUSA_Home_Leaderboard', [[300, 50],[728, 90]], 'Home-Leaderboard').addService(googletag.pubads());
+            googletag.defineSlot('/22246689465/BTUSA_Home_Leaderboard_No2', [[300, 50],[728, 90]], 'Home-Leaderboard-Two').addService(googletag.pubads());
+            googletag.defineSlot('/22246689465/BTUSA_Home_LargeLeaderboard', [[320, 50],[970, 90]], 'Home-LargeLeaderboard').addService(googletag.pubads());
+            googletag.defineSlot('/22246689465/BTUSA_Home_Billboardv2', [[320, 100],[970, 250]], 'Home-Billboard').addService(googletag.pubads());
+
+            googletag.defineSlot('/22246689465/BTUSA_Post_Leaderboard', [[300, 50],[728, 90]], 'Post-Leaderboard').addService(googletag.pubads());
+            googletag.defineSlot('/22246689465/BTUSA_Post_LargeLeaderboard', [[320, 50],[970, 90]], 'Post-LargeLeaderboard').addService(googletag.pubads());
+
+            googletag.defineSlot('/22246689465/BTUSA_Post_InlineRectangle', [[300, 250]], 'Post-InlineRectangle').addService(googletag.pubads());
+            googletag.defineSlot('/22246689465/BTUSA_Post_HalfPage', [[300, 600]], 'Post-HalfPage').addService(googletag.pubads());
+            googletag.defineSlot('/22246689465/BTUSA_Post_Billboard', [[320, 100],[970, 250]], 'Post-Billboard').addService(googletag.pubads());
+
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-232448730-1"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'UA-232448730-1');
+</script><link href="https://www.googletagmanager.com" rel="preconnect"></head>
+<body class="articles-template-default single single-articles postid-1462 wp-custom-logo">
+
+    <section class="add-section d-lg-block bg-black">
+        <div class="container p-0" id="Post-Billboard">
+            <script type="rocketlazyloadscript">
+                googletag.cmd.push(function() {
+                    googletag.display('Post-Billboard');
+                });
+            </script>
+        </div>
+    </section>
+<!--start header section-->
+<header class="header w-100">
+    <div class="container">
+        <div class="header-top text-center d-lg-block d-none">
+            <a href="https://businesstravelerusa.com">
+                <img width="537" height="74" src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg" class="attachment- size- entered lazyloaded" alt="Business Treaveler logo" decoding="async" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg" data-ll-status="loaded"><noscript><img width="537" height="74" src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg" class="attachment- size-" alt="Business Treaveler logo" decoding="async" /></noscript>            </a>
+                        <div class="d-lg-flex d-none align-items-center justify-content-md-center justify-content-start pt-3 pb-4">
+                <p class="fs-m font-etna mb-0">Travel news, reviews and intel for high-flyers</p>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="header-fixed"></div>
+
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg p-0 justify-content-center align-items-center">
+                <button type="button" class="navbar-toggler start-0 position-absolute border-0" id="toggle-btn">
+                    <span class="navbar-toggler-icon bar1"></span>
+                    <span class="navbar-toggler-icon bar2"></span>
+                    <span class="navbar-toggler-icon bar3"></span>
+                </button>
+
+                <div class="left-logo">
+                    <a href="https://businesstravelerusa.com">
+                                                <img width="537" height="74" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20537%2074'%3E%3C/svg%3E" class="w-100 h-100 of-cover" alt="Business Treaveler logo" decoding="async" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg"><noscript><img width="537" height="74" src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg" class="w-100 h-100 of-cover" alt="Business Treaveler logo" decoding="async" /></noscript>                    </a>
+                </div>
+
+                <div class="navbar-menu" id="main-menu">
+                    <form action="https://businesstravelerusa.com/" method="get" class="d-lg-none d-flex nav-form">
+                        <input type="text" name="s" id="focus1" required="" class="nav-search-box" placeholder="Search">
+                        <a href="#" class="nav-open-search-icon">
+                            <i class="icon-search_red text-black"></i>
+                        </a>
+                    </form>
+                    <ul id="menu-top-menu" class="navbar-nav"><li id="nav-menu-item-6779" class="nav-item "><a href="https://businesstravelerusa.com/news/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">News</a></li>
+<li id="nav-menu-item-27" class="nav-item "><a href="https://businesstravelerusa.com/travel/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Travel</a></li>
+<li id="nav-menu-item-24" class="nav-item "><a href="https://businesstravelerusa.com/profiles/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Profiles</a></li>
+<li id="nav-menu-item-28" class="nav-item "><a href="https://businesstravelerusa.com/tried-tested/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Tried &amp; Tested</a></li>
+<li id="nav-menu-item-29" class="nav-item "><a href="https://businesstravelerusa.com/tv/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">THE TV SHOW</a></li>
+<li id="nav-menu-item-26" class="nav-item "><a href="https://businesstravelerusa.com/the-magazine/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">The Magazine</a></li>
+<li id="nav-menu-item-8451" class="nav-item airline-dropdown-parent"><a class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Airlines</a><div class="airline-dropdown">
+                    <h5 class="fw-medium text-white text-uppercase mb-0 font-filsonpro mb-4 airline-sub-menu-domestic">Domestic</h5>
+                    <div class="row airline-menu-domestic">
+                    <div class="col-md-3"><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/alaska-airlines/">Alaska Airlines</a>
+                            </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/american-airlines/">American Airlines</a>
+                            </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/delta-air-lines/">Delta Air Lines</a>
+                            </h5></div>
+                            <div class="col-md-3"><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/frontier-airlines/">Frontier Airlines</a>
+                                </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/jetblue/">JetBlue</a>
+                                </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/southwest-airlines/">Southwest Airlines</a>
+                                </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/united-airlines/">United Airlines</a>
+                                </h5></div>
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <div class="border-bottom border-1 border-white mt-1 mb-5"></div>
+                    <h5 class="fw-medium text-white text-uppercase mb-0 font-filsonpro mb-4 airline-sub-menu-international">International</h5>
+                    <div class="row airline-menu-international">
+                        <div class="col-md-3"><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/air-canada/">Air Canada</a>
+                                        </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/air-france/">Air France</a>
+                                        </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/avianca/">Avianca</a>
+                                        </h5></div>
+                        <div class="col-md-3"><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/british-airways/">British Airways</a>
+                                                </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/easyjet/">easyJet</a>
+                                                </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/emirates/">Emirates</a>
+                                                </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/latam/">LATAM</a>
+                                                </h5></div>
+                        <div class="col-md-3"><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/lufthansa/">Lufthansa</a>
+                                                                    </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/qantas/">Qantas</a>
+                                                                    </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/qatar-airways/">Qatar Airways</a>
+                                                                    </h5></div>
+                        <div class="col-md-3"><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/singapore-airlines/">Singapore Airlines</a>
+                                                                    </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/turkish-airlines/">Turkish Airlines</a>
+                                                                    </h5><h5 class="font-filsonpro fw-medium mb-2"><a class="text-white text-primary-hover" href="https://businesstravelerusa.com/virgin-atlantic/">Virgin Atlantic</a>
+                                                                    </h5></div>
+                    </div>
+                    
+                </div>
+<ul class="sub-menu">
+	<li id="nav-menu-item-7483" class="sub-menu-item active "><a href="https://businesstravelerusa.com/air-canada/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Air Canada</a></li>
+	<li id="nav-menu-item-7484" class="sub-menu-item active "><a href="https://businesstravelerusa.com/air-france/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Air France</a></li>
+	<li id="nav-menu-item-7485" class="sub-menu-item active "><a href="https://businesstravelerusa.com/alaska-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Alaska Airlines</a></li>
+	<li id="nav-menu-item-7482" class="sub-menu-item active "><a href="https://businesstravelerusa.com/american-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">American Airlines</a></li>
+	<li id="nav-menu-item-7486" class="sub-menu-item active "><a href="https://businesstravelerusa.com/avianca/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Avianca</a></li>
+	<li id="nav-menu-item-7487" class="sub-menu-item active "><a href="https://businesstravelerusa.com/british-airways/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">British Airways</a></li>
+	<li id="nav-menu-item-7488" class="sub-menu-item active "><a href="https://businesstravelerusa.com/delta-air-lines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Delta Air Lines</a></li>
+	<li id="nav-menu-item-7489" class="sub-menu-item active "><a href="https://businesstravelerusa.com/easyjet/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">easyJet</a></li>
+	<li id="nav-menu-item-7490" class="sub-menu-item active "><a href="https://businesstravelerusa.com/emirates/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Emirates</a></li>
+	<li id="nav-menu-item-7491" class="sub-menu-item active "><a href="https://businesstravelerusa.com/frontier-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Frontier Airlines</a></li>
+	<li id="nav-menu-item-7492" class="sub-menu-item active "><a href="https://businesstravelerusa.com/jetblue/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">JetBlue</a></li>
+	<li id="nav-menu-item-7493" class="sub-menu-item active "><a href="https://businesstravelerusa.com/latam/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">LATAM</a></li>
+	<li id="nav-menu-item-7494" class="sub-menu-item active "><a href="https://businesstravelerusa.com/lufthansa/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Lufthansa</a></li>
+	<li id="nav-menu-item-7495" class="sub-menu-item active "><a href="https://businesstravelerusa.com/qantas/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Qantas</a></li>
+	<li id="nav-menu-item-7496" class="sub-menu-item active "><a href="https://businesstravelerusa.com/qatar-airways/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Qatar Airways</a></li>
+	<li id="nav-menu-item-7497" class="sub-menu-item active "><a href="https://businesstravelerusa.com/singapore-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Singapore Airlines</a></li>
+	<li id="nav-menu-item-7498" class="sub-menu-item active "><a href="https://businesstravelerusa.com/southwest-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Southwest Airlines</a></li>
+	<li id="nav-menu-item-7499" class="sub-menu-item active "><a href="https://businesstravelerusa.com/turkish-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Turkish Airlines</a></li>
+	<li id="nav-menu-item-7500" class="sub-menu-item active "><a href="https://businesstravelerusa.com/united-airlines/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">United Airlines</a></li>
+	<li id="nav-menu-item-7501" class="sub-menu-item active "><a href="https://businesstravelerusa.com/virgin-atlantic/" class="nav-link fw-medium fs-m text-uppercase fw-medium font-filsonpro">Virgin Atlantic</a></li>
+</ul>
+</li>
+</ul>                </div>
+
+                <button id="search" class="search-icon position-absolute d-lg-block d-none align-items-center justify-content-center">
+                    <i class="icon-search_red text-white text-primary-hover d-flex align-items-center justify-content-center"></i>
+                </button>
+                <form action="https://businesstravelerusa.com/" method="get">
+                    <a href="#" class="open-search-icon">
+                        <i class="icon-search_red text-black"></i>
+                    </a>
+                    <input type="text" name="s" id="focus" required="" class="search-box" placeholder="SEARCH">
+                    <button class="open-close-icon" type="button">
+                        <i class="icon-cross_red"></i>
+                    </button>
+                </form>
+            </nav>
+
+        </div>
+    </div>
+            <section class="add-section d-lg-block my-2 mb-4">
+            <div class="container p-0" id="Post-LargeLeaderboard">
+                <script type="rocketlazyloadscript">
+                    googletag.cmd.push(function() {
+                        googletag.display('Post-LargeLeaderboard');
+                    });
+                </script>
+            </div>
+        </section>
+    </header>
+
+<!--start popup section-->
+<div class="modal sign-up-modal" id="modal-popup" tabindex="-1">
+    <div class="modal-dialog h-100 d-flex align-items-center">
+        <div class="modal-content bg-secondary">
+            <div class="modal-body">
+                <div class="bg-secondary sign-up-box">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="icon-img me-3 bg-black rounded-pill d-md-flex d-none align-items-center justify-content-center">
+                            <img width="34" height="25" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2034%2025'%3E%3C/svg%3E" alt="" data-lazy-src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/images/letter-box.svg"><noscript><img width="34" height="25" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/images/letter-box.svg" alt=""></noscript>
+                        </div>
+                        <label for="exampleFormControlInput1" class="form-label mb-0">
+                            <h4 class="font-etna fw-bold mb-0">Sign up for our weekly newsletter</h4>
+                        </label>
+                    </div>
+                    <div class="d-flex position-relative border border-grey overflow-hidden">
+                        <script type="rocketlazyloadscript">(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.8.10 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-8477" method="post" data-id="8477" data-name="Newsletter"><div class="mc4wp-form-fields"><div class="tnp tnp-subscription">
+
+<div class="tnp-field tnp-field-email">
+<input class="tnp-email" type="email" name="EMAIL" id="tnp-1" value="" required="" placeholder="Enter your email"></div>
+<div class="tnp-field tnp-field-button"><input class="tnp-submit" type="submit" value="Sign up">
+</div>
+</div>
+               </div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1671651287"><input type="hidden" name="_mc4wp_form_id" value="8477"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--success message-->
+<!--success message-->
+
+<section class="article-content" data-showed-articles="1462" data-related-articles="9472,9109,9088" data-showed="1">
+    <section class="article">
+        <div class="container">
+            <div class="row h-100">
+                <div class="col-lg-4 col-12 order-last order-lg-0">
+                    <div class="h-100 d-flex flex-column justify-content-end mt-lg-0 mt-4">
+                        <div class="d-block">
+                            <h1 class="font-etnacondensed fw-bold article-title mb-lg-7 mb-6">What To Do on a Long Flight? Learn New Personal Growth Skills, of Course!</h1>
+                            <p class="article-desc font-filsonpro fw-book mb-0"></p><p>Emirates teams up with Mindvalley to offer flyers helpful courses for enhancing their lives and skills</p><p></p>
+                        </div>
+                        <div class="d-block">
+                            <div class="author-profile my-5 d-flex align-items-center">
+                                <div class="author-profile-bio border-end border-grey border-1 pe-4">
+                                                                        <p class="mb-0 font-agletmono">April 28, 2021</p>
+                                </div>
+                                <div class="d-flex align-items-center ps-4">
+                                    <div class="author-profile-img d-flex align-items-end">
+                                                                                <a href="https://businesstravelerusa.com/categories/business-traveler-usa-story/" class="text-black text-primary-hover">
+                                            <p class="fs-xm font-filsonpro fw-medium text-uppercase mb-0">
+                                                Business Traveler USA Story                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-1 border-dark border-bottom mb-7"></div>
+
+                            <div class="share">
+                                <p class="text-uppercase mb-0 font-agletmono mb-2">share</p>
+                                <div class="d-flex align-items-center">
+                                    <a href="https://m.facebook.com/sharer.php?u=" class="text-white text-primary-hover">
+                                        <div class="share-icon d-flex align-items-center justify-content-center">
+                                            <i class="icon-facebook"></i>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="text-white text-primary-hover">
+                                        <div class="share-icon d-flex align-items-center justify-content-center">
+                                            <i class="icon-linkedin2"></i>
+                                        </div>
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?url=" class="text-white text-primary-hover">
+                                        <div class="share-icon d-flex align-items-center justify-content-center me-0">
+                                            <i class="icon-twitter"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="article-img">
+                        <div class="ratio ratio-30x17 h-100">
+                                                            <img width="800" height="450" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png" alt="" class="w-100 h-100 of-cover entered lazyloaded" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png" data-ll-status="loaded"><noscript><img width="800" height="450" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1623-3.png" alt="" class="w-100 h-100 of-cover"></noscript>
+                                                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--start author detail section-->
+    <section class="author mt-lg-8 mb-lg-9 my-6">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-7 col-12">
+                            <section class="add-section">
+                                <div class="container p-0" id="Post-Leaderboard">
+                                    <script type="rocketlazyloadscript">
+                                        googletag.cmd.push(function() {
+                                            googletag.display('Post-Leaderboard');
+                                        });
+                                    </script>
+                                </div>
+                            </section>
+                            <div class="text-wrap">
+                                <p class="fs-lm mb-lg-7 mb-6 pb-1 font-etna"></p><p><img width="800" height="450" decoding="async" class="bt-feature entered lazyloaded" src="/wp-content/uploads/2021/04/mindvalley-800x450.jpg" data-lazy-src="/wp-content/uploads/2021/04/mindvalley-800x450.jpg" data-ll-status="loaded"><noscript><img width="800" height="450" decoding="async" class="bt-feature" src="/wp-content/uploads/2021/04/mindvalley-800x450.jpg"/></noscript></p>
+<p><a href="https://www.mindvalley.com/" rel="noopener noreferrer" target="_blank"><strong><span style="color: rgb(61, 142, 185);">Mindvalley,&nbsp;</span></strong></a>a leading personal growth education company, is sharing four of its premium personal transformation courses, also known as Quests, Emirates for use in their flight entertainment offerings. With more than 30 Quests and hundreds of hours of learning taught by known experts, Mindvalley provides the tools needed to <a href="../mindful-travel/" rel="noopener noreferrer" target="_blank"><strong><span style="color: rgb(61, 142, 185);">unleash the fullest potential&nbsp;</span></strong></a>of one’s mind, body, and spirit and optimize time on a long flight between destinations. Mindvalley’s Quests, often quite pricey otherwise, are now available for free through Emirates’ award-winning inflight entertainment system, Ice.</p>
+<p><strong>Mindvalley Quests</strong></p>
+<p>“The pandemic has been the catalyst needed to prioritize personal growth and we are excited to bring positive change to travelers as flying picks up once again,” says Vishen Lakhiani, Founder and CEO of Mindvalley. “Mindvalley’s mission is to disrupt the education system by teaching skills that are traditionally overlooked at school. Now passengers can learn from the best teachers in the world on a campus that defies borders while flying onboard Emirates.”</p>
+<p>&nbsp;</p>
+<p><strong>These Quests are available inflight starting this month:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Conscious Parenting&nbsp;</strong>by Dr. Shefali Tsabary – Receive the tools and perspective needed to nurture more authentic, fulfilled, and self-aware children.</p>
+<p><strong>Super Brain and 5 Steps&nbsp;</strong><strong>to Powerful Memory&nbsp;</strong>by Jim Kwik – Activate your brain’s limitless potential.</p>
+<p>&nbsp;</p>
+<p><strong>Speak &amp; Inspire&nbsp;</strong>by Lisa Nichols – Learn the power of good communication skills from the world’s most advanced public speaking course.</p>
+<p><strong>Becoming Extraordinary&nbsp;</strong>by Vishen Lakhiani – Become extraordinary by evolving the level of consciousness you operate from.</p>
+<p><strong>7 Days to Breaking Up with Sugar</strong> by Eric Edmeades — Permanently eliminate your sugar cravings</p>
+<p><strong>6 Phase Meditation</strong> with Vishen Lakhiani — Master meditation in less than 3 hours.</p>
+<p><strong>5 Steps to Discover your Life Purpose&nbsp;</strong>by Michael Beckwith — Learn the principles that go beyond traditional goal setting and manifesting.</p>
+<p>And after, Emirates will be adding these courses to the roster:</p>
+<p>&nbsp;</p>
+<p><strong>Money EQ</strong> by Ken Honda – Transform your relationship with money and open the floodgates to a life of free-flowing wealth and prosperity.</p>
+<p><strong>Everyday Bliss&nbsp;</strong>by Paul McKenna, PhD – Become your calmer and more resilient self.</p>
+<p>Since 2003, Mindvalley has transformed teachings of top educators, authors and activists into virtual learning experiences that foster community and prioritize mindset over all else. For more information about Mindvalley, or to sign up for one of their 30+ Quests, go to Mindvalley.com; also view the Omvana app for smart phone convenience.</p>
+<p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <!--sidebar-->
+                            <div class="sidebar h-100 sidebar-right float-end d-lg-block d-none">
+                                            <div class="widget-content">                        </div>                            <div class="widget-content">                                <div class="pt-lg-12 pt-6 sidebar-add-magazine ">
+                <div class="sidebar-title py-6 border-top border-grey">
+                <h6 class="fs-m text-uppercase fw-medium mb-0">Most Popular</h6>
+                </div>
+                <ul class="sidebar-desc-wrap  list-unstyled mb-0">
+                                            <li class="sidebar-desc py-6">
+                            <div class="d-flex">
+                                <img width="296" height="197" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1384-2.png" alt="" class="of-cover popular me-6 entered lazyloaded" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1384-2.png" data-ll-status="loaded"><noscript><img width="296" height="197" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/featured-image-1384-2.png" alt=""
+                                     class="of-cover popular me-6"></noscript>
+                                <a href="https://businesstravelerusa.com/destinations/destinationsasia-pacific/all-eyes-on-busan/" class="text-black text-primary-hover fs-xm fw-medium popular-desc">All Eyes on Busan</a>
+                            </div>
+                        </li>
+
+                                            <li class="sidebar-desc py-6">
+                            <div class="d-flex">
+                                <img width="792" height="680" src="https://businesstravelerusa.com/wp-content/uploads/2022/12/Zip_Air_Fully-flat-seat_Credit-Zip_Air.jpg" alt="" class="of-cover popular me-6 entered lazyloaded" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/12/Zip_Air_Fully-flat-seat_Credit-Zip_Air.jpg" data-ll-status="loaded"><noscript><img width="792" height="680" src="https://businesstravelerusa.com/wp-content/uploads/2022/12/Zip_Air_Fully-flat-seat_Credit-Zip_Air.jpg" alt=""
+                                     class="of-cover popular me-6"></noscript>
+                                <a href="https://businesstravelerusa.com/news/japanese-low-cost-carrier-zipair-lands-in-san-jose/" class="text-black text-primary-hover fs-xm fw-medium popular-desc">Japanese Low-Cost Carrier ZIPAIR Lands in San Jose</a>
+                            </div>
+                        </li>
+
+                                            <li class="sidebar-desc py-6">
+                            <div class="d-flex">
+                                <img width="1639" height="819" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/vcsPRAsset_3683362_271625_6e95a4be-bb07-4be7-bf5a-1125eef9b2aa_0-e1654620283287.jpg" alt="" class="of-cover popular me-6 entered lazyloaded" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/09/vcsPRAsset_3683362_271625_6e95a4be-bb07-4be7-bf5a-1125eef9b2aa_0-e1654620283287.jpg" data-ll-status="loaded"><noscript><img width="1639" height="819" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/vcsPRAsset_3683362_271625_6e95a4be-bb07-4be7-bf5a-1125eef9b2aa_0-e1654620283287.jpg" alt=""
+                                     class="of-cover popular me-6"></noscript>
+                                <a href="https://businesstravelerusa.com/travel/topflight-cuisine/" class="text-black text-primary-hover fs-xm fw-medium popular-desc">Your Next Layover Could Include a Michelin-Starred Meal</a>
+                            </div>
+                        </li>
+
+                                            <li class="sidebar-desc py-6">
+                            <div class="d-flex">
+                                <img width="792" height="680" src="https://businesstravelerusa.com/wp-content/uploads/2022/10/Hong_Kong_Feature_Article_792x680.jpg" alt="" class="of-cover popular me-6 entered lazyloaded" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/10/Hong_Kong_Feature_Article_792x680.jpg" data-ll-status="loaded"><noscript><img width="792" height="680" src="https://businesstravelerusa.com/wp-content/uploads/2022/10/Hong_Kong_Feature_Article_792x680.jpg" alt=""
+                                     class="of-cover popular me-6"></noscript>
+                                <a href="https://businesstravelerusa.com/news/united-airlines-set-to-return-to-hong-kong-in-january/" class="text-black text-primary-hover fs-xm fw-medium popular-desc">United Airlines Set to Return to Hong Kong in January</a>
+                            </div>
+                        </li>
+
+                                            <li class="sidebar-desc py-6">
+                            <div class="d-flex">
+                                <img width="1439" height="719" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/Hollywood01main-e1654620212835.jpg" alt="" class="of-cover popular me-6 entered lazyloaded" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/09/Hollywood01main-e1654620212835.jpg" data-ll-status="loaded"><noscript><img width="1439" height="719" src="https://businesstravelerusa.com/wp-content/uploads/2022/09/Hollywood01main-e1654620212835.jpg" alt=""
+                                     class="of-cover popular me-6"></noscript>
+                                <a href="https://businesstravelerusa.com/travel/the-vinyl-revival-why-people-are-flocking-to-one-of-hollywoods-most-historic-districts-once-again/" class="text-black text-primary-hover fs-xm fw-medium popular-desc">The Vinyl Revival: Why People Are Flocking to One of Hollywood’s Most Historic Districts Once Again</a>
+                            </div>
+                        </li>
+
+                                    </ul>
+                </div>
+                </div>                
+                                <section class="add-section mb-3">
+                                    <div class="container p-0" id="Post-HalfPage">
+                                        <script type="rocketlazyloadscript">
+                                            googletag.cmd.push(function() {
+                                                googletag.display('Post-HalfPage');
+                                            });
+                                        </script>
+                                    </div>
+                                </section>
+
+                                <section class="add-section">
+                                    <div class="container p-0" id="Post-InlineRectangle">
+                                        <script type="rocketlazyloadscript">
+                                            googletag.cmd.push(function() {
+                                                googletag.display('Post-InlineRectangle');
+                                            });
+                                        </script>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="related-articles">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-12 related-articles">
+                <div class="main-title pt-4 pb-5 d-md-flex d-block align-items-center justify-content-between mb-6 mt-7">
+                    <h4 class="fw-medium text-uppercase mb-0 font-filsonpro">related stories</h4>
+                </div>
+
+                <div class="row column-border">
+                                                <div class="col-md-4">
+                                <div class="mySwiper2-wrap">
+                                    <a href="https://businesstravelerusa.com/airlines/qatar-airways-settling-in-to-your-hotel-in-the-sky/" class="mySwiper2-img mb-4">
+                                        <div class="ratio ratio-192x145">
+                                                                                            <img width="1310" height="760" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201310%20760'%3E%3C/svg%3E" alt="" class="w-100 h-100 of-cover" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/11/h2-qsuite-quad-seat.jpg"><noscript><img width="1310" height="760" src="https://businesstravelerusa.com/wp-content/uploads/2022/11/h2-qsuite-quad-seat.jpg" alt=""
+                                                     class="w-100 h-100 of-cover"></noscript>
+                                                                                    </div>
+                                    </a>
+                                    <a href="https://businesstravelerusa.com/airlines/qatar-airways-settling-in-to-your-hotel-in-the-sky/" class="mySwiper2-content mw-xs text-black">
+                                        <h5 class="fs-l my-4 text-black text-grey-hover">Qatar Airways: Settling into Your Hotel in the Sky</h5>
+                                    </a>
+                                </div>
+                            </div>
+                                                    <div class="col-md-4">
+                                <div class="mySwiper2-wrap">
+                                    <a href="https://businesstravelerusa.com/destinations/destinationsmiddle-east-and-africa/destination-doha-a-jewel-in-the-crown/" class="mySwiper2-img mb-4">
+                                        <div class="ratio ratio-192x145">
+                                                                                            <img width="1500" height="1060" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201500%201060'%3E%3C/svg%3E" alt="" class="w-100 h-100 of-cover" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/11/LusailE-3-1.jpeg"><noscript><img width="1500" height="1060" src="https://businesstravelerusa.com/wp-content/uploads/2022/11/LusailE-3-1.jpeg" alt=""
+                                                     class="w-100 h-100 of-cover"></noscript>
+                                                                                    </div>
+                                    </a>
+                                    <a href="https://businesstravelerusa.com/destinations/destinationsmiddle-east-and-africa/destination-doha-a-jewel-in-the-crown/" class="mySwiper2-content mw-xs text-black">
+                                        <h5 class="fs-l my-4 text-black text-grey-hover">Destination Doha: A Jewel in the Crown</h5>
+                                    </a>
+                                </div>
+                            </div>
+                                                    <div class="col-md-4">
+                                <div class="mySwiper2-wrap">
+                                    <a href="https://businesstravelerusa.com/air-travel/what-is-it-like-to-fly-on-a-turkish-airlines-787-9-dreamliner/" class="mySwiper2-img mb-4">
+                                        <div class="ratio ratio-192x145">
+                                                                                            <img width="792" height="680" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20792%20680'%3E%3C/svg%3E" alt="" class="w-100 h-100 of-cover" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/12/Turkish-Airlines_Courtesy-of-Turkish-Airlines.jpg"><noscript><img width="792" height="680" src="https://businesstravelerusa.com/wp-content/uploads/2022/12/Turkish-Airlines_Courtesy-of-Turkish-Airlines.jpg" alt=""
+                                                     class="w-100 h-100 of-cover"></noscript>
+                                                                                    </div>
+                                    </a>
+                                    <a href="https://businesstravelerusa.com/air-travel/what-is-it-like-to-fly-on-a-turkish-airlines-787-9-dreamliner/" class="mySwiper2-content mw-xs text-black">
+                                        <h5 class="fs-l my-4 text-black text-grey-hover">What Is It like to Fly on the Turkish Airlines 787-9 Dreamliner?</h5>
+                                    </a>
+                                </div>
+                            </div>
+                                        </div>
+            </div>
+            <section>
+                <div class="container">
+                    <img width="200" height="200" id="image" class="image" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" <="" div="" data-lazy-src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/images/loading-image.gif"><noscript><img width="200" height="200" id="image" class="image"
+                         src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/images/loading-image.gif"
+                </div></noscript>
+            </div></section>
+            <div id="appendData"></div>
+        </div>
+        <section>
+            <div class="container">
+                <img width="200" height="200" id="after_image" class="image" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" data-lazy-src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/images/loading-image.gif"><noscript><img width="200" height="200" id="after_image" class="image" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/images/loading-image.gif"></noscript>
+            </div>
+        </section>
+    </div>
+</section>
+<!--end author detail section-->
+
+<!--start footer section-->
+
+<footer class="footer bg-black">
+    <div class="container">
+        <div class="row align-items-center g-3">
+            <div class="col-lg-2 col-6 order-1">
+                <div class="footer-left">
+                    <a href="https://businesstravelerusa.com">
+                        <img width="537" height="74" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20537%2074'%3E%3C/svg%3E" class="attachment- size-" alt="Business Treaveler logo" decoding="async" data-lazy-src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg"><noscript><img width="537" height="74" src="https://businesstravelerusa.com/wp-content/uploads/2022/08/logo.svg" class="attachment- size-" alt="Business Treaveler logo" decoding="async" /></noscript>                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8 order-3 order-lg-2 mt-2 mt-lg-0">
+                <div class="footer-middle text-lg-center mt-lg-4">
+                    <ul id="menu-footer-menu" class="navbar-nav d-inline-block"><li id="nav-menu-item-8003" class="nav-item"><a href="https://businesstravelerusa.com/archive/" class="nav-link fs-xs font-filsonpro ">Archive</a></li>
+<li id="nav-menu-item-47" class="nav-item"><a href="https://businesstravelerusa.com/about-us/" class="nav-link fs-xs font-filsonpro ">About Us</a></li>
+<li id="nav-menu-item-46" class="nav-item"><a href="https://businesstravelerusa.com/contact-us/" class="nav-link fs-xs font-filsonpro ">Contact Us</a></li>
+<li id="nav-menu-item-45" class="nav-item"><a href="https://businesstravelerusa.com/advertising/" class="nav-link fs-xs font-filsonpro ">Advertising</a></li>
+<li id="nav-menu-item-44" class="nav-item"><a href="https://businesstravelerusa.com/terms-conditions/" class="nav-link fs-xs font-filsonpro ">Terms  +  Conditions</a></li>
+<li id="nav-menu-item-43" class="nav-item"><a href="https://businesstravelerusa.com/privacy-policy/" class="nav-link fs-xs font-filsonpro ">Privacy Policy</a></li>
+<li id="nav-menu-item-42" class="nav-item"><a href="https://businesstravelerusa.com/cookie-policy/" class="nav-link fs-xs font-filsonpro ">Cookie Policy</a></li>
+</ul>                </div>
+            </div>
+            <div class="col-lg-2 col-6 order-2 order-lg-3">
+                <div class="footer-right d-flex align-items-center justify-content-end">
+                                                                                <a href="https://www.facebook.com/businesstravelerUS" target="_blank">
+                                                        <div class="footer-icon d-flex align-items-center justify-content-center ">
+                                <i class="icon-facebook"></i>
+                            </div>
+                                                            </a>
+                            
+                                                                                    <a href="https://www.instagram.com/businesstravelerusa/" target="_blank">
+                                                        <div class="footer-icon d-flex align-items-center justify-content-center ">
+                                <i class="icon-instagram"></i>
+                            </div>
+                                                            </a>
+                            
+                                                                                    <a href="https://www.linkedin.com/company/business-traveler" target="_blank">
+                                                        <div class="footer-icon d-flex align-items-center justify-content-center ">
+                                <i class="icon-linkedin2"></i>
+                            </div>
+                                                            </a>
+                            
+                                                                                    <a href="https://twitter.com/BizTraveler_USA" target="_blank">
+                                                        <div class="footer-icon d-flex align-items-center justify-content-center me-lg-0">
+                                <i class="icon-twitter"></i>
+                            </div>
+                                                            </a>
+                            
+                                        </div>
+            </div>
+            <div class="col-12 order-last mt-1 mt-lg-0">
+                <div class="footer-bottom">
+                    <p class="fs-xs text-white font-roboto mb-0">Website created by <a href="https://ink-studio.com" target="_blank">Ink Studio</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end footer section-->
+
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+
+    jQuery('#dismiss').click(function () {
+        let date = new Date();
+        var currentDate = date.getDate();
+        const d = new Date();
+        d.setTime(d.getTime() + (currentDate*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = "news_letter" + "=" + "news_letter_cookie" + ";" + expires + ";path=/";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        var cookieFound = 0;
+        var found = ca.map(function( x){
+            if(x == ' news_letter=news_letter_cookie' ){
+                cookieFound = 1;
+            }
+        } );
+        var currentUrl = window.location.href;
+        var url = new URL(currentUrl);
+        if(cookieFound == 1){
+            window.location.href = `${url.origin}`;
+        }
+
+    });
+
+
+});</script>
+
+
+<!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span><div class="cookie"><div class="container"><div class="d-flex align-items-center justify-content-between"><div class="cookie-message"><a href="#" class="text-white text-white-hover">We use cookies to improve your experience on our site and to show your relevant advertising. <br>
+To find out more, read our updated privacy policy and cookie policy.</a></div><div class="cookie-btn"><a id="wt-cli-accept-all-btn" role="button" data-cli_action="accept_all" class="wt-cli-element cli-plugin-main-button wt-cli-accept-all-btn cookie_action_close_header cli_action_button">Ok</a></div></div></div></div></span></div><div id="cookie-law-info-again" data-nosnippet="true"><span id="cookie_hdr_showagain">Manage consent</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+	<div class="cli-modal-content cli-bar-popup">
+		  <button type="button" class="cli-modal-close" id="cliModalClose">
+			<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+			<span class="wt-cli-sr-only">Close</span>
+		  </button>
+		  <div class="cli-modal-body">
+			<div class="cli-container-fluid cli-tab-container">
+	<div class="cli-row">
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+			<div class="cli-privacy-overview">
+				<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+					<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.</div>
+				</div>
+				<a class="cli-privacy-readmore" aria-label="Show more" role="button" data-readmore-text="Show more" data-readless-text="Show less"></a>			</div>
+		</div>
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+												<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+								Necessary							</a>
+															<div class="wt-cli-necessary-checkbox">
+									<input type="checkbox" class="cli-user-preference-checkbox" id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked">
+									<label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+								</div>
+								<span class="cli-necessary-caption">Always Enabled</span>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="necessary">
+								<div class="wt-cli-cookie-description">
+									Necessary cookies are absolutely essential for the website to function properly. These cookies ensure basic functionalities and security features of the website, anonymously.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Duration</th><th class="cookielawinfo-column-4">Description</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-analytics</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Analytics".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-functional</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by GDPR cookie consent to record the user consent for the cookies in the category "Functional".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-necessary</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookies is used to store the user consent for the cookies in the category "Necessary".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-others</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Other.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-performance</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Performance".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">viewed_cookie_policy</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data.</td></tr></tbody></table>								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="functional" data-toggle="cli-toggle-tab">
+								Functional							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-functional" class="cli-user-preference-checkbox" data-id="checkbox-functional">
+									<label for="wt-cli-checkbox-functional" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Functional</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="functional">
+								<div class="wt-cli-cookie-description">
+									Functional cookies help to perform certain functionalities like sharing the content of the website on social media platforms, collect feedbacks, and other third-party features.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="performance" data-toggle="cli-toggle-tab">
+								Performance							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-performance" class="cli-user-preference-checkbox" data-id="checkbox-performance">
+									<label for="wt-cli-checkbox-performance" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Performance</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="performance">
+								<div class="wt-cli-cookie-description">
+									Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="analytics" data-toggle="cli-toggle-tab">
+								Analytics							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-analytics" class="cli-user-preference-checkbox" data-id="checkbox-analytics">
+									<label for="wt-cli-checkbox-analytics" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Analytics</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="analytics">
+								<div class="wt-cli-cookie-description">
+									Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="advertisement" data-toggle="cli-toggle-tab">
+								Advertisement							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-advertisement" class="cli-user-preference-checkbox" data-id="checkbox-advertisement">
+									<label for="wt-cli-checkbox-advertisement" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Advertisement</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="advertisement">
+								<div class="wt-cli-cookie-description">
+									Advertisement cookies are used to provide visitors with relevant ads and marketing campaigns. These cookies track visitors across websites and collect information to provide customized ads.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="others" data-toggle="cli-toggle-tab">
+								Others							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-others" class="cli-user-preference-checkbox" data-id="checkbox-others">
+									<label for="wt-cli-checkbox-others" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Others</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="others">
+								<div class="wt-cli-cookie-description">
+									Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+								</div>
+							</div>
+						</div>
+					</div>
+										</div>
+	</div>
+</div>
+		  </div>
+		  <div class="cli-modal-footer">
+			<div class="wt-cli-element cli-container-fluid cli-tab-container">
+				<div class="cli-row">
+					<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+						<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+						
+															<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">SAVE &amp; ACCEPT</a>
+													</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><script type="rocketlazyloadscript">(function() {function maybePrefixUrlField() {
+	if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if (urlFields) {
+	for (var j=0; j < urlFields.length; j++) {
+		urlFields[j].addEventListener('blur', maybePrefixUrlField);
+	}
+}
+})();</script><link data-minify="1" rel="stylesheet" id="cookie-law-info-table-css" href="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-table.css?ver=1671516246" type="text/css" media="all">
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/businesstravelerusa.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/js/gsap/gsap.min.js?ver=1.0.0" id="gsapJs-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/js/gsap/ScrollTrigger.min.js?ver=1.0.0" id="gsapScrollJs-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/js/gsap/ScrollToPlugin.min.js?ver=1.0.0" id="gsapScrollJsPlugin-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/themes/businesstraveller/assets/js/marquee/jquery.marquee.min.js?ver=1.0.0" id="marqueeJs-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/themes/businesstraveller/assets/js/app.js?ver=1671516246" id="appJs-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/themes/businesstraveller/assets/js/custom.js?ver=1671516246" id="custom-appJs-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" defer="" src="https://businesstravelerusa.com/wp-content/cache/min/1/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=1671516246" id="mc4wp-forms-api-js"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://businesstravelerusa.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+
+
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+    var count = 1;
+    var ajaxFinished = 0;
+    var postFound = true;
+    var lastArticleId;
+    jQuery(document).ready(function(){
+        jQuery('#image').hide();
+        jQuery('#after_image').hide();
+
+    });
+    var jqxhr = {
+        abort: function () {
+        }
+    };
+    jQuery(document).on('touchmove', onScroll); // for mobile
+    function onScroll() {
+        if (jQuery(window).scrollTop() > jQuery(document).height() - jQuery(window).height() - 100) {
+            fetchData();
+        }
+    }
+    function fetchData() {
+        jqxhr.abort();
+        jqxhr = jQuery.ajax({
+            type: 'post',
+            url: 'https://businesstravelerusa.com/wp-admin/admin-ajax.php',
+            data: {
+                action: 'get_next_article',
+                showed_article: jQuery('section.article-content').attr('data-showed-articles'),
+                related_article: jQuery('section.article-content').attr('data-related-articles'),
+            },
+            dataType: 'json',
+            beforeSend: function () {
+                jQuery('#after_image').css("display", "flex");
+                jQuery('#after_image').css("align-items", "center");
+                jQuery('#after_image').css("justify-content", "center");
+                jQuery('#after_image').css("margin", "auto");
+                jQuery('#after_image').show();
+
+            },
+            success: function (response) {
+                if(response.status == "No More Article Have"){
+                    postFound = false;
+                }
+                if (response.id != '') { count++; lastArticleId = response.id }
+                var dataShowing = jQuery('.article-content').attr('data-showed-articles');
+                dataShowing = dataShowing.split(",");
+                if (dataShowing.length > 3) {
+                    var checkClass = jQuery('footer.footer').hasClass('footer-fix');
+                    if (checkClass == false) {
+                        jQuery('footer.footer').addClass('footer-fix');
+                    }
+                }
+                dataShowing.push(response.id);
+                var result = dataShowing.join();
+                jQuery('.article-content').attr('data-showed-articles', result);
+                var dataRelatedArticle = jQuery('.article-content').attr('data-related-articles');
+                dataRelatedArticle = dataRelatedArticle.split(",");
+                dataRelatedArticle.push(response.related_post_id);
+                var related_result = dataRelatedArticle.join();
+                jQuery('.article-content').attr('data-related-articles', related_result);
+                if (count <= 4) {
+                    jQuery("#appendData").append(response.content);
+                } else {
+                    jQuery('#appendData').append(response.content);
+                }
+            },
+            complete: function () {
+                jQuery('#image').hide();
+                jQuery('#after_image').hide();
+
+            },
+        });
+    }
+    jQuery(window).scroll(function () {
+        var position = jQuery(window).scrollTop();
+        var related_art = jQuery('.related-articles').position();
+        var bottom = jQuery('.article-content').innerHeight()/2;
+        var footer = jQuery('.footer').offset();
+        if(position > parseInt(related_art.top) - 400){
+            if(postFound){
+                if(count <= 3){
+                    fetchData();
+                }
+            }
+
+        }
+    });
+    jQuery(window).scroll(function () {
+        if (jQuery(window).scrollTop() > jQuery(document).height() - jQuery(window).height()-100) {
+            if(postFound){
+                if(ajaxFinished == 0){
+                    setTimeout(function () {
+                        fetchData();
+                    }, 300)
+                }else{
+                    setTimeout(function () {
+                        ajaxFinished = 0;
+                    }, 500)
+                }
+            }
+        }
+    });
+});</script>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me --></body></html>

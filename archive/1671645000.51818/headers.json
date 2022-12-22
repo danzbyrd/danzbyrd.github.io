@@ -1,0 +1,22 @@
+{
+    "Status-Code": 200,
+    "Server": "nginx",
+    "Date": "Wed, 21 Dec 2022 20:24:31 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "37280",
+    "Connection": "keep-alive",
+    "Cache-Control": "max-age=120, stale-while-revalidate=60, stale-if-error=7200",
+    "ETag": "\"2e3a4-XUeW0NGCxGL7RMxOqs3XD7c3pM0\"",
+    "Content-Encoding": "gzip",
+    "X-Cloud-Trace-Context": "4448e1532878f8cccbc3e9e0cfbbfaf2",
+    "Access-Control-Allow-Origin": "*",
+    "Accept-Ranges": "bytes",
+    "Via": "1.1 varnish",
+    "Age": "97",
+    "X-Served-By": "cache-iad-kiad7000059-IAD",
+    "X-Cache": "HIT",
+    "X-Cache-Hits": "1",
+    "X-Timer": "S1671654272.814507,VS0,VE6",
+    "Vary": "Accept-Encoding",
+    "Strict-Transport-Security": "max-age=31557600"
+}

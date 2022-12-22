@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Overview" transform="translate(-1201.000000, -7439.000000)" fill="#62686E">
+            <g id="footer" transform="translate(0.000000, 7095.000000)">
+                <g id="Group-10" transform="translate(155.000000, 339.000000)">
+                    <g id="social-media" transform="translate(1046.000000, 5.000000)">
+                        <path d="M8.49295385,4.54226087 L5.53818462,4.54226087 L5.53818462,3.29986957 C5.53818462,2.71552174 5.94941538,2.57921739 6.2388,2.57921739 L8.30741538,2.57921739 L8.30741538,0.00834782609 L5.31041538,-0.000130434782 C2.59241538,-0.000130434782 2.07664615,1.91595652 2.07664615,3.14334783 L2.07664615,4.54226087 L-0.000276923078,4.54226087 L-0.000276923078,7.15095652 L2.07664615,7.15095652 L2.07664615,14.9770435 L5.53818462,14.9770435 L5.53818462,7.15095652 L8.20495385,7.15095652 L8.49295385,4.54226087 Z" id="ico-facebook"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

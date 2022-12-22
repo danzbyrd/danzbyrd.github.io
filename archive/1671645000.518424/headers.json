@@ -1,0 +1,23 @@
+{
+    "Status-Code": 200,
+    "Date": "Wed, 21 Dec 2022 19:02:14 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Content-Length": "45932",
+    "Connection": "keep-alive",
+    "Cache-Control": "public, max-age=3600",
+    "Vary": "Accept-Encoding",
+    "Content-Encoding": "gzip",
+    "X-B": "V6.3-3 web1",
+    "Age": "0",
+    "X-Cache": "miss cached",
+    "X-Cache-Hits": "0",
+    "X-Forwarded-For": "173.67.182.169",
+    "X-UA-Device": "desktop",
+    "Set-Cookie": "X-UA-Info=country|US|state|PA|city|Palmyra|isp|Verizon Fios|ip|173.67.182.169|device|desktop; path=/;",
+    "X-Debug": "",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=86400; includeSubDomains",
+    "Accept-Ranges": "bytes"
+}

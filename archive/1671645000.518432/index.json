@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518432",
+    "base_url": "www.entrepreneur.com/article/323156",
+    "basename": "323156",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.entrepreneur.com/article/323156",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.entrepreneur.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.entrepreneur.com/article/323156.html"
+    },
+    "domain": "www.entrepreneur.com",
+    "extension": "",
+    "hash": "1EA6N3EKSF3T39HCFDJP",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:32:13.304737+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221193212/https://www.entrepreneur.com/en-ae/growth-strategies/the-evolved-entrepreneur-10-things-i-learnt-at-mindvalley/323156",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:32:00.616882+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:31:53.497717+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:51.360987+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.entrepreneur.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:31:36.393277+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:36.256368+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:31:36.645675+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:36.398720+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:32:00.604805+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:58.520128+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:31:58.490675+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:55.678567+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:31:49.034410+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:46.567196+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpc5y57ak4",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:31:55.674098+00:00",
+                "index_texts": [
+                    "\n\t\n\t\t\tOpinions expressed by Entrepreneur contributors are their own.\n\t\n\t\n\t\t\tYou're reading Entrepreneur Middle East, an international franchise of Entrepreneur Media.\n\t\n\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tAs an entrepreneur, one of the first lessons we learn is to embrace the \"forever student' in all of us. From life lessons learnt through failures, to wrong hires, tricky business associations, or even trusting too much, it seems we find ourselves perpetually on a path of failing, learning, evolving and eventually transcending.\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\n\t\n\n\t\n\t\t\t\n\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tShutterstock\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\tHowever, outside of personal experiences, we find ourselves constantly yearning for better teaching as well. Though there may be no dearth of resources out there, we frequently fall for the usual trappings of insular books, seminars, mentors and quick fix guides- all in the hope of making us better entrepreneurs.   This quest for connective learning sent me on a journey three years ago today and introduced me to the power of \"transformative education' and a platform called Mindvalley.Through a kick off of a TED talks meets Burning Man-like event, I deep dove into the world of Mindvalley, and found myself instantly embraced by the community. Suddenly, I was listening to some of the greatest minds in the world, from Steven Kotler talking about the concept of flow and its integral role amongst thought leaders and the smartest minds of our time, to Vishen Lakhiani, the Mindvalley founder himself, talking about rising from failure and a dead-end job, to creating one of the largest online tribes of likeminded people in the world. People who opt to want to \"bend reality' (often used by Lakhiani himself) and \"live in wonder\" (again, his words not mine).Cut to one year later, and I was now attending the inaugural Mindvalley University in Barcelona, or Mindvalley \"U' as we refer to it, and then once again this summer for the second year in the growing startup capital of Europe, Tallinn, Estonia.  The month-long transformational event, for all ages, brought together a tribe of change makers from across the globe. Through a platform dedicated to expanding social connections and igniting a sense of wonder, I had the opportunity to learn from world class speakers, teachers and business development specialists immersed in a forever student-like ambience.Here are my key takeaways:1. Find your tribe: It is often lonely out there for entrepreneurs, and nothing can be more soothing than to know that you are not alone. That others question themselves just as you do, that others rise every morning thinking can I do it today? A common practice at Mindvalley U is to hug your tribe every morning and start the day with an energetic hip shaking dance, perhaps to remind you to realize that you are alive and ready to conquer just about anything you set your heart on!2. Be grateful and celebrate your wins: You are here today because of everything you accomplished. You are here today because of the mistakes you made and the intuition you followed, and it is important to celebrate and be grateful for those opportunities. You need to close your \"hindsight window'.Your hindsight window -a term coined by another Mindvalley University regular, the founder of Wild Fit Eric Edmeades- refers to the time between when you experience a negative event and the time in the future where you end up perceiving that same event as a \"blessing'. According to Edmeades, the shorter your hindsight window, the easier it is to achieve happiness in the present.3. Learn to trust your gut: In a world where AI trends and data analysis are available to us at our finger tips, some of the greatest success stories from entrepreneurs and billionaires still talk about gut instinct and intuition in the process of decision-making. The likes of Peter Diamandis and Richard Branson will confirm learning to build you intuition and trust your gut is a sure shot formula for success.4. Practice mindfulness and meditation: We talked about building intuition, and there is possibly no better way to achieve this than to connect with oneself. It is when we are mindful that we become aware of our values, decision making practices, and how our body reacts to stress, success and failure. We learn to feel our breath and quiet the mind even in times of high stress. At MVU I had the honor to learn how to incorporate mindfulness and meditation into my daily life courtesy of Tibetan Buddhist monk, Gelong Thubten. Having taught monthly classes in the subject at reputable institutions like Google and to the entire cast of Dr. Strange, Thubten says, \"Mindfulness helps you build compassion and empathy. It does so much more than help you manage stress, it transforms the way in which you deal with it.\"5. Visualize and realize: Tony Robbins says, \"Whatever you hold in your mind on a consistent basis is exactly what you will experience in your life.\" Some of the greatest leaders and minds in the world begin their days with visualization, they see themselves at the finish line even before the race has begun. Vishen Lakhiani often speaks of visualizing your long-term goals by imagining them on a flat screen in front of you.6. Understand deep work: Embraced by many startup cultures in the world today and used frequently at the Mindvalley HQ, Author Cal Newport defines deep work as \"professional activities performed in a state of distraction- free concentration that will push your cognitive capabilities to their limit.\" Deep work requires windows of focused time free from distractions like emails, meetings, social media etc. CEO of Evercoach by Mindvalley, Ajit Nawalkha says, \"If you do not have distractions, you can reach things faster and be in a state of \"flow'. Deep work versus fractured time, allows you to efficiently shorten your work day. His mantra, 4 x 4, meaning four hours of work four days a week is only possible because of states of \"deep work'.7. Be brave: The old adage \"fortune favors the bold' comes to mind when I think of bravery. Mindvalley University curates a collective of speakers from all walks of life. For me, one of the most common takeaways was to stand tall in the face of fear, and perhaps a first step into doing that is just committing to uprooting yourself and your family and working from a different city every year. Sometimes bravery simply means learning to transform your fear to flow. Steven Cotler, the author of The Rise Of Super Man and Stealing Fire, says, \"When risk is a challenge, fear becomes a compass- literally pointing people in the direction they need to go next.\"8. Acknowledge relationships: To get ahead in life, your key relationships need to be in the right place. Human connection, acknowledgment and praise, are all a part of building an ecosystem or culture you want to create in your business for years to come.9. Define your high structure and low structure teams: According to Eric Strauss, COO of Mindvalley, great organizations are a composition of both high and low structure teams. Find out which one you are and try to find ways to include the other. If you see yourself as a creative organization or team, you are probably operating as a low structure cohort. Process maybe exactly what you need. The same applies to heavy operations and process driven organizations that may need to pump in some fresh creative low structure minds to help drive innovation.10. Know that you are just a tiny particle in the universe, but the universe is in you: Your decisions and their outcomes were meant to happen. \"Everything is dependent on everything else. We tend to forget that in our world,\" says, Nassim Haramein, a Mindvalley speaker and a renowned quantum physicist as well as the founder of The Resonance Academy.Related: What The Middle East Startup Ecosystem Can Learn From Other Emerging Markets\n\n\t\t\t\t\t\t\t\t\t\t"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:53.824031+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:31:51.336970+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:49.076418+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.entrepreneur.com/article/323156",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:31:46.560242+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:36.654557+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:31:53.820124+00:00",
+                "index_texts": null,
+                "output": "The Evolved Entrepreneur: 10 Things I Learnt At Mindvalley",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:53.787932+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518432/warc/1671651113",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.entrepreneur.com/article/323156"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:31:53.772187+00:00",
+                "index_texts": null,
+                "output": "www.entrepreneur.com/article/323156.html",
+                "pwd": "/data/archive/1671645000.518432",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:53.501406+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221193212/https://www.entrepreneur.com/en-ae/growth-strategies/the-evolved-entrepreneur-10-things-i-learnt-at-mindvalley/323156",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "The Evolved Entrepreneur: 10 Things I Learnt At Mindvalley",
+        "warc": null,
+        "wget": "www.entrepreneur.com/article/323156.html"
+    },
+    "link_dir": "/data/archive/1671645000.518432",
+    "newest_archive_date": "2022-12-21T19:32:00.616882+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T19:31:36.256368+00:00",
+    "path": "/article/323156",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "3b913670-18e4-4402-b71e-787342a0d572",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518432",
+    "title": "The Evolved Entrepreneur: 10 Things I Learnt At Mindvalley",
+    "updated": "2022-12-21T19:31:36.256250+00:00",
+    "updated_date": "2022-12-21 19:31",
+    "url": "https://www.entrepreneur.com/article/323156"
+}

@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518533",
+    "base_url": "www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972",
+    "basename": "giving-others-a-helping-hand-KI5093972",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.thesundaily.my",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972.html"
+    },
+    "domain": "www.thesundaily.my",
+    "extension": "",
+    "hash": "SKXV4V67E66P32ZQFGC4",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:00:03.025109+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: Failed to find \"content-location\" URL header in Archive.org response.",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:56.675945+00:00",
+                "status": "failed"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:59:39.885374+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:35.312600+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.thesundaily.my"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:58:53.779954+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:53.635135+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:58:54.215533+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:53.800197+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T18:59:56.665725+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:54.649442+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T18:59:54.645911+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:51.754095+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:59:29.796652+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:23.386956+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpatw4bczw",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T18:59:51.749016+00:00",
+                "index_texts": [
+                    " ASHA Gill, who was born in the United Kingdom, moved back to Malaysia in 1995 and began a steady rise in the local entertainment scene as a TV host, model and actress. Best known for hosting music chart shows such as RIM Chart Show and as one of the anchors of Channel [V] International, Asha also starred in TV series such as City of the Rich, films such as Mimpi Moon and several music videos. She later became a travel show host with Lonely Planet\u2019s Six Degrees, and was also a radio presenter and columnist for a women\u2019s lifestyle magazine. She has her own official website AshaGill.Com, where she shares her views on a variety of subjects. She is also passionate about human rights, especially women\u2019s rights. In 2015 she stepped away from the entertainment world and started working for Mindvalley to help set up, host and create programmes and coach for their Soulvana platform. She left MindValley in 2017 and started her own coaching practice, where she also conducts hypnotherapy sessions. \u201cI teach and coach people on that which I needed the most myself. \u201cI had always had one foot in the world of personal development since I was a teen, so it seemed like a natural shift, after going through a few difficult years and then a brutal 2017, to move into an area where I could help others. Ultimately this work brings me great joy, and that was exactly what I needed.\u201d Explaining what she does, Asha said: \u201cI can\u2019t speak for others, but I help people grow and nurture a mindset that helps them achieve what they want. Our thought process, programmes we run in our mind, our beliefs, are the very things getting in the way of us having the kind of mind that is our ally, not our foe. \u201cIt\u2019s the process that helped me see how I was self-sabotaging myself without even realising it. \u201cWhen you can create a shift in perspective, breakthroughs happen and you can get on with what you want to do, without the limiting beliefs that were getting in your way. You can learn how to manage your mind better, and when you do, you create mental health. \u201cI am fascinated by people and I am very intuitive, I pick up on things unspoken. To be able to hone that intuition, learn a different set of skills, I am able to help others the way I needed, and was helped. Nothing feels more fulfilling than seeing a person learn how to love, trust, respect and support themselves. It\u2019s an incredible thing.\u201d The pandemic put a damper on many of her plans. \u201cI also had a bit of a rollercoaster year, fracturing one foot after the other, then getting shingles! Boy, was that a fun challenge! It\u2019s a good thing my son is a good cook, he fixed up some amazing meals.\u201d Since she already works virtually, she was still able to engage with clients, some who are from the UK, Australia and the US. \u201cSo instead of it being a small part of my work, it became the whole of it. I was also doing workshops and training online. It suited me because the kiddo was at home and I couldn\u2019t leave him. \u201cHomeschooling, work, fractured feet \u2013 it was more than enough to keep me occupied!\u201d She has not actively been involved in the entertainment scene since 2015, but has hosted a few events for special clients. \u201cBut I mostly do events and work related to what I do now in the area of mental health.\u201d Looking back at her career, Asha finds it hard to name one highlight. \u201cGosh, I don\u2019t think I have one highlight \u2013 I have far too many. In fact I loved every minute of it all. Even the toughest days. If I had to pick one thing though, it would be my Lonely Planet\u2019s Six Degrees episode in Kaohsiung, Taiwan. \u201cI was pregnant with my son and it was a really exciting, but super tiring time for me. It\u2019s such a lovely thing to be able to share with him. It was also the last ever episode I shot for the series, which was a bit sad, too.\u201d "
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:48.930263+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:59:35.263890+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:29.807863+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T18:59:23.373988+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:58:54.221325+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:59:48.926541+00:00",
+                "index_texts": null,
+                "output": "Giving others a helping hand",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:48.878500+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518533/warc/1671649179",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T18:59:48.869012+00:00",
+                "index_texts": null,
+                "output": "www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972.html",
+                "pwd": "/data/archive/1671645000.518533",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:59:39.889761+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "ArchiveError: Failed to find \"content-location\" URL header in Archive.org response.",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Giving others a helping hand",
+        "warc": null,
+        "wget": "www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972.html"
+    },
+    "link_dir": "/data/archive/1671645000.518533",
+    "newest_archive_date": "2022-12-21T18:59:56.675945+00:00",
+    "num_failures": 1,
+    "num_outputs": 11,
+    "oldest_archive_date": "2022-12-21T18:58:53.635135+00:00",
+    "path": "/style-life/lifestyle/giving-others-a-helping-hand-KI5093972",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "483dcf99-035b-4ece-9b89-2eb0d0f0f857",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518533",
+    "title": "Giving others a helping hand",
+    "updated": "2022-12-21T18:58:53.635010+00:00",
+    "updated_date": "2022-12-21 18:58",
+    "url": "https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972"
+}

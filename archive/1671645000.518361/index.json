@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518361",
+    "base_url": "www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9",
+    "basename": "want-to-change-the-world-live-by-these-guidelines-2013-9",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.businessinsider.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9.html"
+    },
+    "domain": "www.businessinsider.com",
+    "extension": "",
+    "hash": "NHR5JEQS86DJSYJZ9DD6",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:41:48.266496+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['curl', '--silent', '--location', '--compressed', '--head', '--max-time', '120', '--user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)', 'https://web.archive.org/save/https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:48.252196+00:00",
+                "status": "failed"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:39:42.001034+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:41.271637+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.businessinsider.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:37:03.027631+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:37:02.884675+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:37:03.468531+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:37:03.041049+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:39:48.208865+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:47.623375+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:39:47.619438+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:45.277218+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:37:41.080410+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:37:39.779068+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmp8vilhmh4",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:39:45.272746+00:00",
+                "index_texts": [
+                    "\n                                Tired of being told to preserve the status quo? Do you blow a gasket every time you hear, \u201cThat\u2019s not how it\u2019s done\u201d? Are you destined to be the next (fill in the blank) and raring to go?\n                        \n                        Why not be a disruptive hero? Disruptive heroes are people who either completely change the rules or teach us that the status quo needs to be pushed, challenged or broken. They have a major impact on what we believe is possible, what we do and who we become.Here\u2019s how disruptive heroes change the world\u2014and what you should know before becoming a one:1. Question everythingWe\u2019re entering the age of the Internet of everything\u2014where, for example, your peas know if they\u2019ve been shipped properly and your ambulance attendant can instantly access your medical records on her smartphone.How would you design a healthcare system if there were no such thing as doctors?\n                        \n                        That ridiculous question, asked by Jamie Heywood, led him to co-found PatientsLikeMe, which bypasses the double-blind approach to medical research and uses crowdsourcing techniques to find better treatments for hard-to-treat diseases.All assumptions behind every business decision are now up for grabs. You can be the one who leads us into the future! Begin by questioning all time-honored assumptions.2. Audacity mattersMy goal is to build the greatest place in the world to work. So I started studying all the things the best companies did and decided to one-up them.That\u2019s Vishen Lakhiani, founder of MindValley, a 21st century publishing, media and education company based in Malaysia. And Lakhiani is achieving his goal, with 20 percent of his employees starting their own businesses within two years of starting at MindValley.\n                        \n                        Do you need to be the best in the world to be audacious? No. But no matter how small your focus is, audacity matters. Because in an era of constant disruptions, incrementalism is dead. Go bold or get buried. (Click to Tweet!)3. Leap before the net appearsThere are no safety nets anymore. Deal with it. Life\u2019s tough; get a helmet and move on.But don\u2019t freak!Risk is not as risky as you think. A strong social network with good people around you is a good enough safety net. If you have that, you can pretty much leave whatever you have and take a calculated risk on anything.\n                        \n                        That\u2019s Manick Bhan, who left a very secure job at Goldman Sachs to pursue his dream: building Rukkus, a new online venture helping people stay connected to their favorite bands.Bhan (and every other disruptive hero I\u2019ve interviewed) shared that at some point, you need to follow your vision and do whatever will get you there. Each hero who took that leap said their social network\u2014friends, family, community\u2014was truly their safety net. Those folks will be there for you, no matter what.4. Don\u2019t yell \u201cbooga booga!\u201dDisrupting things sounds great, until you realize that if you don\u2019t have any way to make it work, you\u2019re just a disruptive guy yelling \u201cbooga booga!\u201d That\u2019s not useful.This sage advice comes from one of today\u2019s social era disruptors, Chris Brogan, founder of Human Business Works.\n                        \n                        What you need to focus on is innovation. Innovation is being disruptive to achieve a specific goal. Begin by asking the questions no one else is asking, such as:If our company (team, store, product) didn\u2019t exist, how would we approach this?What if there were no rules for this? What would we do?What would \u201cwow\u201d everyone?5. It\u2019s not about youUltimately, being a disruptive hero is about paying it forward\u2014taking the gifts you were given throughout your life and making a difference for someone you don\u2019t yet know. Helping consumers have a better experience. Helping students learn better. Helping people get what they need.Being a disruptive hero is never about you. It\u2019s always about helping others. That\u2019s what heroes do.\n                        \n                        Bill Jensen, also known as Mr. Simplicity, is the author of the new book Disrupt! Think Epic. Be Epic. The book is based on interviews with 100 disruptive heroes and was published on August 5, 2013. Bill blogs at simplerwork.com.Get our best career advice delivered to your inbox. Sign up today!Read more posts on Brazen Life \u00bb\n                    "
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:44.106580+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:39:41.237551+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:37:41.085067+00:00",
+                "status": "failed"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:37:39.756595+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:37:03.472366+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:39:44.103176+00:00",
+                "index_texts": null,
+                "output": "Want to Change the World? Live by These Guidelines",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:44.077031+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518361/warc/1671651582",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:39:44.059798+00:00",
+                "index_texts": null,
+                "output": "www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9.html",
+                "pwd": "/data/archive/1671645000.518361",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:39:42.005069+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "TimeoutExpired: Command '['curl', '--silent', '--location', '--compressed', '--head', '--max-time', '120', '--user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)', 'https://web.archive.org/save/https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9']' timed out after 120 seconds",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9']' timed out after 120 seconds",
+        "singlefile": "singlefile.html",
+        "title": "Want to Change the World? Live by These Guidelines",
+        "warc": null,
+        "wget": "www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9.html"
+    },
+    "link_dir": "/data/archive/1671645000.518361",
+    "newest_archive_date": "2022-12-21T19:39:48.252196+00:00",
+    "num_failures": 2,
+    "num_outputs": 10,
+    "oldest_archive_date": "2022-12-21T19:37:02.884675+00:00",
+    "path": "/want-to-change-the-world-live-by-these-guidelines-2013-9",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "b3bbf5e5-bd33-4c91-81ea-4a4224bd483c",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518361",
+    "title": "Want to Change the World? Live by These Guidelines",
+    "updated": "2022-12-21T19:37:02.884554+00:00",
+    "updated_date": "2022-12-21 19:37",
+    "url": "https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9"
+}

@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.518272",
+    "base_url": "play.google.com/store/apps/details?id=com.mindvalley.mva",
+    "basename": "details",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/play.google.com/store/apps/details?id=com.mindvalley.mva",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=play.google.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "play.google.com/store/apps/details@id=com.mindvalley.mva.html"
+    },
+    "domain": "play.google.com",
+    "extension": "",
+    "hash": "N2Z9E1MQGQ596SQVPM2Q",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:18:16.680083+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221201814/https://play.google.com/store/apps/details?id=com.mindvalley.mva",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:18:02.628208+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:17:53.266720+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:51.692734+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=play.google.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:17:39.546950+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:39.391130+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:17:39.827033+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:39.562456+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T20:18:02.621647+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:18:00.293995+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T20:18:00.289903+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:57.591005+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:17:49.737387+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:47.728315+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmptyc6np8z",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T20:17:57.586301+00:00",
+                "index_texts": [
+                    "Mindvalley, a skills & learning platform for personal growth & self careTake self improvement learning up a level & find online courses in self growth, skill mastery, self care, motivation, mind and body from experts. Change your mindset with live expert classes & self improvement programs.Powered by machine learning & cutting edge tech, Mindvalley\u2019s educational self care & live expert classes bring personal development, self growth  & mindset. Our live expert classes, self care & improvement programs help achieve the full potential of your soul, mind and body to help with careers, relationships, health & mindset.Self care & improvement starts with mindset. Start inner changes and absorb info with educational live expert classes & self learning. Take Mindvalley\u2019s self growth planner anywhere & transform on the go.Push yourself with live expert classes in self growth areas. Leadership Skills, Confidence, Entrepreneurship, Productivity, Health, Fitness, Relationships, Public Speaking, Mindfulness, Happiness, Self Care, Meditation, Spirituality, Mind and Body : Mindvalley is the centre for expert classes on self development. Improve yourself & expand your emotional intelligence, mindset & self growth through expert classes.What to expect from Mindvalley\u2019s self improvement live expert classes & self growth planner:\u2022 Study high rated personal development courses in self growth to grow your skills\u2022 Personalized self learning, expert classes & insights based on your growth goals so you continue to push yourself\u2022 Free meditation expert classes for all levels to improve self care & mindset\u2022 Live events, self growth workshops, training sessions & talks\u2022 Study with world class coaches, teachers, trainers & entrepreneurs\u2022 Form real life working relationships with like minded people around the world\u2022 Easy navigation for a seamless learning experienceHow will I transform with Mindvalley?\u2022 Increase productivity & improve performance at home & work with self learning \u2022 Push yourself by learning to develop & live a healthy life, mind and body\u2022 Discover your purpose, find happiness, joy & fulfilment in your career & relationships\u2022 Reclaim life & increase your impact in the world\u2022 Become more focused on self care & personal growth\u2022 Overall self improvement & personal development as your mindset changes, your skill set expand & you reach goals with our unique program of live expert classes & programsMindvalley now has some great new features available completely for free\u2022 Unlock new meditations everyday\u2022 Gain instant access to lessons in all Quests programs\u2022 Customize your growth plan with personalized recommendations for a unique experience\u2022 Get networking. Join the Mindvalley community and make new connectionsOur revolutionary learning platform combines community & education to accelerate self growth with personal growth planner.Mindvalley MembershipUnlock our best programs (Quests\u2122) instantly with our Membership plan. Gain full access to a vault of acclaimed programs, series & lessons from world renowned experts & thought leaders. Learn from Nir Eyal, Keith Ferazzi, Jim Kwik, Marisa Peer, Neale Donald Walsch, our founder Vishen Lakhiani; including guests Mark Cuban, Maye Musk & Gary Zukav.Take classes to master a new skill & learn from anywhere. Mindvalley's online learning programs are designed to create lifelong changes in mind, body, career & relationships.Subscription plans in the app are processed via your Play Store account & will automatically renew under Google's terms & conditions. All in app purchases on your Mindvalley account will adhere to Google Play Store's payment, subscription & refund policies. You can manage your app subscription plans in your Play Store account settings.About Mindvalley: https://www.mindvalley.com/aboutPrivacy Policy: https://www.mindvalley.com/privacy-policyTerms & Conditions: https://www.mindvalley.com/terms-and-conditions"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:56.372190+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:17:51.663610+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:49.762874+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T20:17:47.702653+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:39.831715+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:17:56.367221+00:00",
+                "index_texts": null,
+                "output": "Mindvalley: Self-Improvement - Apps on Google Play",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:56.333726+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518272/warc/1671653873",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T20:17:56.326060+00:00",
+                "index_texts": null,
+                "output": "play.google.com/store/apps/details@id=com.mindvalley.mva.html",
+                "pwd": "/data/archive/1671645000.518272",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:17:53.271727+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221201814/https://play.google.com/store/apps/details?id=com.mindvalley.mva",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley: Self-Improvement - Apps on Google Play",
+        "warc": null,
+        "wget": "play.google.com/store/apps/details@id=com.mindvalley.mva.html"
+    },
+    "link_dir": "/data/archive/1671645000.518272",
+    "newest_archive_date": "2022-12-21T20:18:02.628208+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T20:17:39.391130+00:00",
+    "path": "/store/apps/details",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "bf9f5d78-bf94-44d7-8b07-a3b16eaf9cab",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518272",
+    "title": "Mindvalley: Self-Improvement - Apps on Google Play",
+    "updated": "2022-12-21T20:17:39.390989+00:00",
+    "updated_date": "2022-12-21 20:17",
+    "url": "https://play.google.com/store/apps/details?id=com.mindvalley.mva"
+}

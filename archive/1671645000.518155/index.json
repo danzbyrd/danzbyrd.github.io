@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.518155",
+    "base_url": "blog.mindvalley.com",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/blog.mindvalley.com",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=blog.mindvalley.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "blog.mindvalley.com/index.html"
+    },
+    "domain": "blog.mindvalley.com",
+    "extension": "",
+    "hash": "13GZ70FMX7CP47M524M6",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:31:23.367591+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221203121/https://blog.mindvalley.com/",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:40.374543+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:30:19.617213+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:17.854908+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=blog.mindvalley.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:30:04.926846+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:04.751211+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:30:05.529823+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:04.946963+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T20:30:40.360232+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:38.123630+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T20:30:38.115435+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:34.715530+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:30:15.793935+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:13.499208+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmptgb9ptx9",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T20:30:34.709778+00:00",
+                "index_texts": [
+                    "\n\n        \n            \n                \n                \n            \n\n            \n            \n                \n            \n        \n\n\t\t\t\n                        \nMindvalley Blog\n\n\n\nStep into your greatness and learn from best-selling personal growth trainers. Don\u2019t miss out on the latest articles on mind, body, spirit, and work.\n\n\n\n\n        \n                        Reaching the Peak Human Experience With BreathworkReaching the Peak Human Experience With Breathwork                    \n        \n                    \t\t\t\t\t\t\n\n            \n            Latest articles\n        \n        \n    \n    \t\t\t\n                        \nTry Mindvalley for Free\n\n\n\nExperience the world\u2019s most powerful life transformation platformBegin your path to greatness with free Quest lessons, daily live classes, guided meditations and healing sounds, special community events, and more. Unlock your free Mindvalley access today.Get started\n\n\n\nLearn From The Best Trainers\n\n\n\nLearn from the world\u2019s leading speakers, best-selling authors, and activists, who are all on a mission to raise human consciousness.\n\n\n\n\n\n\n\n\nFounder & CEO of Mindvalley\n\n\n\n\n\n\n\n\n\n\n\n\nMotivational Speaker & Best-selling Author\n\n\n\n\n\n\n\n\n\n\n\n\nWorld\u2019s Leader in Mental Fitness\n\n\n\n\n\n\n\n\n\n\n\n\nAward-winning Hypnotherapist\n\n\n\n\n\n\n\n\n\n\n    Awaken your unstoppable. Subscribe for daily insights on personal growth.\n    \n\n\n\n\nOur Recent Podcast Episodes\n\n\n\n\n                    \t\n\n    \n    \n    \n\n    \n\n"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:24.487547+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:30:17.836142+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:15.832884+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://blog.mindvalley.com/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T20:30:13.458899+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:05.534269+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:30:24.473814+00:00",
+                "index_texts": null,
+                "output": "Mindvalley Blog - The Latest In Personal Growth",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:24.418249+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518155/warc/1671654619",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://blog.mindvalley.com/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T20:30:24.370934+00:00",
+                "index_texts": null,
+                "output": "blog.mindvalley.com/index.html",
+                "pwd": "/data/archive/1671645000.518155",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:30:19.621627+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221203121/https://blog.mindvalley.com/",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley Blog - The Latest In Personal Growth",
+        "warc": null,
+        "wget": "blog.mindvalley.com/index.html"
+    },
+    "link_dir": "/data/archive/1671645000.518155",
+    "newest_archive_date": "2022-12-21T20:30:40.374543+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T20:30:04.751211+00:00",
+    "path": "/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "f4332d9c-1325-4bf3-9cc7-ab6b98236e0a",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518155",
+    "title": "Mindvalley Blog - The Latest In Personal Growth",
+    "updated": "2022-12-21T20:30:04.751007+00:00",
+    "updated_date": "2022-12-21 20:30",
+    "url": "https://blog.mindvalley.com/"
+}

@@ -1,0 +1,22 @@
+{
+    "Status-Code": 200,
+    "Date": "Wed, 21 Dec 2022 19:50:08 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Connection": "keep-alive",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Vary": "X-Forwarded-Proto,Accept-Encoding",
+    "X-Powered-By": "PHP/8.0.11",
+    "Set-Cookie": "PHPSESSID=ql8vt9kd497bbdkg00n878083b; path=/",
+    "Expires": "Wed, 21 Dec 2022 20:50:05 GMT",
+    "Cache-Control": "max-age=3600, must-revalidate",
+    "Pragma": "cache",
+    "Link": "<https://vulcanpost.com/wp-json/>; rel=\"https://api.w.org/\", <https://vulcanpost.com/wp-json/wp/v2/posts/677363>; rel=\"alternate\"; type=\"application/json\", <https://wp.me/p3ZbEc-2Qdd>; rel=shortlink",
+    "Referrer-Policy": "no-referrer-when-downgrade",
+    "CF-Cache-Status": "DYNAMIC",
+    "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xfQk3Mf5oRUkJSC%2FGnGYMANgzr4Vaxd115z8TwYzQVNvyPvRqbd6kxwKxwXKOxzZCzfZPYwvCdBG4HyfqbRJlfmb%2BxpKHJSrqzPONvNnkvnmt1jfMlmsf9ceQN3oU5wHLg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "Server": "cloudflare",
+    "CF-RAY": "77d3250dd8ed1791-EWR",
+    "Content-Encoding": "br",
+    "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="109px" viewBox="0 0 108 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-play</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="34.569508" cy="34.6548648" rx="34.569508" ry="34.6548648"></ellipse>
+        <filter x="-55.0%" y="-43.3%" width="209.9%" height="209.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AFest-Overview" transform="translate(-665.000000, -1220.000000)">
+            <g id="About-+-Aftermovies" transform="translate(140.000000, 730.000000)">
+                <g id="vid-Montego-Copy-2" transform="translate(400.000000, 443.000000)">
+                    <g id="sec-video">
+                        <g id="Group-7">
+                            <g id="ico-play" transform="translate(145.000000, 67.000000)">
+                                <g id="ico-solid-play">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                </g>
+                                <path d="M26.7913687,24.5192498 L26.7913687,43.9213596 C26.7913687,45.6995112 28.1300246,46.4310293 29.8120146,45.5339148 L48.0052501,35.8312522 C49.6716339,34.9421764 49.688974,33.5080794 48.0052501,32.6125727 L29.8120146,22.9099101 C29.3247577,22.6510652 28.863511,22.5256621 28.4560185,22.5256621 C27.4693667,22.5256621 26.7913687,23.2491415 26.7913687,24.5192498 Z" id="Clip-2" fill="#2C313B"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

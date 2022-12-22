@@ -1,0 +1,21 @@
+{
+    "Status-Code": 200,
+    "Date": "Wed, 21 Dec 2022 19:34:47 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Connection": "keep-alive",
+    "Vary": "Accept-Encoding, Accept-Encoding, Accept-Encoding, Accept-Encoding,Cookie",
+    "X-Pingback": "https://businesstravelerusa.com/xmlrpc.php",
+    "Link": "<https://businesstravelerusa.com/wp-json/>; rel=\"https://api.w.org/\", <https://businesstravelerusa.com/wp-json/wp/v2/articles/1462>; rel=\"alternate\"; type=\"application/json\", <https://businesstravelerusa.com/?p=1462>; rel=shortlink",
+    "X-Powered-By": "WP Engine",
+    "X-Cacheable": "SHORT",
+    "Cache-Control": "max-age=600, must-revalidate",
+    "X-Cache": "MISS",
+    "X-Cache-Group": "normal",
+    "CF-Cache-Status": "DYNAMIC",
+    "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=3DCjY8XkLQ1UW%2BQWdjJcGON4rqSJkfFcFc0eq%2B5GdkbMiXCmjBQcbOcfI0ETZ8LmolsVf4NfNACxHhN8O6JGdchiUiE8Vlls8jgBu7wsBSm6GAr75dRHDGFPs53xTyiHJ7T1bi5qpnMG\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "Server": "cloudflare",
+    "CF-RAY": "77d30e9c2c52f009-EWR",
+    "Content-Encoding": "br",
+    "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+}

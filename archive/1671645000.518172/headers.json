@@ -1,0 +1,16 @@
+{
+    "Status-Code": 200,
+    "Date": "Wed, 21 Dec 2022 20:25:09 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Connection": "keep-alive",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "cross-origin-window-policy": "deny",
+    "x-content-type-options": "nosniff",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-request-id": "091024cfc71d09b699f134f82766260e",
+    "x-xss-protection": "1; mode=block",
+    "Strict-Transport-Security": "max-age=15724800; includeSubDomains",
+    "Content-Encoding": "br"
+}

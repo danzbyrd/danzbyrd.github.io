@@ -1,0 +1,1 @@
+var crossbtn=document.querySelector('.cross-icon');if(crossbtn){crossbtn.addEventListener('click',function(){var fixedVideo=document.querySelector('.fixed-video .videoVimeo');fixedVideo.classList.remove('d-block');fixedVideo.classList.add('d-none')})}

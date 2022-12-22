@@ -1,0 +1,17 @@
+{
+    "Status-Code": 200,
+    "Connection": "keep-alive",
+    "Server": "nginx",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Link": "<https://blog.mindvalley.com/wp-json/>; rel=\"https://api.w.org/\"",
+    "Cache-Control": "private, proxy-revalidate, s-maxage=0",
+    "Via": "1.1 google, 1.1 varnish",
+    "Accept-Ranges": "bytes",
+    "Date": "Wed, 21 Dec 2022 20:30:14 GMT",
+    "X-Served-By": "cache-iad-kiad7000167-IAD",
+    "X-Cache": "MISS",
+    "X-Cache-Hits": "0",
+    "X-Timer": "S1671654615.508858,VS0,VE482",
+    "Vary": "Accept-Encoding",
+    "Strict-Transport-Security": "max-age=300"
+}

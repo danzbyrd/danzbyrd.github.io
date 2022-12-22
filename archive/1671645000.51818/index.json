@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.51818",
+    "base_url": "support.mindvalley.com",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/support.mindvalley.com",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=support.mindvalley.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "support.mindvalley.com/index.html"
+    },
+    "domain": "support.mindvalley.com",
+    "extension": "",
+    "hash": "21SGW6WMRHPKYYSTPWQ2",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://support.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:25:00.017606+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221202459/https://support.mindvalley.com/",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:47.092298+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:24:38.566536+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:36.657401+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=support.mindvalley.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:24:22.223608+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:22.032530+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:24:22.367447+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:22.233937+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T20:24:47.088020+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:44.981781+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T20:24:44.977774+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:43.000734+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:24:33.601451+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:31.301429+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpc9ke87b7",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T20:24:42.996590+00:00",
+                "index_texts": [
+                    "  Welcome to Mindvalley\nSupport Center\n Browse by category\n \n  View more categories\n  Kristi AnierCustomer Happiness Manager Contact us\nMindvalley Customer Support experience just got better! You can now contact us through different messaging channels that are convenient for you, right next to your family and friends.   Popular articles\n \nHow to navigate your Mindvalley account\n\nHow to find your programs, subscriptions and community information. Once you log in to your Mindvalley account you will see the navigation bar on top. \n  Read more\n \nHow to find your programs\n\nHow to access your programs and what to do if you can't find them\u2026 1. Use the search bar  to find your programs. 2. You will find all your quests under the My Programs page of your account. Make sure to log in with the same email that you used ...\n  Read more\n  \nHow to access and start your Quest\n\nLearn how to start your programs\u00a0and the different learning modes available.\n  Read more\n \nHow to navigate your Quest\n\nLearn how to access your programs and how to navigate your account to start your Quests.\n  Read more\n  \nMindvalley Membership\n\nLearn more about Mindvalley Membership and what to expect from this transformational subscription.\n  Read more\n \nHow to refund your purchase\n\nYou can now refund a program or subscription through the billing section of your account. You will find the option for a refund under Payment History in the Billing Section of your profile.\n  Read more\n  \nVAT, GST & VAT exemption\n\nInformation on EU value added tax, Australian GST and how to get VAT exemption.\n  Read more\n \nHow to merge accounts under one email address\n\nTo merge 2 (or more) accounts under one email address please fill out the Merge Accounts Form in this article. \n  Read more\n  \nHow to reset or recover your password\n\nIf you have forgotten or lost the password for your Mindvalley account, there is an easy way to recover it:\nThrough the main login page or the settings page in your Mindvalley account.\n  Read more\n \nHow to cancel your subscription\n\nYou can cancel subscriptions yourself on the Billing Section of your account when accessing it through the web.\n  Read more\n    Other Mindvalley brands\n     \n          Choose your language\n           \n          Explore Mindvalley in your preferred language\n         "
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:41.133967+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:24:36.650396+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:33.611421+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://support.mindvalley.com/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T20:24:31.296417+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:22.371901+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:24:41.129842+00:00",
+                "index_texts": null,
+                "output": "Mindvalley Support Center",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:41.119510+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.51818/warc/1671654278",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://support.mindvalley.com/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T20:24:41.105227+00:00",
+                "index_texts": null,
+                "output": "support.mindvalley.com/index.html",
+                "pwd": "/data/archive/1671645000.51818",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:24:38.572863+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221202459/https://support.mindvalley.com/",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley Support Center",
+        "warc": null,
+        "wget": "support.mindvalley.com/index.html"
+    },
+    "link_dir": "/data/archive/1671645000.51818",
+    "newest_archive_date": "2022-12-21T20:24:47.092298+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T20:24:22.032530+00:00",
+    "path": "/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "b56b1a2d-9dc8-4ef2-b0b6-dea57e35b333",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.51818",
+    "title": "Mindvalley Support Center",
+    "updated": "2022-12-21T20:24:22.032374+00:00",
+    "updated_date": "2022-12-21 20:24",
+    "url": "https://support.mindvalley.com/"
+}

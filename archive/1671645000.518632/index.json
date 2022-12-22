@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.518632",
+    "base_url": "pitchbook.com/profiles/company/119001-97#overview",
+    "basename": "119001-97",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/pitchbook.com/profiles/company/119001-97#overview",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=pitchbook.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "pitchbook.com/profiles/company/119001-97.html"
+    },
+    "domain": "pitchbook.com",
+    "extension": "",
+    "hash": "853CE4TEE65VX8VH58QH",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:21:33.516646+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221182132/https://pitchbook.com/profiles/company/119001-97",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:21:00.231399+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:20:39.314437+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:37.114971+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=pitchbook.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:20:19.135518+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:18.978838+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:20:19.255136+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:19.146749+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T18:21:00.223334+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:58.670032+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T18:20:58.666197+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:56.471802+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:20:34.234338+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:31.232237+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmp2vga_tfa",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T18:20:56.467210+00:00",
+                "index_texts": [
+                    "\n\n\n\nMindvalley Overview\n\n\n\n\n\nFounded\n\n2003\n\n\n\n\n\n\n\nStatus\n\nPrivate\n\n\n\n\n\nEmployees\n\n404\n\n\n\n\n\n\n\nLatest Deal Type\n\n2ndary - Private\n\n\n\n\n\n\nMindvalley General Information\nDescription\nOperator of an education investment group intended to build and invest in education businesses. The company publishes ideas and teachings by good authors in personal growth, wellbeing, spirituality, productivity, mindfulness and more and combines them with cutting-edge sophisticated learning technology, thereby helping users with their growth.\n\n\nContact Information\n\n\n\n\nWant to dig into this profile?\nWe\u2019ll help you find what you need\nLearn more\n\n\n\nMindvalley Valuation & Funding\n\n\n\n\nDeal Type\nDate\nAmount\nRaised to Date\nPost-Val\nStatus\nStage\n\n\n\n\n4. Secondary Transaction - Private\n01-Oct-2021\n\n00000\n\nCompleted\nGenerating Revenue\n\n\n3. Seed Round\n01-Oct-2014\n00000\n00000\n\nCompleted\nStartup\n\n\n2. Angel (individual)\n01-Nov-2013\n\n$700.00\n0000\nCompleted\nStartup\n\n\n1. Capitalization\n01-Jan-2012\n$700.00\n$700.00\n\nCompleted\nStartup\n\n\n\n\nTo view Mindvalley\u2019s complete valuation and funding history, request access\u00a0\u00bb\n\n\n\n\nMindvalley Comparisons\n\n\n\n\nDescription\nPrimaryIndustry\nHQ Location\nEmployees\nTotal Raised\nPost Valuation\nLast Financing Details\n\n\n\n\n\n\nOperator of an education investment group intended to build and invest in education businesses. The company publishes id\nEducational and Training Services (B2C)\nKuala Lumpur, Malaysia\n404\n\nAs of\u00a02022\n\n\n00000\n\n\n00000000000 \n00000\n\n\n\n\n\n\n\n\n000000\n\n\nn voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n00000000000 00000000\nChennai, India\n00\n\nAs of\u00a00000\n\n\n00.000\n\n\n00000000000 \n00.000\n\n\n\n\n\n\n\n0000 (\n\n\nt. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pari\n00000000 00000000\nSan Francisco, CA\n00\n\nAs of\u00a00000\n\n\n00.000\n\n\n000000000000\n00.000\n\n\nAdd Comparison\n\n\n\nPitchBook\u2019s comparison feature gives you a side-by-side look at key metrics for similar companies. Personalize which data points you want to see and create visualizations instantly.\nRequest a free trial\n\n\n\n\n\n\nMindvalley Competitors (5)\n\n\n\n\nCompany Name\nFinancing Status\nLocation\nEmployees\nTotal Raised\nLast Financing Date/Type\nLast Financing Amount\n\n\n\n\nSkillAngels\nVenture Capital-Backed\nChennai, India\n00\n00.000\n00000000000 \n00.000\n\n\n0000 (00000000 000\nVenture Capital-Backed\nSan Francisco, CA\n00\n00.000\n000000000000\n00.000\n\n\n000000000\nVenture Capital-Backed\nLos Angeles, CA\n0000\n00000\n0000000000 0\n00000\n\n\n00000000000\nVenture Capital-Backed\nSan Francisco, CA\n000\n00000\n0000000000 0\n00000\n\n\n000000 00000\nVenture Capital-Backed\nSan Francisco, CA\n00\n0000\n000000000 - \n0000\n\n\n\n\nYou\u2019re viewing 5 of 5 competitors. Get the full list\u00a0\u00bb\n\n\n\n\n\nMindvalley Signals\n\n\n\n\n\nGrowth Rate\n\n0.80%\nWeeklyGrowth\n\n\n\n\nWeekly Growth\n0.80%, 93rd %\n\n-35.5%.\n530%\n\n\n\nSize Multiple\n\n219x\nMedian\n\n\n\n\nSize Multiple\n219x, 100th %ile\n\n0.00x\n0.95x.\n413Kx\n\n\n\n\nKey Data Points\n\nTwitter Followers\n5.5k\n\n\n\nSimilarweb Unique Visitors\n15.0K\n\n\n\nMajestic Referring Domains\n314\n\n\n\n\n\nPitchBook\u2019s non-financial metrics help you gauge a company\u2019s traction and growth using web presence and social reach.\nRequest a free trial\n\n\n\n\n\n"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:55.095850+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T18:20:37.104123+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:34.278477+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://pitchbook.com/profiles/company/119001-97#overview",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T18:20:31.223253+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:19.258914+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T18:20:55.092281+00:00",
+                "index_texts": null,
+                "output": "Mindvalley Company Profile: Valuation & Investors | PitchBook",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:55.060121+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518632/warc/1671646839",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://pitchbook.com/profiles/company/119001-97#overview"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T18:20:55.048020+00:00",
+                "index_texts": null,
+                "output": "pitchbook.com/profiles/company/119001-97.html",
+                "pwd": "/data/archive/1671645000.518632",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T18:20:39.318236+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221182132/https://pitchbook.com/profiles/company/119001-97",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley Company Profile: Valuation & Investors | PitchBook",
+        "warc": null,
+        "wget": "pitchbook.com/profiles/company/119001-97.html"
+    },
+    "link_dir": "/data/archive/1671645000.518632",
+    "newest_archive_date": "2022-12-21T18:21:00.231399+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T18:20:18.978838+00:00",
+    "path": "/profiles/company/119001-97",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "4f88e931-5725-4779-aa60-2933635b3303",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518632",
+    "title": "Mindvalley Company Profile: Valuation & Investors | PitchBook",
+    "updated": "2022-12-21T18:48:59.329975+00:00",
+    "updated_date": "2022-12-21 18:48",
+    "url": "https://pitchbook.com/profiles/company/119001-97#overview"
+}

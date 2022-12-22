@@ -1,0 +1,2054 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Archived Sites</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            :root {
+                --bg-main: #efefef;
+                --accent-1: #aa1e55;
+                --accent-2: #ffebeb;
+                --accent-3: #efefef;
+
+                --text-1: #1c1c1c;
+                --text-2: #eaeaea;
+                --text-main: #1a1a1a;
+                --font-main: "Gill Sans", Helvetica, sans-serif;
+            }
+            /* Dark Mode (WIP) */
+            /*
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --accent-2: hsl(160, 100%, 96%);
+
+                    --text-1: #eaeaea;
+                    --text-2: #1a1a1a;
+                    --bg-main: #101010;
+                }
+
+                #table-bookmarks_wrapper,
+                #table-bookmarks_wrapper img,
+                tbody td:nth-child(3),
+                tbody td:nth-child(3) span,
+                footer {
+                    filter: invert(100%);
+                }
+            }*/
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                font-size: 18px;
+                font-weight: 200;
+                text-align: center;
+                margin: 0px;
+                padding: 0px;
+                font-family: var(--font-main);
+            }
+
+            .header-top small {
+                font-weight: 200;
+                color: var(--accent-3);
+            }
+            
+            .header-top {
+                width: 100%;
+                height: auto;
+                min-height: 40px;
+                margin: 0px;
+                text-align: center;
+                color: white;
+                font-size: calc(11px + 0.84vw);
+                font-weight: 200;
+                padding: 4px 4px;
+                border-bottom: 3px solid var(--accent-1);
+                background-color: var(--accent-1);
+            }
+            input[type=search] {
+                width: 22vw;
+                border-radius: 4px;
+                border: 1px solid #aeaeae;
+                padding: 3px 5px;
+            }
+            .nav > div {
+                min-height: 30px;
+            }
+            .header-top a {
+                text-decoration: none;
+                color: rgba(0,0,0,0.6);
+            }
+            .header-top a:hover {
+                text-decoration: none;
+                color: rgba(0,0,0,0.9);
+            }
+            .header-top .col-lg-4 {
+                text-align: center;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+            .header-archivebox img {
+                display: inline-block;
+                margin-right: 3px;
+                height: 30px;
+                margin-left: 12px;
+                margin-top: -4px;
+                margin-bottom: 2px;
+            }
+            .header-archivebox img:hover {
+                opacity: 0.5;
+            }
+
+            #table-bookmarks_length, #table-bookmarks_filter {
+                padding-top: 12px;
+                opacity: 0.8;
+                padding-left: 24px;
+                padding-right: 22px;
+                margin-bottom: -16px;
+            }
+            table {
+                padding: 6px;
+                width: 100%;
+            }
+            table thead th {
+                font-weight: 400;
+            }
+            table tr {
+                height: 35px;
+            }
+            tbody tr:nth-child(odd) {
+               background-color: var(--accent-2) !important;
+            }
+            table tr td {
+                white-space: nowrap;
+                overflow: hidden;
+                /*padding-bottom: 0.4em;*/
+                /*padding-top: 0.4em;*/
+                padding-left: 2px;
+                text-align: center;
+            }
+            table tr td a {
+                text-decoration: none;
+            }
+            table tr td img, table tr td object {
+                display: inline-block;
+                margin: auto;
+                height: 24px;
+                width: 24px;
+                padding: 0px;
+                padding-right: 5px;
+                vertical-align: middle;
+                margin-left: 4px;
+            }
+            #table-bookmarks {
+                width: 100%; 
+                overflow-y: scroll;
+                table-layout: fixed;
+            }
+            .dataTables_wrapper {
+                background-color: #fafafa;
+            }
+            table tr a span[data-archived~=False] {
+                opacity: 0.4;
+            }
+            .files-spinner {
+                height: 15px;
+                width: auto;
+                opacity: 0.5;
+                vertical-align: -2px;
+            }
+            .in-progress {
+                display: none;
+            }
+            tr td a.favicon img {
+                padding-left: 6px;
+                padding-right: 12px;
+                vertical-align: -4px;
+            }
+            tr td a.title {
+                font-size: 1.4em;
+                text-decoration:none;
+                color:black;
+            }
+            tr td a.title small {
+                background-color: var(--accent-3);
+                border-radius: 4px;
+                float:right
+            }
+            input[type=search]::-webkit-search-cancel-button {
+                -webkit-appearance: searchfield-cancel-button;
+            }
+            .title-col {
+                text-align: left;
+            }
+            .title-col a {
+                color: black;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/jquery.dataTables.min.css"/>
+        <script src="/static/jquery.min.js"></script>
+        <script src="/static/jquery.dataTables.min.js"></script>
+        <script>
+            document.addEventListener('error', function(e) {
+              e.target.style.opacity = 0;
+            }, true)
+            jQuery(document).ready(function() {
+                jQuery('#table-bookmarks').DataTable({
+                    stateSave: true, // save state (filtered input, number of entries shown, etc) in localStorage
+                    dom: '<lf<t>ip>', // how to show the table and its helpers (filter, etc) in the DOM
+                    order: [[0, 'desc']],
+                    iDisplayLength: 100,
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="header-top container-fluid">
+                <div class="row nav">
+                    <div class="col-sm-2">
+                        <a href="/" class="header-archivebox">
+                            <img src="/static/archive.png" alt="Logo"/>
+                            ArchiveBox: Index
+                        </a>
+                    </div>
+                    <div class="col-sm-10" style="text-align: right">
+                        <a href="/add/">Add Links</a> &nbsp; | &nbsp; 
+                        <a href="/admin/core/snapshot/">Admin</a> &nbsp; | &nbsp; 
+                        <a href="https://github.com/ArchiveBox/ArchiveBox/wiki">Docs</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <table id="table-bookmarks">
+            <thead>
+                <tr>
+                    <th style="width: 100px;">Bookmarked</th>
+                    <th style="width: 26vw;">Saved Link (50)</th>
+                    <th style="width: 50px">Files</th>
+                    <th style="width: 16vw;whitespace:nowrap;overflow-x:hidden;">Original URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.496289)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="A Better You, Everyday · Mindvalley">
+        
+            <a href="/archive/1671645000.496289/index.html"><img src="/archive/1671645000.496289/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.496289/index.html" title="A Better You, Everyday · Mindvalley">
+            <span data-title-for="https://www.mindvalley.com/" data-archived="True">
+                A Better You, Everyday · Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.496289/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.mindvalley.com/">
+        <a href="https://www.mindvalley.com/">
+            https://www.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518558)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley - Overview, News &amp; Competitors | ZoomInfo.com">
+        
+            <a href="/archive/1671645000.518558/index.html"><img src="/archive/1671645000.518558/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518558/index.html" title="Mindvalley - Overview, News &amp; Competitors | ZoomInfo.com">
+            <span data-title-for="https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl" data-archived="True">
+                Mindvalley - Overview, News &amp; Competitors | ZoomInfo.com
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518558/index.html">
+                    📄 &nbsp;
+                    6 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl">
+        <a href="https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl">
+            https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518533)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Giving others a helping hand">
+        
+            <a href="/archive/1671645000.518533/index.html"><img src="/archive/1671645000.518533/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518533/index.html" title="Giving others a helping hand">
+            <span data-title-for="https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972" data-archived="True">
+                Giving others a helping hand
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518533/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972">
+        <a href="https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972">
+            https://www.thesundaily.my/style-life/lifestyle/giving-others-a-helping-hand-KI5093972
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518255)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Soulvana by Mindvalley">
+        
+            <a href="/archive/1671645000.518255/index.html"><img src="/archive/1671645000.518255/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518255/index.html" title="Soulvana by Mindvalley">
+            <span data-title-for="https://www.soulvana.com/" data-archived="True">
+                Soulvana by Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.soulvana.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518255/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.soulvana.com/">
+        <a href="https://www.soulvana.com/">
+            https://www.soulvana.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518214)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley (mindvalley) - Profile | Pinterest">
+        
+            <a href="/archive/1671645000.518214/index.html"><img src="/archive/1671645000.518214/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518214/index.html" title="Mindvalley (mindvalley) - Profile | Pinterest">
+            <span data-title-for="https://www.pinterest.com/mindvalley/" data-archived="True">
+                Mindvalley (mindvalley) - Profile | Pinterest
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.pinterest.com/mindvalley/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518214/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.pinterest.com/mindvalley/">
+        <a href="https://www.pinterest.com/mindvalley/">
+            https://www.pinterest.com/mindvalley/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518246)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="A Better You, Everyday · Mindvalley">
+        
+            <a href="/archive/1671645000.518246/index.html"><img src="/archive/1671645000.518246/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518246/index.html" title="A Better You, Everyday · Mindvalley">
+            <span data-title-for="https://www.omvana.com/" data-archived="True">
+                A Better You, Everyday · Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.omvana.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518246/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.omvana.com/">
+        <a href="https://www.omvana.com/">
+            https://www.omvana.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518424)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Transform Your Life While Working From Home Through Personal Development">
+        
+            <a href="/archive/1671645000.518424/index.html"><img src="/archive/1671645000.518424/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518424/index.html" title="Transform Your Life While Working From Home Through Personal Development">
+            <span data-title-for="https://www.newsweek.com/amplify/best-personal-growth-programs" data-archived="True">
+                Transform Your Life While Working From Home Through Personal Development
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.newsweek.com/amplify/best-personal-growth-programs" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518424/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.newsweek.com/amplify/best-personal-growth-programs">
+        <a href="https://www.newsweek.com/amplify/best-personal-growth-programs">
+            https://www.newsweek.com/amplify/best-personal-growth-programs
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.607313)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Online Learning Programs | Mindvalley">
+        
+            <a href="/archive/1671645000.607313/index.html"><img src="/archive/1671645000.607313/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.607313/index.html" title="Online Learning Programs | Mindvalley">
+            <span data-title-for="https://www.mindvalley.com/programs" data-archived="True">
+                Online Learning Programs | Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.mindvalley.com/programs" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.607313/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.mindvalley.com/programs">
+        <a href="https://www.mindvalley.com/programs">
+            https://www.mindvalley.com/programs
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518088)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="A Better You, Everyday · Mindvalley">
+        
+            <a href="/archive/1671645000.518088/index.html"><img src="/archive/1671645000.518088/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518088/index.html" title="A Better You, Everyday · Mindvalley">
+            <span data-title-for="https://www.mindvalley.com#Organization" data-archived="True">
+                A Better You, Everyday · Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.mindvalley.com#Organization" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518088/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.mindvalley.com#Organization">
+        <a href="https://www.mindvalley.com#Organization">
+            https://www.mindvalley.com#Organization
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518609)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Working at MindValley Labs Sdn Bhd company profile and information | JobStreet.com Malaysia">
+        
+            <a href="/archive/1671645000.518609/index.html"><img src="/archive/1671645000.518609/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518609/index.html" title="Working at MindValley Labs Sdn Bhd company profile and information | JobStreet.com Malaysia">
+            <span data-title-for="https://www.jobstreet.com.my/en/companies/443859-mindvalley-labs" data-archived="True">
+                Working at MindValley Labs Sdn Bhd company profile and information | JobStreet.com Malaysia
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.jobstreet.com.my/en/companies/443859-mindvalley-labs" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518609/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.jobstreet.com.my/en/companies/443859-mindvalley-labs">
+        <a href="https://www.jobstreet.com.my/en/companies/443859-mindvalley-labs">
+            https://www.jobstreet.com.my/en/companies/443859-mindvalley-labs
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518121)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley (@mindvalley) • Instagram photos and videos">
+        
+            <a href="/archive/1671645000.518121/index.html"><img src="/archive/1671645000.518121/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518121/index.html" title="Mindvalley (@mindvalley) • Instagram photos and videos">
+            <span data-title-for="https://www.instagram.com/mindvalley/" data-archived="True">
+                Mindvalley (@mindvalley) • Instagram photos and videos
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.instagram.com/mindvalley/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518121/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.instagram.com/mindvalley/">
+        <a href="https://www.instagram.com/mindvalley/">
+            https://www.instagram.com/mindvalley/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518483)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="3 Ways to Hire the Perfect People for Your Team | Inc.com">
+        
+            <a href="/archive/1671645000.518483/index.html"><img src="/archive/1671645000.518483/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518483/index.html" title="3 Ways to Hire the Perfect People for Your Team | Inc.com">
+            <span data-title-for="https://www.inc.com/young-entrepreneur-council/its-make-or-break-time-how-to-hire-the-perfect-people-for-your-team.html" data-archived="True">
+                3 Ways to Hire the Perfect People for Your Team | Inc.com
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.inc.com/young-entrepreneur-council/its-make-or-break-time-how-to-hire-the-perfect-people-for-your-team.html" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518483/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.inc.com/young-entrepreneur-council/its-make-or-break-time-how-to-hire-the-perfect-people-for-your-team.html">
+        <a href="https://www.inc.com/young-entrepreneur-council/its-make-or-break-time-how-to-hire-the-perfect-people-for-your-team.html">
+            https://www.inc.com/young-entrepreneur-council/its-make-or-break-time-how-to-hire-the-perfect-people-for-your-team.html
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518508)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="inc.com">
+        
+            <a href="/archive/1671645000.518508/index.html"><img src="/archive/1671645000.518508/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518508/index.html" title="inc.com">
+            <span data-title-for="https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html" data-archived="True">
+                inc.com
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518508/index.html">
+                    📄 &nbsp;
+                    9 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html">
+        <a href="https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html">
+            https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518491)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="inc.com">
+        
+            <a href="/archive/1671645000.518491/index.html"><img src="/archive/1671645000.518491/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518491/index.html" title="inc.com">
+            <span data-title-for="https://www.inc.com/srikumar-rao/you-can-craft-your-life.html" data-archived="True">
+                inc.com
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.inc.com/srikumar-rao/you-can-craft-your-life.html" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518491/index.html">
+                    📄 &nbsp;
+                    9 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.inc.com/srikumar-rao/you-can-craft-your-life.html">
+        <a href="https://www.inc.com/srikumar-rao/you-can-craft-your-life.html">
+            https://www.inc.com/srikumar-rao/you-can-craft-your-life.html
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518499)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="inc.com">
+        
+            <a href="/archive/1671645000.518499/index.html"><img src="/archive/1671645000.518499/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518499/index.html" title="inc.com">
+            <span data-title-for="https://www.inc.com/graham-winfrey-kevin-j-ryan/worlds-coolest-offices-2019.html" data-archived="True">
+                inc.com
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.inc.com/graham-winfrey-kevin-j-ryan/worlds-coolest-offices-2019.html" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518499/index.html">
+                    📄 &nbsp;
+                    8 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.inc.com/graham-winfrey-kevin-j-ryan/worlds-coolest-offices-2019.html">
+        <a href="https://www.inc.com/graham-winfrey-kevin-j-ryan/worlds-coolest-offices-2019.html">
+            https://www.inc.com/graham-winfrey-kevin-j-ryan/worlds-coolest-offices-2019.html
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518583)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Working at Mindvalley | Glassdoor">
+        
+            <a href="/archive/1671645000.518583/index.html"><img src="/archive/1671645000.518583/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518583/index.html" title="Working at Mindvalley | Glassdoor">
+            <span data-title-for="https://www.glassdoor.com/Overview/Working-at-Mindvalley-EI_IE391151.11,21.htm" data-archived="True">
+                Working at Mindvalley | Glassdoor
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.glassdoor.com/Overview/Working-at-Mindvalley-EI_IE391151.11,21.htm" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518583/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.glassdoor.com/Overview/Working-at-Mindvalley-EI_IE391151.11,21.htm">
+        <a href="https://www.glassdoor.com/Overview/Working-at-Mindvalley-EI_IE391151.11,21.htm">
+            https://www.glassdoor.com/Overview/Working-at-Mindvalley-EI_IE391151.11,21.htm
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518524)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success">
+        
+            <a href="/archive/1671645000.518524/index.html"><img src="/archive/1671645000.518524/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518524/index.html" title="How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success">
+            <span data-title-for="https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8" data-archived="True">
+                How This Female Entrepreneur Broke All The Rules To Get To Seven-Figure Success
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518524/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8">
+        <a href="https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8">
+            https://www.forbes.com/sites/stephanieburns/2021/04/27/how-this-female-entrepreneur-broke-all-the-rules-to-get-to-seven-figure-success/?sh=283bb89e17a8
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518387)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Vishen Lakhiani Offers 4 Tips For Becoming More Productive">
+        
+            <a href="/archive/1671645000.518387/index.html"><img src="/archive/1671645000.518387/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518387/index.html" title="Vishen Lakhiani Offers 4 Tips For Becoming More Productive">
+            <span data-title-for="https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd" data-archived="True">
+                Vishen Lakhiani Offers 4 Tips For Becoming More Productive
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518387/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd">
+        <a href="https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd">
+            https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518104)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley - Home | Facebook">
+        
+            <a href="/archive/1671645000.518104/index.html"><img src="/archive/1671645000.518104/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518104/index.html" title="Mindvalley - Home | Facebook">
+            <span data-title-for="https://www.facebook.com/mindvalley/" data-archived="True">
+                Mindvalley - Home | Facebook
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.facebook.com/mindvalley/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518104/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.facebook.com/mindvalley/">
+        <a href="https://www.facebook.com/mindvalley/">
+            https://www.facebook.com/mindvalley/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518235)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Evercoach by Mindvalley | The World&#x27;s #1 Coaching Platform">
+        
+            <a href="/archive/1671645000.518235/index.html"><img src="/archive/1671645000.518235/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518235/index.html" title="Evercoach by Mindvalley | The World&#x27;s #1 Coaching Platform">
+            <span data-title-for="https://www.evercoach.com/" data-archived="True">
+                Evercoach by Mindvalley | The World&#x27;s #1 Coaching Platform
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.evercoach.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518235/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.evercoach.com/">
+        <a href="https://www.evercoach.com/">
+            https://www.evercoach.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518449)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley&#x27;s Vishen Lakhiani On The New Age Of Entrepreneurship">
+        
+            <a href="/archive/1671645000.518449/index.html"><img src="/archive/1671645000.518449/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518449/index.html" title="Mindvalley&#x27;s Vishen Lakhiani On The New Age Of Entrepreneurship">
+            <span data-title-for="https://www.entrepreneur.com/video/325943" data-archived="True">
+                Mindvalley&#x27;s Vishen Lakhiani On The New Age Of Entrepreneurship
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.entrepreneur.com/video/325943" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518449/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.entrepreneur.com/video/325943">
+        <a href="https://www.entrepreneur.com/video/325943">
+            https://www.entrepreneur.com/video/325943
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518441)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Turning Points: Vishen Lakhiani, Founder, Mindvalley">
+        
+            <a href="/archive/1671645000.518441/index.html"><img src="/archive/1671645000.518441/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518441/index.html" title="Turning Points: Vishen Lakhiani, Founder, Mindvalley">
+            <span data-title-for="https://www.entrepreneur.com/article/344902" data-archived="True">
+                Turning Points: Vishen Lakhiani, Founder, Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.entrepreneur.com/article/344902" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518441/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.entrepreneur.com/article/344902">
+        <a href="https://www.entrepreneur.com/article/344902">
+            https://www.entrepreneur.com/article/344902
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518432)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="The Evolved Entrepreneur: 10 Things I Learnt At Mindvalley">
+        
+            <a href="/archive/1671645000.518432/index.html"><img src="/archive/1671645000.518432/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518432/index.html" title="The Evolved Entrepreneur: 10 Things I Learnt At Mindvalley">
+            <span data-title-for="https://www.entrepreneur.com/article/323156" data-archived="True">
+                The Evolved Entrepreneur: 10 Things I Learnt At Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.entrepreneur.com/article/323156" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518432/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.entrepreneur.com/article/323156">
+        <a href="https://www.entrepreneur.com/article/323156">
+            https://www.entrepreneur.com/article/323156
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518566)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley Labs Sdn. Bhd. Company Profile - Malaysia | Financials &amp; Key Executives | EMIS">
+        
+            <a href="/archive/1671645000.518566/index.html"><img src="/archive/1671645000.518566/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518566/index.html" title="Mindvalley Labs Sdn. Bhd. Company Profile - Malaysia | Financials &amp; Key Executives | EMIS">
+            <span data-title-for="https://www.emis.com/php/company-profile/MY/Mindvalley_Labs_Sdn_Bhd_en_4225572.html" data-archived="True">
+                Mindvalley Labs Sdn. Bhd. Company Profile - Malaysia | Financials &amp; Key Executives | EMIS
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.emis.com/php/company-profile/MY/Mindvalley_Labs_Sdn_Bhd_en_4225572.html" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518566/index.html">
+                    📄 &nbsp;
+                    20 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.emis.com/php/company-profile/MY/Mindvalley_Labs_Sdn_Bhd_en_4225572.html">
+        <a href="https://www.emis.com/php/company-profile/MY/Mindvalley_Labs_Sdn_Bhd_en_4225572.html">
+            https://www.emis.com/php/company-profile/MY/Mindvalley_Labs_Sdn_Bhd_en_4225572.html
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518466)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA">
+        
+            <a href="/archive/1671645000.518466/index.html"><img src="/archive/1671645000.518466/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518466/index.html" title="What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA">
+            <span data-title-for="https://www.businesstravelerusa.com/business-traveler-usa-story/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/" data-archived="True">
+                What To Do on a Long Flight? Learn New Personal Growth Skills, of Course! - Business Traveler USA
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.businesstravelerusa.com/business-traveler-usa-story/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518466/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.businesstravelerusa.com/business-traveler-usa-story/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/">
+        <a href="https://www.businesstravelerusa.com/business-traveler-usa-story/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/">
+            https://www.businesstravelerusa.com/business-traveler-usa-story/what-to-do-on-a-long-flight-learn-new-personal-growth-skills-of-course/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518457)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Wellness, Mindfulness Now a Burgeoning Focus for Apps - Business Traveler USA">
+        
+            <a href="/archive/1671645000.518457/index.html"><img src="/archive/1671645000.518457/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518457/index.html" title="Wellness, Mindfulness Now a Burgeoning Focus for Apps - Business Traveler USA">
+            <span data-title-for="https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/" data-archived="True">
+                Wellness, Mindfulness Now a Burgeoning Focus for Apps - Business Traveler USA
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518457/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/">
+        <a href="https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/">
+            https://www.businesstravelerusa.com/business-traveler-usa-story/wellness-mindfulness-now-a-burgeoning-focus-for-apps/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518361)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Want to Change the World? Live by These Guidelines">
+        
+            <a href="/archive/1671645000.518361/index.html"><img src="/archive/1671645000.518361/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518361/index.html" title="Want to Change the World? Live by These Guidelines">
+            <span data-title-for="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9" data-archived="True">
+                Want to Change the World? Live by These Guidelines
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518361/index.html">
+                    📄 &nbsp;
+                    10 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9">
+        <a href="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9">
+            https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-9
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518352)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Want to Change the World? Live by These Guidelines">
+        
+            <a href="/archive/1671645000.518352/index.html"><img src="/archive/1671645000.518352/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518352/index.html" title="Want to Change the World? Live by These Guidelines">
+            <span data-title-for="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-10" data-archived="True">
+                Want to Change the World? Live by These Guidelines
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-10" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518352/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-10">
+        <a href="https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-10">
+            https://www.businessinsider.com/want-to-change-the-world-live-by-these-guidelines-2013-10
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.51837)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="7 Lessons From Bootstrapping a $15M Lifestyle Business">
+        
+            <a href="/archive/1671645000.51837/index.html"><img src="/archive/1671645000.51837/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.51837/index.html" title="7 Lessons From Bootstrapping a $15M Lifestyle Business">
+            <span data-title-for="https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1" data-archived="True">
+                7 Lessons From Bootstrapping a $15M Lifestyle Business
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.51837/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1">
+        <a href="https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1">
+            https://www.businessinsider.com/7-lessons-from-bootstrapping-a-15m-lifestyle-business-2013-1
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518541)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Luring workers to the middle of nowhere - BBC Worklife">
+        
+            <a href="/archive/1671645000.518541/index.html"><img src="/archive/1671645000.518541/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518541/index.html" title="Luring workers to the middle of nowhere - BBC Worklife">
+            <span data-title-for="https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators" data-archived="True">
+                Luring workers to the middle of nowhere - BBC Worklife
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518541/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators">
+        <a href="https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators">
+            https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518205)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Transformational ideas and epic celebration">
+        
+            <a href="/archive/1671645000.518205/index.html"><img src="/archive/1671645000.518205/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518205/index.html" title="Transformational ideas and epic celebration">
+            <span data-title-for="https://www.afest.com/" data-archived="True">
+                Transformational ideas and epic celebration
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.afest.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518205/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.afest.com/">
+        <a href="https://www.afest.com/">
+            https://www.afest.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518415)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="6 Design Inspirations Malaysian Offices Could Take From Mindvalley">
+        
+            <a href="/archive/1671645000.518415/index.html"><img src="/archive/1671645000.518415/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518415/index.html" title="6 Design Inspirations Malaysian Offices Could Take From Mindvalley">
+            <span data-title-for="https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/" data-archived="True">
+                6 Design Inspirations Malaysian Offices Could Take From Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518415/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/">
+        <a href="https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/">
+            https://vulcanpost.com/677363/mindvalley-malaysian-office-design-inspiration/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518113)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley (@mindvalley) / Twitter">
+        
+            <a href="/archive/1671645000.518113/index.html"><img src="/archive/1671645000.518113/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518113/index.html" title="Mindvalley (@mindvalley) / Twitter">
+            <span data-title-for="https://twitter.com/mindvalley/" data-archived="True">
+                Mindvalley (@mindvalley) / Twitter
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://twitter.com/mindvalley/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518113/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://twitter.com/mindvalley/">
+        <a href="https://twitter.com/mindvalley/">
+            https://twitter.com/mindvalley/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518398)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Kristina Mänd-Lakhiani, the co-founder of Mindvalley.com, speaks to Sura about breaking out of her perfect life. - Thrive Global">
+        
+            <a href="/archive/1671645000.518398/index.html"><img src="/archive/1671645000.518398/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518398/index.html" title="Kristina Mänd-Lakhiani, the co-founder of Mindvalley.com, speaks to Sura about breaking out of her perfect life. - Thrive Global">
+            <span data-title-for="https://thriveglobal.com/stories/kristina-mand-lakhiani-the-co-founder-of-mindvalley-speaks-with-sura/" data-archived="True">
+                Kristina Mänd-Lakhiani, the co-founder of Mindvalley.com, speaks to Sura about breaking out of her perfect life. - Thrive Global
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://thriveglobal.com/stories/kristina-mand-lakhiani-the-co-founder-of-mindvalley-speaks-with-sura/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518398/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://thriveglobal.com/stories/kristina-mand-lakhiani-the-co-founder-of-mindvalley-speaks-with-sura/">
+        <a href="https://thriveglobal.com/stories/kristina-mand-lakhiani-the-co-founder-of-mindvalley-speaks-with-sura/">
+            https://thriveglobal.com/stories/kristina-mand-lakhiani-the-co-founder-of-mindvalley-speaks-with-sura/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.51818)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley Support Center">
+        
+            <a href="/archive/1671645000.51818/index.html"><img src="/archive/1671645000.51818/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.51818/index.html" title="Mindvalley Support Center">
+            <span data-title-for="https://support.mindvalley.com/" data-archived="True">
+                Mindvalley Support Center
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://support.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.51818/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://support.mindvalley.com/">
+        <a href="https://support.mindvalley.com/">
+            https://support.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518163)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Stories -  Mindvalley Stories">
+        
+            <a href="/archive/1671645000.518163/index.html"><img src="/archive/1671645000.518163/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518163/index.html" title="Stories -  Mindvalley Stories">
+            <span data-title-for="https://stories.mindvalley.com/" data-archived="True">
+                Stories -  Mindvalley Stories
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://stories.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518163/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://stories.mindvalley.com/">
+        <a href="https://stories.mindvalley.com/">
+            https://stories.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518146)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Stream The Mindvalley Podcast with Vishen Lakhiani music | Listen to songs, albums, playlists for free on SoundCloud">
+        
+            <a href="/archive/1671645000.518146/index.html"><img src="/archive/1671645000.518146/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518146/index.html" title="Stream The Mindvalley Podcast with Vishen Lakhiani music | Listen to songs, albums, playlists for free on SoundCloud">
+            <span data-title-for="https://soundcloud.com/mindvalley" data-archived="True">
+                Stream The Mindvalley Podcast with Vishen Lakhiani music | Listen to songs, albums, playlists for free on SoundCloud
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://soundcloud.com/mindvalley" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518146/index.html">
+                    📄 &nbsp;
+                    13 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://soundcloud.com/mindvalley">
+        <a href="https://soundcloud.com/mindvalley">
+            https://soundcloud.com/mindvalley
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518272)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley: Self-Improvement - Apps on Google Play">
+        
+            <a href="/archive/1671645000.518272/index.html"><img src="/archive/1671645000.518272/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518272/index.html" title="Mindvalley: Self-Improvement - Apps on Google Play">
+            <span data-title-for="https://play.google.com/store/apps/details?id=com.mindvalley.mva" data-archived="True">
+                Mindvalley: Self-Improvement - Apps on Google Play
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://play.google.com/store/apps/details?id=com.mindvalley.mva" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518272/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://play.google.com/store/apps/details?id=com.mindvalley.mva">
+        <a href="https://play.google.com/store/apps/details?id=com.mindvalley.mva">
+            https://play.google.com/store/apps/details?id=com.mindvalley.mva
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518263)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Connections by Mindvalley - Apps on Google Play">
+        
+            <a href="/archive/1671645000.518263/index.html"><img src="/archive/1671645000.518263/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518263/index.html" title="Connections by Mindvalley - Apps on Google Play">
+            <span data-title-for="https://play.google.com/store/apps/details?id=com.mindvalley.connect" data-archived="True">
+                Connections by Mindvalley - Apps on Google Play
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://play.google.com/store/apps/details?id=com.mindvalley.connect" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518263/index.html">
+                    📄 &nbsp;
+                    17 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://play.google.com/store/apps/details?id=com.mindvalley.connect">
+        <a href="https://play.google.com/store/apps/details?id=com.mindvalley.connect">
+            https://play.google.com/store/apps/details?id=com.mindvalley.connect
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518632)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley Company Profile: Valuation &amp; Investors | PitchBook">
+        
+            <a href="/archive/1671645000.518632/index.html"><img src="/archive/1671645000.518632/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518632/index.html" title="Mindvalley Company Profile: Valuation &amp; Investors | PitchBook">
+            <span data-title-for="https://pitchbook.com/profiles/company/119001-97#overview" data-archived="True">
+                Mindvalley Company Profile: Valuation &amp; Investors | PitchBook
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://pitchbook.com/profiles/company/119001-97#overview" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518632/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://pitchbook.com/profiles/company/119001-97#overview">
+        <a href="https://pitchbook.com/profiles/company/119001-97#overview">
+            https://pitchbook.com/profiles/company/119001-97#overview
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518623)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Working at Mindvalley - Company Profile &amp; Information | Hiredly Malaysia">
+        
+            <a href="/archive/1671645000.518623/index.html"><img src="/archive/1671645000.518623/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518623/index.html" title="Working at Mindvalley - Company Profile &amp; Information | Hiredly Malaysia">
+            <span data-title-for="https://my.hiredly.com/companies/mindvalley" data-archived="True">
+                Working at Mindvalley - Company Profile &amp; Information | Hiredly Malaysia
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://my.hiredly.com/companies/mindvalley" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518623/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://my.hiredly.com/companies/mindvalley">
+        <a href="https://my.hiredly.com/companies/mindvalley">
+            https://my.hiredly.com/companies/mindvalley
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518591)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="How MindValley Founder Built A $40M Company With Only $700 - with Vishen Lakhiani - Business Podcast for Startups">
+        
+            <a href="/archive/1671645000.518591/index.html"><img src="/archive/1671645000.518591/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518591/index.html" title="How MindValley Founder Built A $40M Company With Only $700 - with Vishen Lakhiani - Business Podcast for Startups">
+            <span data-title-for="https://mixergy.com/interviews/vishen-lakhiani-mindvalley-interview/" data-archived="True">
+                How MindValley Founder Built A $40M Company With Only $700 - with Vishen Lakhiani - Business Podcast for Startups
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://mixergy.com/interviews/vishen-lakhiani-mindvalley-interview/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518591/index.html">
+                    📄 &nbsp;
+                    20 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://mixergy.com/interviews/vishen-lakhiani-mindvalley-interview/">
+        <a href="https://mixergy.com/interviews/vishen-lakhiani-mindvalley-interview/">
+            https://mixergy.com/interviews/vishen-lakhiani-mindvalley-interview/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518172)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley Insights">
+        
+            <a href="/archive/1671645000.518172/index.html"><img src="/archive/1671645000.518172/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518172/index.html" title="Mindvalley Insights">
+            <span data-title-for="https://insights.mindvalley.com/" data-archived="True">
+                Mindvalley Insights
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://insights.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518172/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://insights.mindvalley.com/">
+        <a href="https://insights.mindvalley.com/">
+            https://insights.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518575)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Company:Mindvalley - HandWiki">
+        
+            <a href="/archive/1671645000.518575/index.html"><img src="/archive/1671645000.518575/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518575/index.html" title="Company:Mindvalley - HandWiki">
+            <span data-title-for="https://handwiki.org/wiki/Company:Mindvalley" data-archived="True">
+                Company:Mindvalley - HandWiki
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://handwiki.org/wiki/Company:Mindvalley" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518575/index.html">
+                    📄 &nbsp;
+                    17 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://handwiki.org/wiki/Company:Mindvalley">
+        <a href="https://handwiki.org/wiki/Company:Mindvalley">
+            https://handwiki.org/wiki/Company:Mindvalley
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518197)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley Gear - Made for Changemakers">
+        
+            <a href="/archive/1671645000.518197/index.html"><img src="/archive/1671645000.518197/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518197/index.html" title="Mindvalley Gear - Made for Changemakers">
+            <span data-title-for="https://gear.mindvalley.com/" data-archived="True">
+                Mindvalley Gear - Made for Changemakers
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://gear.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518197/index.html">
+                    📄 &nbsp;
+                    21 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://gear.mindvalley.com/">
+        <a href="https://gear.mindvalley.com/">
+            https://gear.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518189)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Shape the Future of Humanity by Working on the Future of Education | Mindvalley Careers">
+        
+            <a href="/archive/1671645000.518189/index.html"><img src="/archive/1671645000.518189/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518189/index.html" title="Shape the Future of Humanity by Working on the Future of Education | Mindvalley Careers">
+            <span data-title-for="https://careers.mindvalley.com/" data-archived="True">
+                Shape the Future of Humanity by Working on the Future of Education | Mindvalley Careers
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://careers.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518189/index.html">
+                    📄 &nbsp;
+                    21 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://careers.mindvalley.com/">
+        <a href="https://careers.mindvalley.com/">
+            https://careers.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518155)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Mindvalley Blog - The Latest In Personal Growth">
+        
+            <a href="/archive/1671645000.518155/index.html"><img src="/archive/1671645000.518155/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518155/index.html" title="Mindvalley Blog - The Latest In Personal Growth">
+            <span data-title-for="https://blog.mindvalley.com/" data-archived="True">
+                Mindvalley Blog - The Latest In Personal Growth
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://blog.mindvalley.com/" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518155/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://blog.mindvalley.com/">
+        <a href="https://blog.mindvalley.com/">
+            https://blog.mindvalley.com/
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518343)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="Connections by Mindvalley on the App Store">
+        
+            <a href="/archive/1671645000.518343/index.html"><img src="/archive/1671645000.518343/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518343/index.html" title="Connections by Mindvalley on the App Store">
+            <span data-title-for="https://apps.apple.com/us/app/connections-by-mindvalley/id1464646867" data-archived="True">
+                Connections by Mindvalley on the App Store
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://apps.apple.com/us/app/connections-by-mindvalley/id1464646867" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518343/index.html">
+                    📄 &nbsp;
+                    12 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://apps.apple.com/us/app/connections-by-mindvalley/id1464646867">
+        <a href="https://apps.apple.com/us/app/connections-by-mindvalley/id1464646867">
+            https://apps.apple.com/us/app/connections-by-mindvalley/id1464646867
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671645000.518657)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="A Better You, Everyday · Mindvalley">
+        
+            <a href="/archive/1671645000.518657/index.html"><img src="/archive/1671645000.518657/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671645000.518657/index.html" title="A Better You, Everyday · Mindvalley">
+            <span data-title-for="https://www.mindvalley.com/#website" data-archived="True">
+                A Better You, Everyday · Mindvalley
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.mindvalley.com/#website" title="Fetching any missing files...">
+            
+                <a href="/archive/1671645000.518657/index.html">
+                    📄 &nbsp;
+                    11 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.mindvalley.com/#website">
+        <a href="https://www.mindvalley.com/#website">
+            https://www.mindvalley.com/#website
+        </a>
+    </td>
+</tr>
+
+                
+                   
+
+<tr>
+    <td title="Bookmarked:  (1671653551.937075)" data-sort="">
+        
+    </td>
+    <td class="title-col" style="opacity: 1" title="inc.com">
+        
+            <a href="/archive/1671653551.937075/index.html"><img src="/archive/1671653551.937075/favicon.ico" onerror="this.style.display='none'" class="link-favicon" decoding="async"></a>
+        
+
+        <a href="/archive/1671653551.937075/index.html" title="inc.com">
+            <span data-title-for="https://www.inc.com/chris-dessi/how-to-survive-the-most-insanely-devastating-bad-news.html" data-archived="True">
+                inc.com
+            </span>
+            
+        </a>
+    </td>
+    <td>
+        <span data-number-for="https://www.inc.com/chris-dessi/how-to-survive-the-most-insanely-devastating-bad-news.html" title="Fetching any missing files...">
+            
+                <a href="/archive/1671653551.937075/index.html">
+                    📄 &nbsp;
+                    8 <img src="/static/spinner.gif" onerror="this.style.display='none'" class="files-spinner" decoding="async" style="height: 15px"/>
+                </a>
+            
+        </span>
+    </td>
+    <td style="text-align:left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; title="https://www.inc.com/chris-dessi/how-to-survive-the-most-insanely-devastating-bad-news.html">
+        <a href="https://www.inc.com/chris-dessi/how-to-survive-the-most-insanely-devastating-bad-news.html">
+            https://www.inc.com/chris-dessi/how-to-survive-the-most-insanely-devastating-bad-news.html
+        </a>
+    </td>
+</tr>
+
+                
+            </tbody>
+        </table>
+        <footer>
+            <br/>
+            <center>
+                <small>
+                    Archive created using <a href="https://github.com/ArchiveBox/ArchiveBox" title="Github">ArchiveBox</a>
+                    version <a href="https://github.com/ArchiveBox/ArchiveBox/releases/tag/v0.6.3" title="View source code and release info">v0.6.3</a> &nbsp; | &nbsp; 
+                    Download index as <a href="index.json" title="JSON summary of archived links.">JSON</a>
+                    <br/><br/>
+                    Content is hosted for personal archiving purposes only.  Contact server owner for any takedown requests.
+                </small>
+            </center>
+            <br/>
+        </footer>
+    </body>
+</html>
+

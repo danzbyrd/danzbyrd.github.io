@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518387",
+    "base_url": "www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.forbes.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/index.html@sh=7a5b8b8e70cd.html"
+    },
+    "domain": "www.forbes.com",
+    "extension": "",
+    "hash": "14ECQ4D7NE3DSCNSP16M",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:22:08.645390+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221192209/https://gum.criteo.com/syncframe?origin=publishertag&topUrl=www.forbes.com",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:37.473079+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:21:28.388899+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:19.927238+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.forbes.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:16:47.304583+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:47.148144+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:16:47.409410+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:47.311937+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:21:37.447004+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:35.277907+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:21:35.274338+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:33.349508+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:19:19.715959+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:17:19.513338+00:00",
+                "status": "failed"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpomp43uog",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:21:33.345124+00:00",
+                "index_texts": [
+                    "Some entrepreneurs and creatives are massively productive. Malaysian-Indian entrepreneur Vishen Lakhiani is one example.\n\nLakhiani founded personal development online education company Mindvalley in 2004.\nVishen Lakhianimindvalley\n\nHe's also the author of the New York Times best-seller The Code of the Extraordinary Mind and is about to publish a second book on the incredible effects of personal growth in the workplace.\n\nLakhiani offers four strategies that can help anyone accomplish more in less time.\n\n\n1. Be Superconscious About What You Eat\nIt's no big secret that garbage in equals garbage out. Consume sugary drinks and snacks regularly, and your energy levels will peak and plummet throughout the day. Drink multiple cups of coffee, and you'll feel jittery and anxious come evening time. \"Today we know that food is medicine,\" says Lakhiani.\n\u201cThe right food actually magnifies your cognitive ability, it increases your energy, it causes you to stay in shape, it increases your focus, and it actually shifts your emotional states,\u201d he says. \"So when you understand that you can actually change your thinking, your creativity, your emotional states with the foods you eat, you gain a superpower.\"\n\nFor example, eating rich carbs or processed foods for lunch will cause you to feel drowsy for the afternoon. Similarly, drinking coffee in the afternoon will impact on your sleep.\n2. Embrace The Right Exercises\n\nLakhiani is an advocate for high-intensity interval training, as well as super-slow strength training. For the former, a runner could sprint 200 meters, rest for 30 seconds and repeat five or six times. The latter involves lifting weights gradually without stopping to rest or relying on the motion of the body. A typical slow-training full-body workout takes twenty minutes.\n\n\n            \n            \n                PLAY\n                \n                    \n                        \n                        \n                            \n                                \n                \n                \n            \n                \n                    \n                \n                    \n                        \n                            Forbes Leadership\n                        \n                    \n                \n            \n                    \n                \n            \n                \n            \n                            \n                            \n                                \n                \n                    \n\n                \n            \n                                \n                            \n                        \n                    \n                    \n                        \n        \n            \n                \n                    \n                \n            \n            \n        \n            \n\n            \n\n        \n    \n            \n                \n                    \n                \n            \n            \n        \n    \n                    \n                    \n                        \n        \n        \n        \n        01:12\n        \n                        \n                    \n                    \n                    \n                    \n                    \n                \n                    \n                    \n                    \n                \n                    \n\n                    About Connatix\n                    V209100\n                \n                \n            \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n            \n            \n                \n            \n        \n            \n                \n            The EU\u2019s Sustainability-Reporting Directive: ThreeKey Questions\n            \n        \n        \n                \n                    \n                        \n                            \n                                \n\n                                1/1\n                            \n                            \n                        \n                        \n                    \n                    \n                        \n        \n            \n\n            \n\n        \n    \n                        \n        \n            \n        \n        \n            \n        \n    \n                        \n                    \n                    Skip\u00a0Ad\n                    \n                    \n                    \n                \n                \n                    \n                    \n                \n                \n            Choose exercise that enhances your creativity and productivityGetty\n\"These are exercise modalities that have proven to give you the best results in the least amount of time,\" says Lakhiani.\n\"I spend only 45 minutes a week in exercise, but I am incredibly healthy and scored very well on a lot of different health markers. That's because the style of exercise I do is scientifically studied and hyper-optimal.\"\n3. Meditate For At Least 10 Minutes Each Day\nA consistent meditator can focus on difficult tasks for longer without getting distracted and manage challenges more easily. Noted advocates of meditation include Oprah Winfrey, Paul McCartney and David Lynch.\nLakhiani set up Mindvalley after discovering the benefits of meditation. These days, he typically meditates for between 10 and 30 minutes each day. He also teaches his practice as part of a Mindvalley course or meditation quest.\n\"We looked at the science of meditation, and we created six unique exercises that are stacked together that create the most transformative impact on your mind and your body and your soul in 20 to 25 minutes a day,\" he says.\n4. Set Goals For Life\nLakhiani dismisses the Western approach to goal setting whereby an individual picks SMART (specific, measurable, achievable, realistic and time-bound) goals related to their business or personal life.\n\"We often set goals based on what society trains us to believe is normal, is right, and it's respectful. So many people set goals to become, to get into a career or to get a certain amount of money only to attain that goal and realize that they're miserable,\" he says.\n\"I have deliberate goals for how I show up as a father, how I show up as a man, how I treat my body, how I run my company, how I start my morning, how many books I want to accomplish and release and by when,\" he says.\n"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:30.371429+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:21:19.918078+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:19:19.756346+00:00",
+                "status": "failed"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:17:19.480518+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:16:47.414039+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:21:30.368125+00:00",
+                "index_texts": null,
+                "output": "Vishen Lakhiani Offers 4 Tips For Becoming More Productive",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:30.331816+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518387/warc/1671650488",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:21:30.306324+00:00",
+                "index_texts": null,
+                "output": "www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/index.html@sh=7a5b8b8e70cd.html",
+                "pwd": "/data/archive/1671645000.518387",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:21:28.393866+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221192209/https://gum.criteo.com/syncframe?origin=publishertag&topUrl=www.forbes.com",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd']' timed out after 120 seconds",
+        "screenshot": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd']' timed out after 120 seconds",
+        "singlefile": "singlefile.html",
+        "title": "Vishen Lakhiani Offers 4 Tips For Becoming More Productive",
+        "warc": null,
+        "wget": "www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/index.html@sh=7a5b8b8e70cd.html"
+    },
+    "link_dir": "/data/archive/1671645000.518387",
+    "newest_archive_date": "2022-12-21T19:21:37.473079+00:00",
+    "num_failures": 2,
+    "num_outputs": 10,
+    "oldest_archive_date": "2022-12-21T19:16:47.148144+00:00",
+    "path": "/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "8a95140f-abbb-4447-a9b1-35eb0a51395f",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518387",
+    "title": "Vishen Lakhiani Offers 4 Tips For Becoming More Productive",
+    "updated": "2022-12-21T19:16:47.148028+00:00",
+    "updated_date": "2022-12-21 19:16",
+    "url": "https://www.forbes.com/sites/bryancollinseurope/2019/11/28/vishen-lakhiani-offers-4-tips-for-becoming-more-productive/?sh=7a5b8b8e70cd"
+}

@@ -1,0 +1,18 @@
+{
+    "Status-Code": 200,
+    "Content-Type": "text/html; charset=UTF-8",
+    "Connection": "keep-alive",
+    "Date": "Wed, 21 Dec 2022 18:59:03 GMT",
+    "Server": "nginx",
+    "Set-Cookie": "PHPSESSID=ef8454886fb80b1402181c02c0b7a8bd; path=/; secure; HttpOnly, EMISPRO-SP-Authentication-Session-ID-WWW=e5d13d68e4d72e02c31990c2025b0c6f; path=/; secure; HttpOnly, gaVisitorTypeShort=prospect; expires=Wed, 21-Dec-2022 19:29:03 GMT; Max-Age=1800; path=/; domain=.emis.com; secure; HttpOnly, gaVisitorTypeLong=prospect; expires=Fri, 20-Dec-2024 18:59:03 GMT; Max-Age=63072000; path=/; domain=.emis.com; secure; HttpOnly",
+    "X-Frame-Options": "SAMEORIGIN, sameorigin",
+    "X-XSS-Protection": "1; mode=block",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Content-Encoding": "gzip",
+    "Vary": "Accept-Encoding",
+    "X-Cache": "Miss from cloudfront",
+    "Via": "1.1 4582a1c2d6f2ede6721e6bf1997ded3e.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "IAD66-C1",
+    "X-Amz-Cf-Id": "XIkELelKuYZDqJ9jzbCgTm3ntrH7CEoOa5tJOvCLhUQb1nKtuMUfIg=="
+}

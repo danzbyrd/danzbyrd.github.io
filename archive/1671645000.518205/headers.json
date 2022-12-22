@@ -1,0 +1,13 @@
+{
+    "Status-Code": 200,
+    "Server": "nginx",
+    "Date": "Wed, 21 Dec 2022 19:48:25 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Connection": "keep-alive",
+    "Vary": "Accept-Encoding, User-Agent, Accept-Encoding",
+    "Surrogate-Control": "max-age=120, stale-while-revalidate=60, stale-if-error=7200",
+    "Cache-Control": "max-age=120, stale-while-revalidate=60, stale-if-error=7200",
+    "ETag": "W/\"2cf3d-P1BY5oGV4oSrtoq22Akux6O2Tb8\"",
+    "Content-Encoding": "gzip",
+    "X-Cloud-Trace-Context": "92c087f09bb6269ed0977f08cf7aa879"
+}

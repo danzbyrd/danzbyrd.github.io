@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518541",
+    "base_url": "www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators",
+    "basename": "20141008-wooing-reluctant-relocators",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.bbc.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators.html"
+    },
+    "domain": "www.bbc.com",
+    "extension": "",
+    "hash": "KY9GSF5PN143VC96DMVA",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:48:14.955325+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221194809/https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:56.098902+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:47:40.658843+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:38.486868+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.bbc.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:47:17.652690+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:17.507521+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:47:17.988593+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:17.668773+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:47:56.093553+00:00",
+                "index_texts": [],
+                "output": "ArchiveError: Failed to save media",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:55.498633+00:00",
+                "status": "failed"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:47:55.494013+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:53.265893+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:47:36.001365+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:32.379105+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpr1qnw1xq",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:47:53.258352+00:00",
+                "index_texts": [
+                    "Luring workers to the middle of nowhereIn 2004, just a year after Vishen Lakhiani started online education company MindValley in New York, everything went topsy turvy.US immigration authorities didn\u2019t extend his visa. The entrepreneur wouldn\u2019t be able to stay in the country, but he still had ambitious plans to grow his company into a digital publishing powerhouse. Rather than give up, Lakhiani moved the company to Kuala Lumpur in his native Malaysia.\u201cIf I couldn\u2019t be in Silicon Valley,\u201d he said, \u201cI would figure out how to build a Silicon Valley-style company in Malaysia.\u201dMalaysia, however, was facing a massive brain drain at the time, with the number of skilled Malaysians moving abroad tripling between 1990 and 2010, according the World Bank.Undeterred, Lakhiani was keen to attract international talent to a destination often deemed as remote. Today MindValley, which has revenues of more than $20 million annually, has about 200 employees from dozens of countries, with more than 150 of them working at its main office in Malaysia.How, exactly, did Lakhiani get the best and brightest to flock to a place where locals were fleeing?\u00a0 A mix of flexibility, fun and hiring for talent and not specific roles were at the core, something that\u2019s also been a successful recipe for other companies in attracting employees to far away locales.Culture as a competitive advantage Because recruiting the right candidates in Malaysia was a challenge, Lakhiani set about finding ways to create a company culture that attracted and nurtured talent from all over the world.The phrases \u201cJ-O-B is a dirty word\u201d and \u201cHave fun like nobody\u2019s watching\u201d are the main message on MindValley\u2019s career website. And a YouTube search of \u201cMindValley\u201d and \u201cCover Letter\u201d turns up thousands of video applications from candidates the world over.\u00a0\u201cEverything starts with culture,\u201d said Lakhiani. \u201cThe ultimate competitive advantage beyond strategy is the people you attract and the culture you create. You can have a crappy product and a lack of sales, but if you have the right people, they will find a way to fix that.\u201dIn the book The Culture Cycle, Harvard professor James Heskett found that an effective company culture can contribute to as much as half the difference in operating profit between organisations in the same industry because of lower turnover and higher productivity.What\u2019s the draw? Employees at MindValley work flexible hours and attend companywide retreats on luxurious resorts in places like Bali and Phuket. On the first Friday of every month, employees set aside their usual tasks to spend the day reading or taking classes from other employees.One of the draws of MindValley is the fun corporate culture. (MindValley)The company even has its own secret society called SPLASH (Society for Platonic Love, Appreciation, Smiles and Happiness) that surprises employees with things like free movie tickets and parties. In 2010 Lakhiani built an open office with indoor hammocks, a tree house and meditation room.This focus on happiness, flexibility and fun in the workplace may sound extreme, but other companies in remote parts of the globe have used similar tactics to overcome the challenge of attracting and retaining employees. \u00a0About one-third of the 34 employees at Great Harvest moved to Dillon, Montana, in the US to work for the bakery franchise company, said community manager Debbie Huber.Huber said potential recruits are often attracted by the company\u2019s mission statement, which starts \u201cBe Loose and Have Fun,\u201d but they stay because they have they have the chance to explore different roles.\u201cWe have a lot of autonomy in how we do our jobs,\u201d said Huber, who has held a number of different positions in her 20 years with the company. \u201cPeople always have challenging new projects to work on.\u201dBe yourselfHiring differently is also a key way MindValley and other remote firms find they can stand out to top recruits.\u00a0 \u00a0Lakhiani and his team, for instance, worry less about filling specific roles and instead looks for employees who fit into the company culture. Ezekiel Vicente started at MindValley three years ago answering phones \u2014 he was hired in part because of his energy and willingness to try new things, said Lakhiani. Now Vicente, originally from the Philippines, is the company\u2019s head of technology. \u201cI like that the company gives people a chance to explore and figure out what they want to do in life,\u201d he said.Last year MindValley turned its attention homeward in a bid to attract Malaysians, hosting events for local entrepreneurs, designers, students and others at its meeting space called \u201cThe Hall of Awesomeness.\u201dWhen senior partner Veena Sidhu started at MindValley five years ago, she was only one of six other Malaysians at the company. Now there are more than 20 locals. \u201cI see myself staying at this company for the rest of my life,\u201d said Sidhu, who is on her fourth job at the firm. \u201cMy best friends and soul sisters are in this company and I have the freedom to be who I want.\u201dMore than just a jobCompany culture was the primary focus of NRI Distribution\u2019s three co-founders, who started the warehousing and fulfillment company in 1997 in Kamloops, British Columbia, about 350 km from Vancouver in Canada, in order to break out of a toxic work environment.At its core, NRI Distribution in Kamloops, British Columbia, about 350 km from Vancouver in Canada, is family friendly. (NRI)\u201cWe started with a theme of being able to enjoy going to work,\u201d said co-founder Bruce Churchill. The company, which employs 250, including more than 150 people in its main Kamloops office, looks to employees for suggestions on how to refine the work environment.\u201cOur philosophy is that if it makes people\u2019s lives easier, then why not do it?\u201d said human resources director Dean Stainton.NRI Distribution started a family friendly 9:00 to 14:00 shift so that parents could drop off and pick up their kids from school. Employees can bring their dogs to work and there is a children\u2019s daycare on site. They are encouraged to volunteer and donate to local charities.Every year the company gives out two volunteer awards with winners receiving an all-expenses paid two week trip to volunteer for their cause.As Stainton puts it: \u201cWe want to make sure everyone understands that the job is more than a paycheck.\"To comment on this story or anything else you have seen on BBC Capital, head over to our\u00a0Facebook page or message us on Twitter.Chantal Glenisson, Sallie Krawcheck, Julia Hobsbawm."
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:45.890263+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:47:38.464372+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:36.013118+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:47:32.367139+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:17.992438+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:47:45.886421+00:00",
+                "index_texts": null,
+                "output": "Luring workers to the middle of nowhere - BBC Worklife",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:45.813172+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518541/warc/1671652060",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:47:45.748947+00:00",
+                "index_texts": null,
+                "output": "www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators.html",
+                "pwd": "/data/archive/1671645000.518541",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:47:40.663132+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221194809/https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "ArchiveError: Failed to save media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Luring workers to the middle of nowhere - BBC Worklife",
+        "warc": null,
+        "wget": "www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators.html"
+    },
+    "link_dir": "/data/archive/1671645000.518541",
+    "newest_archive_date": "2022-12-21T19:47:56.098902+00:00",
+    "num_failures": 1,
+    "num_outputs": 11,
+    "oldest_archive_date": "2022-12-21T19:47:17.507521+00:00",
+    "path": "/worklife/article/20141008-wooing-reluctant-relocators",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "080ae5d3-7a6f-403d-ae40-c125666a050b",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518541",
+    "title": "Luring workers to the middle of nowhere - BBC Worklife",
+    "updated": "2022-12-21T19:47:17.507355+00:00",
+    "updated_date": "2022-12-21 19:47",
+    "url": "https://www.bbc.com/worklife/article/20141008-wooing-reluctant-relocators"
+}

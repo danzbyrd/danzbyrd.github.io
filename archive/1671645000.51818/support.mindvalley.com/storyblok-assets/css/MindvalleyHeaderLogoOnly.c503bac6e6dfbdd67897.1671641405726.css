@@ -1,0 +1,1 @@
+.slide-down-enter-active{transition:all .3s ease}.slide-down-leave-active{transition:all .3s cubic-bezier(1,.5,.8,1);transform:translateY(-50vh)}.slide-down-enter,.slide-fade-leave-to{transform:translateY(-50vh);opacity:0}

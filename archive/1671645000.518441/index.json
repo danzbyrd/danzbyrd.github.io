@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518441",
+    "base_url": "www.entrepreneur.com/article/344902",
+    "basename": "344902",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.entrepreneur.com/article/344902",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.entrepreneur.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.entrepreneur.com/article/344902.html"
+    },
+    "domain": "www.entrepreneur.com",
+    "extension": "",
+    "hash": "155YHRHZTPDDR3WX1JAD",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:31:36.165913+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221193135/https://www.entrepreneur.com/en-ae/growth-strategies/turning-points-vishen-lakhiani-founder-mindvalley/344902",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:23.077781+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:31:17.254004+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:15.125943+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.entrepreneur.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:30:59.803608+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:30:59.643928+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:31:00.126834+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:30:59.832203+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:31:23.053981+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:21.025177+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:31:21.021287+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:18.567387+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:31:12.863975+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:10.311398+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpai4o8v1g",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:31:18.563047+00:00",
+                "index_texts": [
+                    "\n\t\n\t\t\tOpinions expressed by Entrepreneur contributors are their own.\n\t\n\t\n\t\t\tYou're reading Entrepreneur Middle East, an international franchise of Entrepreneur Media.\n\t\n\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\tIn 2010, a talented makeup artist launched a beauty blog out of her flat in Dubai, with the only comments to her posts coming from her sisters. Two years later, in the summer months of 2012, two McKinsey & Company colleagues decided to quit their jobs, and start a ride-hailing digital business. Another two years later, in February 2014, a passionate publishing and sales executive gathered a group of like-minded colleagues to create a media publishing house that would truly deliver and cater to the needs of the Middle East region, vowing to give a voice to the current and future generations of business leaders in the Arab world.\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\n\t\n\n\t\n\t\t\t\n\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMind Valley\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\tToday, as we open a new decade, it's good to see what the aforementioned personalities are up to today. Huda Kattan is the founder and CEO of Huda Beauty, one of the world's fastest-growing beauty brands, which is valued at US$1 billion. Magnus Olsson and Mudassir Sheikha have already put their signature on the largest technology sector transaction in the Middle East, having agreed to sell the enterprise they founded, Careem, to Uber Technologies for $3.1 billion last year. Likewise, Wissam Younane, CEO of BNC Publishing, the media house behind Entrepreneur Middle East, is gearing up for the sixth anniversary of his enterprise's flagship publication for the MENA region's entrepreneurs and business-minded readership in February 2020.With these being just a couple of the turning points that have characterized business and entrepreneurship in the region over this last decade, we asked a few enterprising individuals to tell us more about instants in the last 10 years that have had a significant impact on their career trajectories. It is our hope that these will serve as insight and inspiration for a whole new generation of upstarts that will rise from this region (and beyond) over the next decade- we're looking forward to the future!VISHEN LAKHIANIFounder and CEO, MindvalleyFollowing his successful appearance at the 2019 Sharjah Entrepreneurship Festival, Vishen Lakhiani, founder and CEO of Mindvalley, an education movement in the field of personal transformation, and author of The Code of the Extraordinary Mind, explains that it was a successful ending of a productive decade for the whole team. The turning point for all of them occurred in 2016, Lakhiani says, when Mindvalley Quests, a new Mindvalley online learning model that produces 800% better completion rates than the industry average, suddenly took off. \"That transformed our company, and transformed the personal growth industry, because so many leading authors came onto the Mindvalley platform to create Quest,\" Lakhiani says. \"Today the Quest Transformation Platform is taking Mindvalley to a whole new level, and we expect to have it in almost every company in the Fortune 500, and in the world's major schooling systems, within the next decade.\"Related: The Evolved Entrepreneur: 10 Things I Learnt At MindvalleyPrior to this breakthrough, Lakhiani's company was struggling; however, its sudden explosion in terms of business growth had its negative side as well. \"What was bad about it is that we suddenly realized that for the last five years, we had built a traditional learning platform that we called Mindvalley Academy with thousands of online courses, but then we realized that in order to truly commit to the Quest platform, we had to take down old courses,\" Lakhiani says. \"So, we destroyed the old version of the company to let the new version emerge. Sometimes, in life, I believe you have to destroy what is nearly good, to allow what is great to come in. In January 2017, when we saw how good Quest was working, we decided to take down a thousand traditional courses on Mindvalley, and say that we were no longer going to be in the online course industry, because we were going to make online courses outdated, and instead, we were going to invest wholeheartedly and fully into the Quest learning format. And what makes Quest different is really bite-size learning, learning as a community, over a 30-day journey. People do not go into a traditional online course, rather they go through a behavioral modification system over 30 days, and 5-20 minutes a day.\"Related: Mindvalley's Vishen Lakhiani On The New Age Of Entrepreneurship\n\n\t\t\t\t\t\t\t\t\t\t"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:17.539312+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:31:15.117062+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:12.878163+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.entrepreneur.com/article/344902",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:31:10.268570+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:00.160516+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:31:17.535918+00:00",
+                "index_texts": null,
+                "output": "Turning Points: Vishen Lakhiani, Founder, Mindvalley",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:17.525741+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518441/warc/1671651077",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.entrepreneur.com/article/344902"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:31:17.511205+00:00",
+                "index_texts": null,
+                "output": "www.entrepreneur.com/article/344902.html",
+                "pwd": "/data/archive/1671645000.518441",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:31:17.257953+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221193135/https://www.entrepreneur.com/en-ae/growth-strategies/turning-points-vishen-lakhiani-founder-mindvalley/344902",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Turning Points: Vishen Lakhiani, Founder, Mindvalley",
+        "warc": null,
+        "wget": "www.entrepreneur.com/article/344902.html"
+    },
+    "link_dir": "/data/archive/1671645000.518441",
+    "newest_archive_date": "2022-12-21T19:31:23.077781+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T19:30:59.643928+00:00",
+    "path": "/article/344902",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "61385a5c-723f-40a9-834b-0330dcc0c3c4",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518441",
+    "title": "Turning Points: Vishen Lakhiani, Founder, Mindvalley",
+    "updated": "2022-12-21T19:30:59.643787+00:00",
+    "updated_date": "2022-12-21 19:30",
+    "url": "https://www.entrepreneur.com/article/344902"
+}

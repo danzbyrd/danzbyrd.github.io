@@ -1,0 +1,20 @@
+{
+    "Status-Code": 200,
+    "Date": "Wed, 21 Dec 2022 18:50:13 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Connection": "keep-alive",
+    "CF-Ray": "77d2cd56eb2217fd-EWR",
+    "Cache-Control": "max-age=10",
+    "Set-Cookie": "ABSSRP=1603;Path=/;Domain=.jobstreet.com.my;Max-Age=31536000, ABSSRPGroup=B;Path=/;Domain=.jobstreet.com.my;Max-Age=31536000, ABHPGroup=B;Path=/;Domain=.jobstreet.com.my;Max-Age=31536000, ABJDGroup=B;Path=/;Domain=.jobstreet.com.my;Max-Age=31536000, __cf_bm=2XWat7pUqlnJbZE6lO9hiuXrDi0GsNoWF2xhNxM7RgQ-1671648613-0-AVVFniPNIO+RBALydIl6RFwa13k5XT795l/JRqXWxn4f1tfQTRgklVKyokMv8evibbqMsgJulFscXGuQXjM5jus=; path=/; expires=Wed, 21-Dec-22 19:20:13 GMT; domain=.jobstreet.com.my; HttpOnly; Secure; SameSite=None",
+    "Strict-Transport-Security": "max-age=2592000; includeSubDomains",
+    "CF-Cache-Status": "DYNAMIC",
+    "x-amzn-trace-id": "Root=1-63a35565-724bfc481bfbe1277f9a05e7",
+    "x-content-type-options": "nosniff",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block",
+    "Vary": "Accept-Encoding",
+    "Server": "cloudflare",
+    "Content-Encoding": "br"
+}

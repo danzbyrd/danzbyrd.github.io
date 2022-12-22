@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518104",
+    "base_url": "www.facebook.com/mindvalley",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.facebook.com/mindvalley",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.facebook.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.facebook.com/mindvalley/index.html"
+    },
+    "domain": "www.facebook.com",
+    "extension": "",
+    "hash": "48AGSM22QWBNGZ2JVFGJ",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:26:47.573038+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221192646/https://www.facebook.com/mindvalley/",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:26:34.749726+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:26:23.087330+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--dump-dom', 'https://www.facebook.com/mindvalley/']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:24:22.955701+00:00",
+                "status": "failed"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.facebook.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:22:08.856596+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:22:08.708688+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:22:09.000491+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:22:08.877804+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:26:34.587824+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:26:31.858519+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:26:31.831507+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:26:28.207187+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:24:21.028727+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.facebook.com/mindvalley/']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:22:20.867199+00:00",
+                "status": "failed"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpzxnno_rv",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:26:28.170049+00:00",
+                "index_texts": [
+                    "AboutStep into your greatness.Be part of the world\u2019s most powerful life transformation platform.3,694,532 people like this4,093,423 people follow thisPhotosVideosPages Liked by This PagePage transparencyFacebook is showing information to help you better understand the purpose of a Page. See actions taken by the people who manage and post content.Page created - April 21, 2014For instant access to 500+ guided meditations & sounds for relaxation, focus, and healing, plus life-changing courses with the world's modern masters... explore Mindvalley today  https://start.mindvalley.com/czEeBZuW1 commentMost Relevant is selected, so some comments may have been filtered out.If you have experienced this with your lover please share in the comments. Curious to see how common this is. ounos and I discuss. And I share a strange experiment that was done many years ago that suggests that it\u2019s possible to influence someone\u2019s body and emotional states by thinking about them. This is beautiful and strange. If you have experienced this with your lover please share in comments. Curious to see how common this is. 0 commentsDon't believe you can have it all?\"You have to make sacrifices to be successful.\" We've all heard it it one form or another.\u2026 See more11 commentsMost Relevant is selected, so some comments may have been filtered out.America's Greatest Ski Racer, World Cup Record Holder, and 3-Time Olympic Gold Medalist Lindsey Vonn shares her story about turning inwards after retirement. Since hanging up her ski boots, Lindsey has become a prominent advocate for mental health. Her 2022 memoir: \u2018Rise: My Story\u2019 details her inspiring struggle while reaching the very pinnacle of her sporting career.3 commentsMost Relevant is selected, so some comments may have been filtered out."
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:26:24.012678+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:24:22.904653+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:24:21.058425+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.facebook.com/mindvalley/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:22:20.857360+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:22:09.004646+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:26:24.009106+00:00",
+                "index_texts": null,
+                "output": "Mindvalley - Home | Facebook",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:26:23.965974+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518104/warc/1671650783",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.facebook.com/mindvalley/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:26:23.948293+00:00",
+                "index_texts": null,
+                "output": "www.facebook.com/mindvalley/index.html",
+                "pwd": "/data/archive/1671645000.518104",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:26:23.102377+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221192646/https://www.facebook.com/mindvalley/",
+        "dom": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--dump-dom', 'https://www.facebook.com/mindvalley/']' timed out after 120 seconds",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.facebook.com/mindvalley/']' timed out after 120 seconds",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley - Home | Facebook",
+        "warc": null,
+        "wget": "www.facebook.com/mindvalley/index.html"
+    },
+    "link_dir": "/data/archive/1671645000.518104",
+    "newest_archive_date": "2022-12-21T19:26:34.749726+00:00",
+    "num_failures": 2,
+    "num_outputs": 10,
+    "oldest_archive_date": "2022-12-21T19:22:08.708688+00:00",
+    "path": "/mindvalley/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "208fca04-716a-4ec8-95bf-72a12d67b210",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518104",
+    "title": "Mindvalley - Home | Facebook",
+    "updated": "2022-12-21T19:22:08.708577+00:00",
+    "updated_date": "2022-12-21 19:22",
+    "url": "https://www.facebook.com/mindvalley/"
+}

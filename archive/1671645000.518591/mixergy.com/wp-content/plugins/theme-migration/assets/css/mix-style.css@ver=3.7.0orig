@@ -1,0 +1,695 @@
+.break_float {
+  zoom: 1;
+}
+.break_float:before,
+.break_float:after {
+  content: "";
+  display: table;
+}
+.break_float:after {
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+.optin-monster-saas-powered-by {
+  display: none !important;
+}
+body.premk-theme,
+body.bbpress {
+  /*	.gform_wrapper	{
+			input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"] {
+				width: 90%;
+			}
+		}*/
+}
+body.premk-theme .button.tiny,
+body.bbpress .button.tiny {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+body.premk-theme .button.micro,
+body.bbpress .button.micro {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: .5rem 0.8rem;
+}
+body.premk-theme .button.selected,
+body.bbpress .button.selected {
+  background-color: #0050BA;
+}
+body.premk-theme .alert-box,
+body.bbpress .alert-box {
+  font-size: 1rem;
+}
+body.premk-theme .alert-box.success,
+body.bbpress .alert-box.success {
+  background-color: #dff0d8;
+  border-color: #dff0d8;
+  color: black;
+}
+@media only screen and (min-width: 40.063em) {
+  body.premk-theme.page-template-default #premium-pricing .medium-offset-2,
+  body.bbpress.page-template-default #premium-pricing .medium-offset-2 {
+    margin-left: auto !important;
+  }
+  body.premk-theme.page-template-default #premium-pricing .medium-8,
+  body.bbpress.page-template-default #premium-pricing .medium-8 {
+    width: 100%;
+  }
+}
+body.premk-theme #stripe-membership-status table:nth-child(3) td:nth-child(4),
+body.bbpress #stripe-membership-status table:nth-child(3) td:nth-child(4),
+body.premk-theme #stripe-membership-status table:nth-child(3) th:nth-child(4),
+body.bbpress #stripe-membership-status table:nth-child(3) th:nth-child(4) {
+  display: none;
+}
+body.premk-theme #stripe-invoice-content td,
+body.bbpress #stripe-invoice-content td {
+  padding-right: 20px;
+}
+body.premk-theme #iframe_container,
+body.bbpress #iframe_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body.premk-theme #lmc_form,
+body.bbpress #lmc_form {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body.premk-theme #content table tr.even,
+body.bbpress #content table tr.even,
+body.premk-theme #content table tr.alt,
+body.bbpress #content table tr.alt,
+body.premk-theme #content table tr:nth-of-type(2n),
+body.bbpress #content table tr:nth-of-type(2n),
+body.premk-theme table.dataTable tr.odd,
+body.bbpress table.dataTable tr.odd,
+body.premk-theme table.dataTable tr.even,
+body.bbpress table.dataTable tr.even,
+body.premk-theme table.dataTable tr.odd td.sorting_1,
+body.bbpress table.dataTable tr.odd td.sorting_1,
+body.premk-theme table.dataTable tr.even td.sorting_1,
+body.bbpress table.dataTable tr.even td.sorting_1,
+body.premk-theme table tr.even,
+body.bbpress table tr.even,
+body.premk-theme table tr.alt,
+body.bbpress table tr.alt,
+body.premk-theme table tr:nth-of-type(2n),
+body.bbpress table tr:nth-of-type(2n) {
+  background: white !important;
+}
+body.premk-theme .wistia_embed,
+body.bbpress .wistia_embed {
+  padding-right: 0px !important;
+}
+body.premk-theme.page-template-tmpl-page-full-width-php,
+body.bbpress.page-template-tmpl-page-full-width-php {
+  padding-top: 60px;
+}
+body.premk-theme.page-template-default .contain-to-grid .top-bar.mini-nav,
+body.bbpress.page-template-default .contain-to-grid .top-bar.mini-nav,
+body.premk-theme.limited-header .contain-to-grid .top-bar.mini-nav,
+body.bbpress.limited-header .contain-to-grid .top-bar.mini-nav {
+  max-width: 48.5714rem;
+}
+body.premk-theme.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav,
+body.bbpress.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav {
+  max-width: 70.7143rem;
+}
+body.premk-theme.page-template-tmpl-page-full-width-php,
+body.bbpress.page-template-tmpl-page-full-width-php,
+body.premk-theme.page-template-default,
+body.bbpress.page-template-default,
+body.premk-theme.limited-header,
+body.bbpress.limited-header {
+  padding-top: 0px;
+}
+body.premk-theme.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav,
+body.bbpress.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav,
+body.premk-theme.page-template-default .contain-to-grid .top-bar.mini-nav,
+body.bbpress.page-template-default .contain-to-grid .top-bar.mini-nav,
+body.premk-theme.limited-header .contain-to-grid .top-bar.mini-nav,
+body.bbpress.limited-header .contain-to-grid .top-bar.mini-nav {
+  position: relative;
+}
+body.premk-theme.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav .logo,
+body.bbpress.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav .logo,
+body.premk-theme.page-template-default .contain-to-grid .top-bar.mini-nav .logo,
+body.bbpress.page-template-default .contain-to-grid .top-bar.mini-nav .logo,
+body.premk-theme.limited-header .contain-to-grid .top-bar.mini-nav .logo,
+body.bbpress.limited-header .contain-to-grid .top-bar.mini-nav .logo {
+  width: 194px;
+  margin: 0px auto;
+}
+@media (max-width: 500px) {
+  body.premk-theme.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav .logo,
+  body.bbpress.page-template-tmpl-page-full-width-php .contain-to-grid .top-bar.mini-nav .logo,
+  body.premk-theme.page-template-default .contain-to-grid .top-bar.mini-nav .logo,
+  body.bbpress.page-template-default .contain-to-grid .top-bar.mini-nav .logo,
+  body.premk-theme.limited-header .contain-to-grid .top-bar.mini-nav .logo,
+  body.bbpress.limited-header .contain-to-grid .top-bar.mini-nav .logo {
+    margin: 0px 0px 0px 10px;
+  }
+}
+body.premk-theme.page-template-tmpl-page-full-width-php.f-topbar-fixed #main,
+body.bbpress.page-template-tmpl-page-full-width-php.f-topbar-fixed #main,
+body.premk-theme.page-template-default.f-topbar-fixed #main,
+body.bbpress.page-template-default.f-topbar-fixed #main,
+body.premk-theme.limited-header.f-topbar-fixed #main,
+body.bbpress.limited-header.f-topbar-fixed #main {
+  padding-top: 60px;
+}
+body.premk-theme #content.hfeed,
+body.bbpress #content.hfeed {
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+}
+body.premk-theme #content.hfeed p,
+body.bbpress #content.hfeed p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+body.premk-theme #content.hfeed h2,
+body.bbpress #content.hfeed h2 {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+@media (max-width: 600px) {
+  body.premk-theme #content.hfeed h2,
+  body.bbpress #content.hfeed h2 {
+    font-size: 2rem;
+  }
+}
+body.premk-theme #content.hfeed .post-meta,
+body.bbpress #content.hfeed .post-meta {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.4em;
+}
+body.premk-theme.post-type-archive-interview .paging-navigation,
+body.bbpress.post-type-archive-interview .paging-navigation {
+  display: none;
+}
+body.premk-theme .widget.mixergy_podcast .podcast_logo,
+body.bbpress .widget.mixergy_podcast .podcast_logo {
+  float: left;
+  margin: 0px 15px 10px 0px;
+  max-width: 60px;
+}
+body.premk-theme .widget.mixergy_podcast .information,
+body.bbpress .widget.mixergy_podcast .information {
+  font-size: 16px;
+  line-height: 20px;
+  float: left;
+  width: 175px;
+  margin: 0px 5px 10px 0px;
+  height: 60px;
+}
+body.premk-theme .widget.mixergy_podcast .subscribe_buttons,
+body.bbpress .widget.mixergy_podcast .subscribe_buttons {
+  float: left;
+}
+body.premk-theme .widget.mixergy_podcast .subscribe_buttons a img,
+body.bbpress .widget.mixergy_podcast .subscribe_buttons a img {
+  margin: 5px 4px 10px 0px;
+}
+body.premk-theme .widget.mixergy_podcast .help,
+body.bbpress .widget.mixergy_podcast .help {
+  font-size: 12px;
+}
+body.premk-theme .widget.mixergy_podcast .widget-title,
+body.bbpress .widget.mixergy_podcast .widget-title {
+  background: none repeat scroll 0 0 #0072bc;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 3px 3px 0 0;
+  color: #ffffff;
+  font-size: 1.14286rem;
+  font-weight: 600;
+  margin: -21px -21px 20px;
+  padding: 10px 0 10px 20px;
+  text-shadow: none;
+}
+body.premk-theme footer.site-footer .widget,
+body.bbpress footer.site-footer .widget {
+  background: transparent;
+  color: white;
+}
+body.premk-theme.page-id-31660 .gfield_type_address label,
+body.bbpress.page-id-31660 .gfield_type_address label {
+  padding-bottom: 20px;
+}
+body.premk-theme.page-id-31660 .gfield_type_address input,
+body.bbpress.page-id-31660 .gfield_type_address input,
+body.premk-theme.page-id-31660 .gfield_type_address select,
+body.bbpress.page-id-31660 .gfield_type_address select {
+  margin-bottom: 0px;
+}
+body.premk-theme .gform_wrapper .gfield_checkbox li label,
+body.bbpress .gform_wrapper .gfield_checkbox li label,
+body.premk-theme .gform_wrapper.gf_browser_chrome .gfield_checkbox li label,
+body.bbpress .gform_wrapper.gf_browser_chrome .gfield_checkbox li label {
+  margin-top: 0px !important;
+  margin-left: 17px;
+}
+body.premk-theme .gform_wrapper .gfield_checkbox li input,
+body.bbpress .gform_wrapper .gfield_checkbox li input,
+body.premk-theme .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+body.bbpress .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+body.premk-theme .gform_wrapper .gfield_checkbox li input[type="checkbox"],
+body.bbpress .gform_wrapper .gfield_checkbox li input[type="checkbox"],
+body.premk-theme .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
+body.bbpress .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"] {
+  margin-top: 5px !important;
+}
+body.premk-theme .gform_wrapper .gfield_radio li label,
+body.bbpress .gform_wrapper .gfield_radio li label,
+body.premk-theme .gform_wrapper.gf_browser_chrome .gfield_radio li label,
+body.bbpress .gform_wrapper.gf_browser_chrome .gfield_radio li label {
+  margin-top: 0px !important;
+  margin-left: 17px;
+}
+body.premk-theme .gform_wrapper .gfield_radio li input[type="radio"],
+body.bbpress .gform_wrapper .gfield_radio li input[type="radio"],
+body.premk-theme .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
+body.bbpress .gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"] {
+  margin-top: 5px !important;
+}
+body.premk-theme .gform_wrapper li.gf_list_inline ul.gfield_checkbox li,
+body.bbpress .gform_wrapper li.gf_list_inline ul.gfield_checkbox li,
+body.premk-theme .gform_wrapper.gf_browser_chrome li.gf_list_inline ul.gfield_checkbox li,
+body.bbpress .gform_wrapper.gf_browser_chrome li.gf_list_inline ul.gfield_checkbox li,
+body.premk-theme .gform_wrapper li.gf_list_inline ul.gfield_radio li,
+body.bbpress .gform_wrapper li.gf_list_inline ul.gfield_radio li,
+body.premk-theme .gform_wrapper.gf_browser_chrome li.gf_list_inline ul.gfield_radio li,
+body.bbpress .gform_wrapper.gf_browser_chrome li.gf_list_inline ul.gfield_radio li {
+  margin: 0 25px 10px 0 !important;
+}
+body.premk-theme .gform_wrapper .ginput_full,
+body.bbpress .gform_wrapper .ginput_full,
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_full,
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_full,
+body.premk-theme .gform_wrapper .ginput_left,
+body.bbpress .gform_wrapper .ginput_left,
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_left,
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_left,
+body.premk-theme .gform_wrapper .ginput_right,
+body.bbpress .gform_wrapper .ginput_right,
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_right,
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_right {
+  margin-bottom: 10px;
+}
+body.premk-theme .gform_wrapper .ginput_full input[type="text"],
+body.bbpress .gform_wrapper .ginput_full input[type="text"],
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_full input[type="text"],
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_full input[type="text"],
+body.premk-theme .gform_wrapper .ginput_left input[type="text"],
+body.bbpress .gform_wrapper .ginput_left input[type="text"],
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_left input[type="text"],
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_left input[type="text"],
+body.premk-theme .gform_wrapper .ginput_right input[type="text"],
+body.bbpress .gform_wrapper .ginput_right input[type="text"],
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_right input[type="text"],
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_right input[type="text"],
+body.premk-theme .gform_wrapper .ginput_full select,
+body.bbpress .gform_wrapper .ginput_full select,
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_full select,
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_full select,
+body.premk-theme .gform_wrapper .ginput_left select,
+body.bbpress .gform_wrapper .ginput_left select,
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_left select,
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_left select,
+body.premk-theme .gform_wrapper .ginput_right select,
+body.bbpress .gform_wrapper .ginput_right select,
+body.premk-theme .gform_wrapper.gf_browser_chrome .ginput_right select,
+body.bbpress .gform_wrapper.gf_browser_chrome .ginput_right select {
+  margin-bottom: 0px;
+}
+body.premk-theme .gform_wrapper .gform-submit-hidden input[type='submit'],
+body.bbpress .gform_wrapper .gform-submit-hidden input[type='submit'] {
+  display: none;
+}
+body.premk-theme .gf_browser_chrome.gform_wrapper .ginput_container + .gfield_description.validation_message,
+body.bbpress .gf_browser_chrome.gform_wrapper .ginput_container + .gfield_description.validation_message {
+  margin-top: 0px !important;
+}
+body.premk-theme .page-id-33886 .button,
+body.bbpress .page-id-33886 .button {
+  font-size: 16px;
+}
+body.premk-theme .page-id-33886 .button .sub-text,
+body.bbpress .page-id-33886 .button .sub-text {
+  font-size: 12px;
+}
+body.premk-theme .testimonial,
+body.bbpress .testimonial {
+  margin: 0 20%;
+  background: #ecf8ff;
+  padding: 10px 50px;
+  position: relative;
+  font-family: Open Sans, sans-serif;
+  color: #666;
+  border-radius: 5px;
+  font-style: italic;
+  text-shadow: 0 1px 0 #ECFBFF;
+  /*background-image: linear-gradient(#f8f8f8, #ddd); */
+}
+body.premk-theme .testimonial:before,
+body.bbpress .testimonial:before,
+body.premk-theme .testimonial:after,
+body.bbpress .testimonial:after {
+  content: "\201C";
+  position: absolute;
+  font-size: 80px;
+  line-height: 1;
+  color: #999;
+  font-family: Open Sans, sans-serif;
+  font-style: normal;
+}
+body.premk-theme .testimonial:before,
+body.bbpress .testimonial:before {
+  top: 0;
+  left: 10px;
+}
+body.premk-theme .testimonial:after,
+body.bbpress .testimonial:after {
+  content: "\201D";
+  right: 10px;
+  bottom: -0.5em;
+  font-style: normal;
+}
+body.premk-theme .switch-plans,
+body.bbpress .switch-plans {
+  display: none;
+}
+body.premk-theme .stripe-signup-container.switch,
+body.bbpress .stripe-signup-container.switch,
+body.premk-theme .stripe-signup-container.processed,
+body.bbpress .stripe-signup-container.processed {
+  position: relative;
+}
+body.premk-theme .stripe-signup-container.switch .stripe-signup-header,
+body.bbpress .stripe-signup-container.switch .stripe-signup-header,
+body.premk-theme .stripe-signup-container.processed .stripe-signup-header,
+body.bbpress .stripe-signup-container.processed .stripe-signup-header {
+  visibility: hidden;
+}
+body.premk-theme .stripe-signup-container.switch .switch-plans,
+body.bbpress .stripe-signup-container.switch .switch-plans {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+body.premk-theme .stripe-signup-container.switch form,
+body.bbpress .stripe-signup-container.switch form {
+  visibility: hidden;
+}
+body.premk-theme .stripe-signup-container.processed form > div,
+body.bbpress .stripe-signup-container.processed form > div {
+  display: none;
+}
+body.premk-theme.page-id-34449 .button.large,
+body.bbpress.page-id-34449 .button.large {
+  font-size: 18px;
+}
+body.premk-theme .media-player,
+body.bbpress .media-player {
+  margin: 10px 0px 30px 0px;
+}
+body.premk-theme .media-player .mejs-controls a:focus > .mejs-offscreen,
+body.bbpress .media-player .mejs-controls a:focus > .mejs-offscreen {
+  display: none !important;
+}
+body.premk-theme.single-course #vid-iframe,
+body.bbpress.single-course #vid-iframe {
+  width: 100%;
+}
+body.premk-theme.single-course #info-box,
+body.bbpress.single-course #info-box {
+  width: 100%;
+}
+body.premk-theme.single-course .wistia_socialbar,
+body.bbpress.single-course .wistia_socialbar {
+  display: none !important;
+}
+body.premk-theme.twitter-card-layout .sumome-share-client-wrapper,
+body.bbpress.twitter-card-layout .sumome-share-client-wrapper {
+  display: none;
+}
+body.premk-theme.twitter-card-layout #primary,
+body.bbpress.twitter-card-layout #primary {
+  padding: 5px 15px !important;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed,
+body.bbpress.twitter-card-layout #primary #content.hfeed {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed h1,
+body.bbpress.twitter-card-layout #primary #content.hfeed h1 {
+  font-weight: bold;
+  font-size: 1.85714rem;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed .post-meta,
+body.bbpress.twitter-card-layout #primary #content.hfeed .post-meta {
+  display: none;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed .mix-modal-show,
+body.bbpress.twitter-card-layout #primary #content.hfeed .mix-modal-show {
+  display: none;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed img.interviewee-photo,
+body.bbpress.twitter-card-layout #primary #content.hfeed img.interviewee-photo {
+  float: left;
+  margin: 0px 20px 10px 0px;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed .interviewee-name,
+body.bbpress.twitter-card-layout #primary #content.hfeed .interviewee-name {
+  display: none;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed p.interviewee-photo,
+body.bbpress.twitter-card-layout #primary #content.hfeed p.interviewee-photo {
+  display: none;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed .media-player,
+body.bbpress.twitter-card-layout #primary #content.hfeed .media-player,
+body.premk-theme.twitter-card-layout #primary #content.hfeed .wistia_embed,
+body.bbpress.twitter-card-layout #primary #content.hfeed .wistia_embed,
+body.premk-theme.twitter-card-layout #primary #content.hfeed .wistia-playback-speed,
+body.bbpress.twitter-card-layout #primary #content.hfeed .wistia-playback-speed,
+body.premk-theme.twitter-card-layout #primary #content.hfeed .mobile-download-audio.button,
+body.bbpress.twitter-card-layout #primary #content.hfeed .mobile-download-audio.button {
+  display: none !important;
+}
+body.premk-theme.twitter-card-layout #primary #content.hfeed .raw-transcript,
+body.bbpress.twitter-card-layout #primary #content.hfeed .raw-transcript,
+body.premk-theme.twitter-card-layout #primary #content.hfeed .sponsors,
+body.bbpress.twitter-card-layout #primary #content.hfeed .sponsors,
+body.premk-theme.twitter-card-layout #primary #content.hfeed .blog-content,
+body.bbpress.twitter-card-layout #primary #content.hfeed .blog-content {
+  display: none !important;
+}
+body.premk-theme.twitter-card-layout #primary #disqus_thread,
+body.bbpress.twitter-card-layout #primary #disqus_thread {
+  display: none !important;
+}
+body.premk-theme.single-interview #banner-go-premium h1,
+body.bbpress.single-interview #banner-go-premium h1 {
+  font-size: 3rem;
+}
+body.premk-theme.single-interview #banner-go-premium div.text-center,
+body.bbpress.single-interview #banner-go-premium div.text-center {
+  display: none;
+}
+body.premk-theme .headroom,
+body.bbpress .headroom {
+  transition: transform 200ms linear;
+}
+body.premk-theme .headroom--pinned,
+body.bbpress .headroom--pinned {
+  transform: translateY(0%);
+}
+body.premk-theme .headroom--unpinned,
+body.bbpress .headroom--unpinned {
+  transform: translateY(-100%);
+}
+body.premk-theme.mix-modal-body,
+body.bbpress.mix-modal-body {
+  overflow: hidden;
+}
+body.premk-theme .mix-modal,
+body.bbpress .mix-modal {
+  display: none;
+}
+body.premk-theme .mix-modal.show,
+body.bbpress .mix-modal.show {
+  display: block;
+  z-index: 1000;
+  position: fixed;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 700px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+body.premk-theme .mix-modal .frame,
+body.bbpress .mix-modal .frame {
+  width: 100%;
+  background: #fefefe;
+  border-radius: 1px;
+  padding: 0px 10px 20px 10px;
+  text-align: center;
+}
+body.premk-theme .mix-modal .modal-header h2,
+body.bbpress .mix-modal .modal-header h2 {
+  font-size: 20pt;
+  font-weight: bold;
+}
+body.premk-theme .mix-modal .btn-close,
+body.bbpress .mix-modal .btn-close {
+  display: block;
+  font-size: 16pt;
+  position: absolute;
+  z-index: 1;
+  top: -9px;
+  right: -9px;
+  width: 18pt;
+  height: 18pt;
+  color: white;
+  line-height: 12pt;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  cursor: pointer;
+  background: black;
+  border: 2pt solid white;
+  border-radius: 18pt;
+}
+body.premk-theme .mix-modal .btn-close:hover,
+body.bbpress .mix-modal .btn-close:hover {
+  color: #919191;
+}
+body.premk-theme .mix-modal .modal-body,
+body.bbpress .mix-modal .modal-body {
+  max-width: 350pt;
+  margin: 0px auto;
+}
+body.premk-theme .mix-modal .email,
+body.bbpress .mix-modal .email,
+body.premk-theme .mix-modal .email:focus,
+body.bbpress .mix-modal .email:focus,
+body.premk-theme .mix-modal .infusion-field-input-container,
+body.bbpress .mix-modal .infusion-field-input-container,
+body.premk-theme .mix-modal .infusion-field-input-container:focus,
+body.bbpress .mix-modal .infusion-field-input-container:focus {
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0;
+  width: 100%;
+  background: none repeat scroll 0 0 white;
+  border: 1pt solid #c9d7dd;
+  border-radius: 0;
+  box-shadow: none;
+  color: #201d1d;
+  padding: 0.8em 12pt;
+  background: url('../images/mix-modal-email.png') no-repeat 97% 50%;
+  height: 3.5rem;
+  margin-top: 15px;
+}
+body.premk-theme .mix-modal .email.has-error,
+body.bbpress .mix-modal .email.has-error,
+body.premk-theme .mix-modal .email:focus.has-error,
+body.bbpress .mix-modal .email:focus.has-error,
+body.premk-theme .mix-modal .infusion-field-input-container.has-error,
+body.bbpress .mix-modal .infusion-field-input-container.has-error,
+body.premk-theme .mix-modal .infusion-field-input-container:focus.has-error,
+body.bbpress .mix-modal .infusion-field-input-container:focus.has-error {
+  border: solid 1px red;
+}
+body.premk-theme .mix-modal .infusion-field-input-container,
+body.bbpress .mix-modal .infusion-field-input-container,
+body.premk-theme .mix-modal .infusion-field-input-container:focus,
+body.bbpress .mix-modal .infusion-field-input-container:focus {
+  background: none;
+  margin-top: 0px;
+}
+body.premk-theme .mix-modal .email-error,
+body.bbpress .mix-modal .email-error,
+body.premk-theme .mix-modal .fname-error,
+body.bbpress .mix-modal .fname-error {
+  display: none;
+  color: red;
+}
+body.premk-theme .mix-modal .submit,
+body.bbpress .mix-modal .submit {
+  border-radius: 1px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  max-width: 300pt;
+  width: 100%;
+  margin: 25px auto 15px auto;
+  font-size: 14pt;
+  font-weight: bold;
+  letter-spacing: 0em;
+  background: #FFCB01;
+  text-shadow: #EEB521 2px 2px 0px;
+  padding: 0.9em;
+  border: none;
+}
+body.premk-theme .mix-modal .modal-header,
+body.bbpress .mix-modal .modal-header {
+  padding: 15px 0 0px 0;
+  text-align: center;
+}
+body.premk-theme .mix-modal .modal-footer,
+body.bbpress .mix-modal .modal-footer {
+  margin: 10px 20px;
+  font-size: 9pt;
+  line-height: 15pt;
+  letter-spacing: 0em;
+  color: #61676a;
+  word-break: break-all;
+}
+body.premk-theme .mix-modal .modal-footer .icon-lock,
+body.bbpress .mix-modal .modal-footer .icon-lock {
+  background: transparent url('../images/mix-modal-lock.png') no-repeat 0 50%;
+  display: inline-block;
+  height: 18px;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: -4px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  width: 19px;
+}
+body.premk-theme .mix-modal-overlay,
+body.bbpress .mix-modal-overlay {
+  display: none;
+}
+body.premk-theme .mix-modal-overlay.show,
+body.bbpress .mix-modal-overlay.show {
+  display: block;
+  background-color: black;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=mix-style.css.map */

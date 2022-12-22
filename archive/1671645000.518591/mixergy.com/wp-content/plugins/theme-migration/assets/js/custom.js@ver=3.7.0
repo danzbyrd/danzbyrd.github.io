@@ -1,0 +1,1065 @@
+
+jQuery(document).ready(function () {
+	if (jQuery('body.premk-theme').length) {
+		/**
+		 * Foundation is the code that makes Mixergy responsive
+		 */
+		jQuery(document).foundation();
+
+		/**
+		 * Set the header to hide when scrolling down but reappear when scrolling up.
+		 */
+		// grab an element
+		var myElement = document.querySelector("header");
+		// construct an instance of Headroom, passing the element
+		var headroom = new Headroom(myElement);
+		// initialise
+		headroom.init();
+	}
+});
+
+jQuery(document).ready(function () {
+	if (jQuery('body.premk-theme').length) {
+
+
+		/**
+		 * Wistia video player
+		 * Will jump to the number of seconds that data-timecode 
+		 * has set in a link that has a class of both wistia-control and chapter.
+		 */
+		jQuery('.wistia-control.chapter').each(function (index) {
+			jQuery(this).click(function () {
+				jQuery('.wistia_embed')[0].wistiaApi.time(jQuery(this).data('timecode')).play();
+				return false;
+			});
+		});
+		/**
+		 * Finds all the wistia embed elements that need to
+		 * have script complete the embedding process. This
+		 * is not intended for iframe embed codes.
+		 * 
+		 * For this to work, the div needs to have a class of
+		 * "wistia_embed" and "scripted". It also needs to have
+		 * the embed has as the attribute value for "data-embed-hash".
+		 * 
+		 * Example usage is for Interview posts.
+		 */
+		jQuery('.wistia_embed.scripted').each(function (index) {
+			var embedCode = jQuery(this).data('embedHash');
+			var stillUrl = jQuery(this).data('stillUrl');
+
+
+			if (embedCode !== undefined && embedCode !== '') {
+				var wistiaArguments = {
+					fullscreenButton: true,
+					videoFoam: true,
+					playerPreference: 'html5',
+					plugin: {
+						"socialbar-v1": {
+							buttons: tmcustom.wistia_socialbar_buttons,
+							pageUrl: window.location,
+							pageTitle: document.title,
+						}
+					}
+				};
+
+				if (stillUrl !== undefined && stillUrl !== '') {
+					wistiaArguments.stillUrl = stillUrl;
+					wistiaArguments.stillSnap = false;
+				}
+
+				console.log(wistiaArguments);
+
+				var wistiaEmbed = Wistia.embed(embedCode + '', wistiaArguments);
+
+				/*
+				 * We want to show the player controls only if this 
+				 * is the HTML5 player. Since it's possible to switch
+				 * between the flash and HTML5 player, we'll need to
+				 * keep an eye on this.
+				 */
+				setInterval(function () {
+					var wistiaCssDisplay = jQuery('.wistia-playback-speed.hash-' + embedCode).css('display');
+
+					if (wistiaEmbed.embedType === 'romulus') {
+						if (wistiaCssDisplay === 'none') {
+							jQuery('.wistia-playback-speed.hash-' + embedCode).css('display', 'block');
+							jQuery('.wistia-playback-speed.hash-' + embedCode + ' .button.default').addClass('selected');
+						}
+					} else {
+						if (wistiaCssDisplay === 'block') {
+							jQuery('.wistia-playback-speed.hash-' + embedCode).css('display', 'none');
+							jQuery('.wistia-playback-speed.hash-' + embedCode + ' .button').removeClass('selected');
+						}
+					}
+				}, 2000);
+			}
+		});
+		jQuery('.wistia-playback-speed .button').click(function () {
+			var playbackGroup = jQuery(this).parent('.wistia-playback-speed');
+			var embedCode = jQuery(playbackGroup).data('embedHash');
+
+			if (embedCode !== '') {
+				var wistiaEmbed = jQuery('#wistia_' + embedCode)[0].wistiaApi;
+
+				wistiaEmbed.playbackRate(jQuery(this).data('speed'));
+
+				jQuery('.button', playbackGroup).removeClass('selected');
+				jQuery(this).addClass('selected');
+			}
+		});
+		/**
+		 * JS for updating CC exp date.
+		 */
+		if (jQuery('#lmc_form').length) {
+			var token = lmc_form_getParameterByName('token');
+			var id = '6';
+			var ccForm = "https://lowermychurn.com/edit_customer_card?id=" + id + "&token=" + token;
+			document.getElementById("lmc_form").setAttribute('src', ccForm);
+		}
+
+	}
+});
+
+
+/*
+ * Opening all non-internal links in a new window.
+ */
+jQuery(document).ready(function ($) {
+	/*
+	 * Adds a handler called internal which tests the link
+	 * to see if it's linking to the same domain or is a 
+	 * tel/mailto link.
+	 * 
+	 * @param {type} obj
+	 * @param {type} index
+	 * @param {type} meta
+	 * @param {type} stack
+	 * @returns {Boolean} true if the link is considered internal
+	 */
+	$.expr[':'].internal = function (obj, index, meta, stack) {
+		var $this = $(obj),
+				url = $this.attr('href') || '',
+				isInternalLink;
+
+		url = url.toLowerCase();
+
+		/*
+		 * Internal links do not start with http:// or https://
+		 * If they do start with either of those protocol, then the link 
+		 * must have the current host as part of it. Otherwise,
+		 * it's trying to link to another site.
+		 * 
+		 * This logic allows for relative links and other protocols 
+		 * to count as internal, such as: mailto, tel and javascript:void(0);
+		 * 
+		 */
+		if ((url.indexOf('http://') !== 0
+				&& url.indexOf('https://') !== 0)
+				|| url.indexOf('http://' + location.host) === 0
+				|| url.indexOf('https://' + location.host) === 0) {
+
+			isInternalLink = true;
+
+		} else {
+			isInternalLink = false;
+		}
+		return isInternalLink;
+	};
+
+	//Find all non-internal links and have them open in a new tab/window.
+	$('a[href]:not(:internal)').attr('target', '_blank');
+});
+
+/**
+ * Get params from URL
+ * Part of the code from JS for updating CC exp date.
+ * @param {type} name
+ * @returns {String}
+ */
+function lmc_form_getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
+	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var mixAnalytics = {
+	init: function () {
+		jQuery(document).ready(function () {
+			mixAnalytics.processEventHitElements();
+			mixAnalytics.interviewEvents.modalBeforeGoPremium();
+			mixAnalytics.processEventQueue();
+		});
+	},
+	/**
+	 * Loop through each element with a class of mkga-event-hit.
+	 * Those elements contain the parameters for a Google Analytics
+	 * event hit. The span is created using a shortcode that's created
+	 * in the class.mkga.php file. The shortcode name is ga_tracking_hit.
+	 */
+	processEventHitElements: function () {
+		jQuery('.mkga-event-hit').each(function (i) {
+			//Grab the valuves from the current element
+			var category = jQuery(this).data('category') === undefined ? '' : jQuery(this).data('category');
+			var action = jQuery(this).data('action') === undefined ? '' : jQuery(this).data('action');
+			var label = jQuery(this).data('label') === undefined ? '' : jQuery(this).data('label');
+
+			mixAnalytics.trackEvent(category, action, label);
+		});
+
+		jQuery('.mkga-event-click').click(function () {
+			//Grab the valuves from the current element
+			var category = jQuery(this).data('category') === undefined ? '' : jQuery(this).data('category');
+			var action = jQuery(this).data('action') === undefined ? '' : jQuery(this).data('action');
+			var label = jQuery(this).data('label') === undefined ? '' : jQuery(this).data('label');
+
+			mixAnalytics.trackEvent(category, action, label);
+		});
+
+		jQuery('.mkga-event-click-queue').click(function () {
+			//Grab the valuves from the current element
+			var category = jQuery(this).data('category') === undefined ? '' : jQuery(this).data('category');
+			var action = jQuery(this).data('action') === undefined ? '' : jQuery(this).data('action');
+			var label = jQuery(this).data('label') === undefined ? '' : jQuery(this).data('label');
+
+			mixAnalytics.queueEvent(category, action, label);
+		});
+	},
+	trackEvent: function (category, action, label) {
+		console.log('About to trigger a GA event for the following information', category, action, label);
+
+		//Make sure GA is loaded
+		if (typeof (_gaq) !== 'undefined') {
+			_gaq.push(['_trackEvent', category, action, label, 1]);
+			console.log('Request made using _gaq');
+		} else if (typeof (gtag) !== 'undefined') {
+			gtag('event', action, {
+				'event_category': category,
+				'event_label': label,
+				'non_interaction': true,
+			 });
+			console.log('Request made using gtag');
+		} else {
+			console.log('GA was not loaded!');
+		}
+	},
+	/**
+	 * When an event is part of a link, there isn't enough
+	 * time to send the event info to Google before the
+	 * page changes and cancels the event notification.
+	 * So, we need to queue the event notification into a
+	 * cookie and then send that notification on the next
+	 * page load.
+	 * 
+	 * DO NOT include commas or pipes | in the names because
+	 * they're used as delimiters.
+	 * 
+	 * @param {type} category
+	 * @param {type} action
+	 * @param {type} label
+	 * @returns {undefined}
+	 */
+	queueEvent: function (category, action, label) {
+		/*
+		 * Queued events are stored in a cookie as a comma
+		 * delimited list of event details. Each queued 
+		 * event will be a new array item in the cookie.
+		 * 
+		 * The event details themselves are stored as
+		 * a pipe delimited string
+		 */
+		var cookieValue = mixTools.getCookie('mixAnalytics_queueEvent');
+		var eventDetails = category + '|' + action + '|' + label;
+		if (cookieValue !== '' && cookieValue !== null) {
+			cookieValue += ',';
+		}
+		cookieValue += eventDetails;
+
+		console.log('New queued events');
+		console.log(cookieValue);
+
+		var cookieExpires = new Date();
+		cookieExpires.setFullYear(cookieExpires.getFullYear() + 1);
+
+		mixTools.setCookie('mixAnalytics_queueEvent', cookieValue, cookieExpires);
+	},
+	/**
+	 * Goes through any GA events that are queued
+	 * in the cookie and makes the request.
+	 * 
+	 * @returns {undefined}
+	 */
+	processEventQueue: function () {
+		/*
+		 * Queued events are stored in a cookie as a comma
+		 * delimited list of event details. Each queued 
+		 * event will be a new array item in the cookie.
+		 * 
+		 * The event details themselves are stored as
+		 * a pipe delimited string
+		 */
+		var cookieValue = mixTools.getCookie('mixAnalytics_queueEvent');
+
+		if (cookieValue !== '') {
+			var events = cookieValue.split(',');
+			var eventDetails = '';
+
+			console.log('Found queued events');
+			console.log(cookieValue);
+
+			for (var i = 0; i < events.length; i++) {
+				eventDetails = events[i].split('|');
+				console.log(eventDetails);
+				mixAnalytics.trackEvent(eventDetails[0], eventDetails[1], eventDetails[2]);
+			}
+
+			/*
+			 * We're done with the events, so clear out the cookie.
+			 */
+			var cookieExpires = new Date();
+			cookieExpires.setFullYear(cookieExpires.getFullYear() - 1);
+			mixTools.setCookie('mixAnalytics_queueEvent', '', cookieExpires);
+		}
+	},
+	interviewEvents: {
+		category: 'Interviews',
+		modalBeforeGoPremiumAction: 'Email request modal',
+		/**
+		 * Track events related to the modal that requests
+		 * emails of non-members before they're taken to
+		 * the go-premium page.
+		 */
+		modalBeforeGoPremium: function () {
+			/**
+			 * Track that it's even possible to activate the modal.
+			 * Do this only if we have a link with a class that'll
+			 * open the modal.
+			 */
+			if (jQuery('.mix-modal-show').length > 0) {
+
+				mixAnalytics.trackEvent(mixAnalytics.interviewEvents.category
+						, mixAnalytics.interviewEvents.modalBeforeGoPremiumAction
+						, 'page hit');
+
+			}
+
+			/**
+			 * Track that the modal has been opened.
+			 */
+			jQuery('.mix-modal-show').click(function () {
+				/*
+				 * We want unique tracking for each page load.
+				 * Tag the object as having been tracked so
+				 * we only track the event once on this page load.
+				 */
+				if (jQuery(this).data('modalBeforeGoPremium') !== 'tracked') {
+
+					jQuery(this).data('modalBeforeGoPremium', 'tracked');
+
+					mixAnalytics.trackEvent(mixAnalytics.interviewEvents.category
+							, mixAnalytics.interviewEvents.modalBeforeGoPremiumAction
+							, 'modal opened');
+
+				}
+
+				return false;
+			});
+
+			/**
+			 * Track that the go-premium page has been viewed.
+			 * Since the modal form will be submitted, it'll be bad
+			 * to pause that submit just to track the event.
+			 * Instead, we'll recognize that we're on the 
+			 * go-premium page *because* of the modal form.
+			 * This happens by looking for a query variable that's
+			 * added to the go-premium page when it's a form submit.
+			 */
+			if (mixTools.getQueryParameterByName('inf_custom_InterviewIwant') !== '') {
+
+				mixAnalytics.trackEvent(mixAnalytics.interviewEvents.category
+						, mixAnalytics.interviewEvents.modalBeforeGoPremiumAction
+						, 'go-premium page hit');
+
+			}
+		},
+	},
+};
+mixAnalytics.init();
+
+var mixModal = {
+	init: function () {
+		jQuery(document).ready(function () {
+			jQuery('.mix-modal-show').click(function () {
+				mixModal.show();
+				return false;
+			});
+
+			jQuery('.mix-modal .btn-close, .mix-modal-overlay').click(function () {
+				mixModal.hide();
+				return false;
+			});
+
+			jQuery('.mix-modal .mix-form').submit(function () {
+				return mixModal.validateForm();
+			});
+
+			jQuery('.mix-modal .email').focus(function () {
+				if (jQuery(this).val() === '') {
+					mixModal.emailError(false);
+				} else {
+					return mixModal.validateForm();
+				}
+			});
+		});
+	},
+	show: function () {
+		jQuery('.mix-modal').addClass('show');
+		jQuery('.mix-modal-overlay').addClass('show');
+		jQuery('.mix-modal-overlay').css('height', jQuery(document).height());
+		jQuery('body').addClass('mix-modal-body');
+	},
+	hide: function () {
+		jQuery('.mix-modal').removeClass('show');
+		jQuery('.mix-modal-overlay').removeClass('show');
+		jQuery('body').removeClass('mix-modal-body');
+	},
+	validateForm: function () {
+		var okToSend = true;
+		if ((jQuery('.mix-modal .email').val().match(/@/g) || []).length === 1) {
+			mixModal.showError(false, '.email');
+		} else {
+			mixModal.showError(true, '.email');
+			okToSend = false;
+		}
+
+		var fname = jQuery('.mix-modal .fname').val();
+
+		fname = jQuery.trim(fname);
+
+		jQuery('.mix-modal .fname').val(fname);
+
+		if (fname.length === 0) {
+			mixModal.showError(true, '.fname');
+			okToSend = false;
+		} else {
+			mixModal.showError(false, '.fname');
+		}
+
+		return okToSend;
+	},
+	showError: function (hasError, inputClass) {
+		if (hasError) {
+			jQuery('.mix-modal ' + inputClass + '-error').css('display', 'block');
+			jQuery('.mix-modal ' + inputClass).addClass('has-error');
+		} else {
+			jQuery('.mix-modal ' + inputClass + '-error').css('display', 'none');
+			jQuery('.mix-modal ' + inputClass).removeClass('has-error');
+		}
+
+	}
+};
+mixModal.init();
+
+var mixTools = {
+	/*
+	 * URLs need to have spaces encoded as %20 but query parameters
+	 * should have them encoded as + 
+	 * However, there isn't a built in function that'll properly 
+	 * encode field parameters.
+	 * 
+	 * @param {type} queryValue
+	 * @returns {undefined}
+	 */
+	urlEncodeQueryParameter: function (queryValue) {
+		queryValue = encodeURIComponent(queryValue);
+		queryValue = queryValue.replace('%20', '+');
+
+		/*
+		 * For extra safty, encode the tick mark, so it won't break HTML attributes.
+		 */
+		queryValue = queryValue.replace("'", '%27');
+
+		return queryValue;
+	},
+	/**
+	 * Looks up the value of a query string field (key).
+	 * 
+	 * @param {string} name - the field name to lookup
+	 * @returns {String} - empty string if the field does not exist, value if field was found
+	 */
+	getQueryParameterByName: function (name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	},
+	/**
+	 * 
+	 * @param {string} name
+	 * @param {string} value
+	 * @param {date} expires Example: var cookieExpires = new Date(); cookieExpires.setFullYear(cookieExpires.getFullYear() + 1);
+	 * @param {string} path Defaults to /
+	 * @param {string} domain Defaults to current domain.
+	 * @param {boolean} secure Defaults to false
+	 * @returns {undefined}
+	 */
+	setCookie: function (name, value, expires, path, domain, secure) {
+		document.cookie = name + "=" + escape(value) +
+				((expires) ? "; expires=" + expires.toUTCString() : "") +
+				((path) ? "; path=" + path : "; path=/") +
+				((domain) ? "; domain=" + domain : "") +
+				((secure) ? "; secure" : "");
+	},
+	/**
+	 * Gets the value of a cookie. Returns an empty 
+	 * string when the cookie doesn't exist.
+	 * 
+	 * @param {type} name
+	 * @returns {String}
+	 */
+	getCookie: function (name) {
+		var dc = document.cookie;
+		var prefix = name + "=";
+		var begin = dc.indexOf("; " + prefix);
+		if (begin === -1) {
+			begin = dc.indexOf(prefix);
+			if (begin !== 0) {
+				return '';
+			}
+		} else {
+			begin += 2;
+		}
+		var end = document.cookie.indexOf(";", begin);
+		if (end === -1) {
+			end = dc.length;
+		}
+		return unescape(dc.substring(begin + prefix.length, end));
+	},
+};
+
+var mixStripe = {
+	init: function () {
+		jQuery(document).ready(function () {
+			if (jQuery('body.premk-theme').length) {
+				mixStripe.openPaymentFormAutomatically();
+				mixStripe.stripePaymentForm();
+			}
+		});
+	},
+	paymentForm: [],
+	paymentFormButton: [],
+	/**
+	 * Will look for a hash that has an ID of a payment form
+	 * on a page like go-premium and will open it automatically.
+	 * 
+	 * Look in the HTML source for a div with an id that starts
+	 * with "stripe-signup-". It should have some numbers after the
+	 * dash. Use those numbers in the hash.
+	 * 
+	 * Example usage would be https://mixergy.com/go-premium/#1417481501
+	 * That will open up a form that has a div with id="stripe-signup-1417481501"
+	 * 
+	 * @returns {undefined}
+	 */
+	openPaymentFormAutomatically: function () {
+		var hash = jQuery(location).attr('hash');
+		console.log('hash: ' + hash);
+
+		if (hash.length > 0) {
+			hash = hash.replace('#', '');
+			console.log('cleaned hash: ' + hash);
+
+			var modal = jQuery('[data-reveal-id="stripe-signup-' + hash + '"]');
+			if (modal.length > 0) {
+				console.log('opening payment');
+
+				modal.click();
+			}
+		}
+
+	},
+	/**
+	 * Sets up the click event when someone makes a purchase on
+	 * a page like /go-premium. It'll create a token using Stripe
+	 * then display errors or submit the form with a token which
+	 * Stripe returned for the customer.
+	 * 
+	 * @returns {undefined}
+	 */
+	stripePaymentForm: function () {
+		/*
+		 * The form is created using a shortcode built into WLM.
+		 * I'd like to change the text without having to hack the
+		 * plugin directly. 
+		 * 
+		 * The original text is something like "Pay USD 199.00".
+		 * By default, we're going to replace that so it says
+		 * "Pay $199.00".
+		 * 
+		 * However, if the "select this option" button has it's own
+		 * text value for the attribute data-confirmation-button-text 
+		 * then use that.
+		 */
+		jQuery('.stripe-submit').each(function (i) {
+			/*
+			 * There's a non-breaking space in the HTML which is represented as \xa0
+			 * There's also a hidden element with an ellipsis that needs to be replaced.
+			 * Note, this will destory the built in "wait" logic but that's OK
+			 * because we replaced that logic with our own code.
+			 */
+			var newButtonText = jQuery(this).text().replace("Pay... \xa0USD ", 'Pay $');
+
+			jQuery(this).text(newButtonText);
+		});
+		mixStripe.stripeSetButtonProcessingText();
+
+		/*
+		 * If data-confirmation-button-text has value, replace the button text.
+		 */
+		jQuery('.select-option-button').click(function () {
+			var confirmationText = jQuery(this).data('confirmationButtonText');
+
+			if (confirmationText !== undefined && confirmationText !== '') {
+				jQuery('.stripe-submit').text(jQuery(this).data('confirmationButtonText'));
+			}
+
+			mixStripe.stripeSetButtonProcessingText();
+		});
+
+		/*
+		 * Raise an event when the payment form has been opened.
+		 */
+		jQuery('.select-option-button').click(function () {
+			window._fbq = window._fbq || [];
+			window._fbq.push(['track', '6032348347026', {'value': '0.00', 'currency': 'USD'}]);
+		});
+
+
+		/*
+		 * This event should fire when the signup form is opened.
+		 */
+		jQuery(document).on('open.fndtn.reveal', '[data-reveal]', function () {
+			/**
+			 * Reset the form, in case a customer has previous
+			 * data entered and someone hit the back button
+			 * or decided to go from one plan to another.
+			 */
+			jQuery('.stripe-submit .waiting-text .approved').hide();
+			jQuery('.stripe-submit .waiting-text .processing').show();
+			jQuery('.stripe-submit .original-text').show();
+			jQuery('.stripe-submit .waiting-text').hide();
+			jQuery('.stripe-submit').prop('disabled', false);
+
+			jQuery('form.stripe-form').each(function () {
+				jQuery(this)[0].reset();
+
+				/*
+				 * We want the ability to pass in an email address
+				 * via URL query string, to make the signup process easier.
+				 */
+				if (mixTools.getQueryParameterByName('wemail') !== '') {
+					jQuery('.stripe-field-email input', this).val(mixTools.getQueryParameterByName('wemail'));
+				}
+			});
+
+			jQuery('input[name="stripeToken"]').remove();
+			jQuery('.stripe-signup-container').removeClass('switch');
+			jQuery('.stripe-signup-container').find('.stripe-error').css('display', 'none');
+			jQuery('.stripe-signup-container .switch-plans').remove();
+		});
+
+
+
+		/**
+		 * Handle the payment click
+		 */
+		jQuery('form.stripe-form .stripe-submit').on('click', function (event) {
+
+			mixStripe.paymentFormButton = jQuery(this);
+			mixStripe.paymentForm = jQuery(mixStripe.paymentFormButton).parents('form.stripe-form');
+
+			//reset the error message
+			mixStripe.paymentForm.parents('.stripe-signup-container').find('.stripe-error').css('display', 'none');
+
+			fields = {
+				card_number: mixStripe.paymentForm.find('.stripe-field-cardnumber input:first'),
+				cvc: mixStripe.paymentForm.find('.stripe-field-cvc input:first'),
+				exp_month: mixStripe.paymentForm.find('.stripe-field-expmonth input:first'),
+				exp_year: mixStripe.paymentForm.find('.stripe-field-expyear input:first'),
+				email: mixStripe.paymentForm.find('.stripe-field-email input:first'),
+				first_name: mixStripe.paymentForm.find('.stripe-field-first_name input:first'),
+				last_name: mixStripe.paymentForm.find('.stripe-field-last_name input:first')
+			};
+
+			/*
+			 * Prevent duplicate button pushes and let the
+			 * customer know that something is happening
+			 */
+			mixStripe.paymentFormButton.prop("disabled", true);
+			mixStripe.paymentFormButton.find('.original-text').hide();
+			mixStripe.paymentFormButton.find('.waiting-text').show();
+
+			/*
+			 * Send the information to Stripe 
+			 */
+			Stripe.card.createToken({
+				number: fields.card_number.val(),
+				cvc: fields.cvc.val(),
+				exp_month: fields.exp_month.val(),
+				exp_year: fields.exp_year.val(),
+				name: fields.first_name.val() + " " + fields.last_name.val()
+			}, function (status, response) {
+				if (response.error) {
+					/*
+					 * There was an error processing the payment
+					 * so we need to show the error message and 
+					 * reset the button so it could be pushed again
+					 */
+					mixStripe.paymentForm.parents('.stripe-signup-container').find('.stripe-error').css('display', 'block');
+					mixStripe.paymentForm.parents('.stripe-signup-container').find('.stripe-error').html(response.error.message).addClass('alert-box warning');
+					mixStripe.paymentFormButton.find('.original-text').show();
+					mixStripe.paymentFormButton.find('.waiting-text').hide();
+					mixStripe.paymentFormButton.prop("disabled", false);
+				} else {
+					/**
+					 * Insert the token into the form so it gets submitted to the server
+					 */
+					mixStripe.paymentForm.append("<input type='hidden' name='stripeToken' value='" + response['id'] + "'/>");
+
+					/*
+					 * check if the customer would like to switch plans before 
+					 * submitting the form with the currently selected plan.
+					 * 
+					 */
+					var switchPlanFrom = String(jQuery('.switch-plans').data("from"));
+					var currentPlan = String(jQuery('input[name="sku"]', mixStripe.paymentForm).val());
+
+					console.log('Current plan SKU: ' + currentPlan);
+					console.log('Suggesting a switch to SKU: ' + String(jQuery('.switch-plans').data("to")));
+
+					if (currentPlan === switchPlanFrom) {
+
+						jQuery('.stripe-signup-container').addClass('switch');
+						jQuery('.switch-plans').clone().appendTo('.stripe-signup-container');
+
+						mixAnalytics.trackEvent('Go Premium', 'Switch plan from ' + switchPlanFrom, 'Offered option');
+
+						jQuery('.stripe-signup-container .switch-plans .button.yes').click(function () {
+							jQuery('input[name="sku"]', mixStripe.paymentFormForm).val(jQuery('.switch-plans').data("to"));
+
+							mixAnalytics.queueEvent('Go Premium', 'Switch plan from ' + switchPlanFrom, 'Accepted offer');
+							console.log('Switched plan');
+							mixStripe.stripePaymentFormSubmit();
+						});
+						jQuery('.stripe-signup-container .switch-plans .button.no').click(function () {
+
+							mixAnalytics.queueEvent('Go Premium', 'Switch plan from ' + switchPlanFrom, 'Declined offer');
+							console.log('Kept plan');
+							mixStripe.stripePaymentFormSubmit();
+						});
+
+					} else {
+						console.log('Not a plan that should be switched.');
+						mixStripe.stripePaymentFormSubmit();
+					}
+				}
+			});
+			event.preventDefault();
+
+		});
+
+	},
+	/*
+	 * Improve how the button looks while it's processing
+	 * by adding nicer HTML to the button.
+	 */
+	stripeSetButtonProcessingText: function () {
+		console.log('fixing button text');
+		jQuery('form.stripe-form .stripe-submit').each(function () {
+			console.log(jQuery(this).html());
+			//Put the existing code into a span so we can hide it when needed
+			jQuery(this).html('<span class="original-text">' + jQuery(this).html() + '</span>');
+			//Add the new waiting code
+			jQuery(this).append('<div class="waiting-text" style="display: none;"><img src="/wp-content/plugins/theme-migration/assets/images/ajax-loading-escaping-ball-30x10-black-blue-transparent.gif" alt="loading animation" /> <span class="processing">Processing...</span><span class="approved" style="display:none;">Approved! Loading...</span></span>');
+		});
+	},
+	stripePaymentFormSubmit: function () {
+		mixStripe.paymentFormButton.find('.waiting-text .processing').hide();
+		mixStripe.paymentFormButton.find('.waiting-text .approved').show();
+
+		jQuery('.stripe-signup-container').addClass('processed');
+		jQuery('.stripe-signup-container').removeClass('switch');
+
+		/*
+		 * Protect the card holder by erasing the card information
+		 * which is no longer needed. It'll prevent someone from
+		 * clicking the back button to see the info.
+		 */
+		mixStripe.paymentForm.find('.stripe-field-cardnumber input:first').val('');
+		mixStripe.paymentForm.find('.stripe-field-cvc input:first').val('');
+		mixStripe.paymentForm.find('.stripe-field-expmonth input:first').val('');
+		mixStripe.paymentForm.find('.stripe-field-expyear input:first').val('');
+
+		mixStripe.paymentForm.submit();
+	},
+};
+mixStripe.init();
+
+
+var mixBbpress = {
+	init: function () {
+		jQuery(document).ready(function () {
+			mixBbpress.smallEdits();
+		});
+	},
+	/**
+	 * These are small edits that don't really fit anywhere
+	 * else and are too small to need their own function.
+	 * @returns {undefined}
+	 */
+	smallEdits: function () {
+		/***
+		 * Change the text of the visual editor tab from text to html
+		 */
+		jQuery('#bbp_reply_content-html').text('HTML');
+		jQuery('#bbp_topic_content-html').text('HTML');
+
+		/**
+		 * Change the text of the bbpress reply buttons
+		 */
+		jQuery('#bbp_topic_submit, #bbp_reply_submit').text('Say It!');
+
+	},
+};
+
+mixBbpress.init();
+
+
+var bbpressReplyQuotes = {
+	timeoutInstances: [],
+	init: function () {
+		jQuery('body.bbpress.single').on('click', '.bbp-reply-to-link', bbpressReplyQuotes.replyClicked);
+		jQuery('body.bbpress.single').on('click', '.bbp-topic-reply-link', bbpressReplyQuotes.replyClicked);
+
+		bbpressReplyQuotes.quoteClickFromRecentPage();
+	},
+	/**
+	 * Handles the click of "quote" from the recent page.
+	 * http://mixergy.com/recent/
+	 * 
+	 * This links to a URL which looks like 
+	 * http://mixergy.com/dojo/topic/have-you-invited-people-to-join-your-mastermind/?bbp_reply_to=40466&_wpnonce=3dffbe2b1a#new-post
+	 * 
+	 * We'll take note of the query string and simulate a click.
+	 */
+	quoteClickFromRecentPage: function () {
+		if (mixTools.getQueryParameterByName('bbp_reply_to') !== '' &&
+				jQuery.isNumeric(mixTools.getQueryParameterByName('bbp_reply_to'))) {
+
+			var postId = mixTools.getQueryParameterByName('bbp_reply_to');
+
+			console.log('Found an attempt to quote post: ' + postId);
+
+			jQuery('.fullpost-' + postId + ' .bbp-reply-to-link').click();
+		}
+		if (window.location.hash === '#new-post') {
+			console.log('Found an attempt to quote the topic.');
+			jQuery('.bbp-topic-reply-link').click();
+		}
+	},
+	replyClicked: function (e) {
+
+		/**
+		 * There are two types of replies. The initial reply
+		 * to the first message in the topic and replies to
+		 * 2nd, 3rd and so on, messages in the topic. 
+		 * 
+		 * The initial reply has a URL of "#new-post" while the
+		 * other replies have a URL that creates a page refresh
+		 * to setup the reply form with the reply-to fields.
+		 * Those other reply links look like:
+		 * https://<domain>/forums/topic/sankar/?bbp_reply_to=95&_wpnonce=befe9281d9#new-post
+		 * 
+		 * We need to identify when each of the two types of 
+		 * links have been clicked and setup the reply form with
+		 * the correct information, when it's the non "#new-post" link.
+		 */
+		var url = jQuery(this).attr("href");
+
+		if (url === "#new-post") {
+			/*
+			 * The form will already have this input value set to
+			 * 0, on page load. Having it set to 0 means a reply
+			 * to the topic direction. However, this value can get 
+			 * changed, if someone clicks reply on a different message
+			 * and then changes their mind to reply to the main 
+			 * topic post. Setting it to 0 will handle that case.
+			 */
+			jQuery('#bbp_reply_to').val(0);
+
+		} else {
+
+			/**
+			 * Parse the URL parameters for the reply ID
+			 * sample url format : https://<domain>/forums/topic/sankar/?bbp_reply_to=95&_wpnonce=befe9281d9#new-post
+			 * We prase the bbp_reply_to parameter and set it to 
+			 * the hidden form parameters.
+			 */
+			var urlPartiallyParsed = url.split('=')[1];
+			var urlFullyParsed = urlPartiallyParsed.split('&')[0];
+
+			var bbpReplyTo = urlFullyParsed;
+			jQuery('#bbp_reply_to').val(bbpReplyTo);
+		}
+
+		var fullPost = jQuery(this).closest('.fullpost');
+
+		/*
+		 * The message content has a "thank" button that we need to remove
+		 * from the element. To do that, we're going to clone the element
+		 * and remove it in the cloned var, so we don't change the UI.
+		 * 
+		 * We're also going to remove the revision notice.
+		 */
+		var replyClonedElement = jQuery('.posttext', fullPost).clone();
+		jQuery('.bbmylike-wrapper', replyClonedElement).remove();
+		jQuery('.bbp-reply-revision-log', replyClonedElement).remove();
+		jQuery('.bbp-topic-revision-log', replyClonedElement).remove();
+
+
+		/**
+		 * We're also going to prefix the authors name with a link to the
+		 * original post, so readers can have more context.
+		 */
+		var authorName = jQuery('.bbp-author-name', fullPost).text();
+
+		var linkToPost = jQuery('.bbp-post-number a', fullPost).attr('href');
+
+		var creditToAuthor = jQuery('<a>', {
+			text: authorName + ' said:',
+			href: linkToPost,
+		});
+
+		jQuery('p:first-child', replyClonedElement).prepend(' ');
+		jQuery('p:first-child', replyClonedElement).prepend(creditToAuthor);
+
+		var replyHtml = replyClonedElement.html();
+
+		/**
+		 * We got the reply as plain text to remove HTML but we
+		 * will end up using it as an HTML string, so we need to
+		 * replace line breaks with <br /> so it'll show up properly
+		 * when we inject it into tinymce.
+		 */
+		//replyHtml = replyHtml.replace(/(?:\r\n|\r|\n)/g, "<br />");
+		var replyQuotes = "<blockquote>" + replyHtml + "</blockquote><br/>";
+
+		/*
+		 * Time to set the content. However, we must make sure the correct
+		 * tab is showing. We can't set the content if the HTML/Source tab
+		 * is currently selected. 
+		 * 
+		 * If we need to switch tabs, it could take a few seconds to load
+		 * the visual editor, causing us to have to wait, so we'll keep trying.
+		 */
+
+
+		/*
+		 * Regardless of whether or not the correct tab was 
+		 * initially showing, we have to keep trying to put 
+		 * the quoted text into the editor because it might
+		 * not be fully loaded when we're trying to do it.
+		 * 
+		 * Example would be when quoteClickFromRecentPage
+		 * needs to execute. Even if the correct tab is 
+		 * showing, we need to wait for the editor to finish
+		 * loading.
+		 * 
+		 * @type Number
+		 */
+		for (var delay = 500; delay <= 10000; delay += 1000) {
+			bbpressReplyQuotes.timeoutInstances.push(
+					setTimeout(function () {
+						try {
+							bbpressReplyQuotes.setQuotedText(replyQuotes);
+							/*
+							 * If we got here, that means we were able to set
+							 * the text without causing an error, so let's
+							 * cancel the other setTimeout events.
+							 */
+							console.log('Quoted text has been set. Aborting other attempts.');
+							for (var i = 0; i < bbpressReplyQuotes.timeoutInstances.length; i++) {
+								console.log('Aborting instance: ' + i + '/' + bbpressReplyQuotes.timeoutInstances[i]);
+								clearTimeout(bbpressReplyQuotes.timeoutInstances[i]);
+							}
+
+							/**
+							 * Focus the the Reply Editor. The tinymce focus()
+							 * function doesn't seem to work, so we need to do
+							 * it with jQuery focus on the element. We set the 
+							 * attribute tabindex because some browsers don't
+							 * support focus for div without tabindex.
+							 * 
+							 * Support for these vary between the browsers.
+							 */
+							window.location = '#new-post';
+							jQuery('#new-post').attr('tabindex', -1).focus();
+						} catch (ex) {
+							console.log('Attempt to set quoted text failed. Other attempts should get it done.');
+						}
+					}, delay)
+					);
+		}
+
+		/**
+		 * stop the navigation to the link given in href
+		 */
+		e.preventDefault();
+		return false;
+
+	},
+	setQuotedText: function (replyQuotes) {
+		if (jQuery('.wp-editor-wrap').hasClass('html-active')) {
+			jQuery('#bbp_reply_content-tmce').click();
+		}
+		
+		/**
+		 * Use tinymce api to set the processed reply text as blockquoted.
+		 */
+		tinymce.activeEditor.setContent(replyQuotes);
+
+		/**
+		 * After we paste the reply, TinyMCE will popup a tooltip box
+		 * for the creditToAuthor link and we need to hide that.
+		 * We'll do it several times, as early as possible but keep
+		 * increasing the time to make sure we hide it eventually.
+		 */
+		for (var delay = 0; delay <= 1500; delay += 100) {
+			setTimeout(function () {
+				jQuery('.mce-inline-toolbar-grp').css('display', 'none');
+			}, delay);
+		}
+
+		/**
+		 * Set the cursor to the bottom of the text.
+		 * Support for this will vary between the browsers.
+		 */
+		tinymce.activeEditor.selection.select(tinymce.activeEditor.getBody(), true);
+		tinymce.activeEditor.selection.collapse(false);
+		tinymce.activeEditor.focus();
+
+		/*
+		 * Set the cursor to the bottom and scroll down.
+		 * I'm using 100000 as a scroll because I don't
+		 * know how long the content will be.
+		 * 
+		 * Support for these vary between the browsers.
+		 */
+		jQuery(tinymce.activeEditor.getBody()).animate({scrollTop: 100000}, {duration: 'medium', easing: 'swing'});
+
+	},
+};
+
+jQuery(document).ready(function () {
+	bbpressReplyQuotes.init();
+});

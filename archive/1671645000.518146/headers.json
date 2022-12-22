@@ -1,0 +1,17 @@
+{
+    "Status-Code": 200,
+    "Content-Type": "text/html",
+    "Content-Length": "65485",
+    "Connection": "keep-alive",
+    "x-pants": "distant-towel",
+    "x-xss-protection": "1; mode=block",
+    "cache-control": "private, max-age=0, no-cache, no-store",
+    "x-frame-options": "SAMEORIGIN",
+    "date": "Wed, 21 Dec 2022 20:31:09 GMT",
+    "strict-transport-security": "max-age=63072000; includeSubdomains; preload",
+    "server": "am/2",
+    "X-Cache": "Miss from cloudfront",
+    "Via": "1.1 1391cb3b815aa63859ec0cff5767737c.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "EWR53-C3",
+    "X-Amz-Cf-Id": "pzfL2itJSISwiXofJZWT2Sef3aKeFleHMxlw7vYj6BJ5SFrA0LtL5A=="
+}

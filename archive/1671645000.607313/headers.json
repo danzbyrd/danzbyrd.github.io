@@ -1,0 +1,22 @@
+{
+    "Status-Code": 200,
+    "Connection": "keep-alive",
+    "Content-Length": "98807",
+    "Content-Type": "text/html; charset=utf-8",
+    "Cache-Control": "max-age=120, stale-while-revalidate=60, stale-if-error=7200",
+    "ETag": "\"81bc3-pubd5DHCWvU4s6cuAR9l5VQ41hY\"",
+    "Content-Encoding": "gzip",
+    "X-Cloud-Trace-Context": "76c111e6d29351460b8733e1b38749df",
+    "Server": "Google Frontend",
+    "Access-Control-Allow-Origin": "*",
+    "Accept-Ranges": "bytes",
+    "Date": "Wed, 21 Dec 2022 18:15:22 GMT",
+    "Via": "1.1 varnish",
+    "Age": "105",
+    "X-Served-By": "cache-iad-kiad7000160-IAD",
+    "X-Cache": "HIT",
+    "X-Cache-Hits": "1",
+    "X-Timer": "S1671646522.379456,VS0,VE3",
+    "Vary": "Accept-Encoding",
+    "Strict-Transport-Security": "max-age=31557600"
+}

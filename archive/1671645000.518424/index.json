@@ -1,0 +1,364 @@
+{
+    "archive_path": "archive/1671645000.518424",
+    "base_url": "www.newsweek.com/amplify/best-personal-growth-programs",
+    "basename": "best-personal-growth-programs",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.newsweek.com/amplify/best-personal-growth-programs",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.newsweek.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "www.newsweek.com/amplify/best-personal-growth-programs.html"
+    },
+    "domain": "www.newsweek.com",
+    "extension": "",
+    "hash": "1S50ZF4JC1ZV3TDZPDJ3",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:02:51.203816+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221190249/https://www.newsweek.com/amplify/best-personal-growth-programs",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:36.809560+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:02:17.813722+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:15.851245+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.newsweek.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:02:04.621054+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:04.479895+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:02:04.807031+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:04.640840+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:02:36.794088+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:35.126328+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:02:35.122520+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:33.138115+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:02:14.260489+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:12.375498+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmp1vipj5ta",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:02:33.133619+00:00",
+                "index_texts": [
+                    "Whenever you look at yourself in the mirror, what do you see? Do you see someone successful and happy? Or do you wish that you were younger and more accomplished?The desire for personal development often roots from a realization or a pressing need for change. And with COVID-19 unsettling our confidence in ourselves making us realize that the world is ever-changing, unpredictable, and uncontrollable, it also elicits unpleasant emotions such as doubt, fear, and frustration. But along with all these challenges lies an opportunity for us to grow as people.Personal development is a continuous process of assessing our skills and improving them. It's a challenge; a daily struggle. There's so little time and so much to do, and it can feel difficult to accomplish even the most basic things like getting a good night's sleep. It can feel like a chore to find time for personal development while juggling with our day-to-day activities.Working from home has changed all of that. Suddenly, we have more time in our hands than we have ever had in the past years.Today is a time to take a step back and work on your personal development; we mean real change and not just some empty promise you tell yourself when you're having a bad day. We mean taking action by investing in Mindvalley's Personal Development Programs.1. Mind Development\nThought Catalog/Pexels\nNo matter where we are in life or how old we are\u2014whether we are 16 or 60, it's important to keep learning. Without a doubt, the most powerful skill is our ability to learn. Mindvalley has several programs that will empower the mind and give you a competitive advantage.Mind Development Programs include Rapid Transformational Hypnotherapy for Abundance with Marisa Peer, The M Word with Emily Fletcher, The Quest for Personal Mastery with Srikumar Rao, and Live By Your Own Rules with Kristina M\u00e4nd-Lakhiani.2. Body Development\nLi Sun/Pexels\nWhen we invest in ourselves, pieces of our life fall into place and it begins to change for the better. From losing weight to radically transforming your life by eliminating bad habits, these body development programs will reshape your life and your future.Mindvalley's Body Development Programs include The Longevity Blueprint with Ben Greenfield, The Mastery of Sleep with Dr. Michael Breus, and The Mindvalley Yoga Quest with Cecilia Sardeo.3. Soul Development\nMagic Bowls/Pexels\nMany people go through life feeling sad and depressed without knowing that the key is in developing their spirituality. Soul development allows you to have a deeper understanding of who we really are. Inner peace leads to a healthier, happier, and more successful life.Soul Development Programs include Duality with Jeffrey Allen, Life Visioning Mastery with Michael Beckwith, Unlocking Transcendence with Jeffrey Allen, Energy Medicine with Donna Eden, Chakra Healing with Anodea Judith, Awaken The Species with Neale Donald Walsch, Feng Shui for Life with Marie Diamond, and Dream Sculpting: Mastering The Art Of Lucid Dreaming with Andrew Holecek.4. Career Development\nFauxels/Pexels\nThere are plenty of ways to grow your career, but developing your leadership skills is one of the most important. Being a leader is not about being the boss; it's about inspiring people and becoming the person that others aspire to be.From mastering the art of public speaking to transforming your relationship with money, reshape your life with the Work Development Programs.Mindvalley's Work Development Programs include Speak and Inspire with Lisa Nichols, Money EQ with Ken Honda, and The New Psychology of Winning with Denis Waitley.5. Relationship Development\nBurst/Pexels\nHumans have an inherent desire to build relationships. Relationships are vital for our emotional well-being; friendships, romantic relationships, and familial relationships all make for a healthier life. They are the glue that holds us together while we go through life's difficulties.From strengthening your relationships to leveling up your sex life, Mindvalley's Relationship Development Programs include Conscious Uncoupling with Katherine Woodward Thomas, Mastering Authentic Networking with Keith Ferrazzi, and The Energies of Love with Donna Eden & David Feinstein.6. Family Development\nGustavo Fring/Pexels\nThe foundation of a family is built on communication, quality time, and appreciation of each other. A positive relationship with the family resolves conflicts, helps children feel loved, and gives them the confidence to learn new things, and explore the world. It also instills in children the importance of building a positive family relationship in the future.Family Relationship Development Programs include Conscious Parenting Mastery with Dr. Shefali Tsabary, Be Extraordinary for Teens with Vishen Lakhiani, and Little Humans with Renee Airya and Akira Chan.7. Entrepreneurial Skills Development\nDavid McEachan/Pexels\nThinking of becoming an entrepreneur or looking to expand your skillset? Thinking outside the box, flexibility, adaptability, resilience, and taking the initiative are some of the most important traits of an entrepreneur. But how do you apply these to your career and your everyday life?Entrepreneurial skills will help you not just in your career but in many aspects of your life. Mindvalley's Entrepreneurship Skills Development Programs include Be Extraordinary with Vishen Lakhiani, Hero. Genius. Legend. with Robin Sharma, The Quest for Personal Mastery with Srikumar Rao, and Mastering Authentic Networking with Keith Ferrazzi.How Do I Enroll?Enrolling in Mindvalley gives you unlimited access to all of their Quests for only $99/month or an annual subscription of $599 ($49.90 per month). You also get access to all upcoming quests, full access to all their online communities, free live coaching calls with the authors, free official certifications that you can print and display anywhere, and an unconditional 15-day money-back guarantee.You may access all of their programs through your smartphone, laptop, desktop computer, iPad, or Apple TV.We have the power to shape our lives in the way we want it to be. In those moments of doubt, remind yourself of your dreams for a better life and a better you. Remind yourself that you need to take the leap, and the best time to do it is now.\nWe may earn a commission from links on this page, but we only recommend products we back. Newsweek AMPLIFY participates in various affiliate marketing programs, which means we may get paid commissions on editorially chosen products purchased through our links to retailer sites."
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:20.031344+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:02:15.827391+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:14.281182+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:02:12.364115+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:04.810986+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:02:20.027860+00:00",
+                "index_texts": null,
+                "output": "Transform Your Life While Working From Home Through Personal Development",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:19.987158+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518424/warc/1671649337",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.newsweek.com/amplify/best-personal-growth-programs"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:02:19.970619+00:00",
+                "index_texts": null,
+                "output": "www.newsweek.com/amplify/best-personal-growth-programs.html",
+                "pwd": "/data/archive/1671645000.518424",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:02:17.817345+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221190249/https://www.newsweek.com/amplify/best-personal-growth-programs",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Transform Your Life While Working From Home Through Personal Development",
+        "warc": null,
+        "wget": "www.newsweek.com/amplify/best-personal-growth-programs.html"
+    },
+    "link_dir": "/data/archive/1671645000.518424",
+    "newest_archive_date": "2022-12-21T19:02:36.809560+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T19:02:04.479895+00:00",
+    "path": "/amplify/best-personal-growth-programs",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "bda18438-5fc0-4ef5-a4d2-7627750c3ac7",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518424",
+    "title": "Transform Your Life While Working From Home Through Personal Development",
+    "updated": "2022-12-21T19:02:04.479788+00:00",
+    "updated_date": "2022-12-21 19:02",
+    "url": "https://www.newsweek.com/amplify/best-personal-growth-programs"
+}

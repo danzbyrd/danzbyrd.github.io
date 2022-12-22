@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.518508",
+    "base_url": "www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html",
+    "basename": "6-ways-to-banish-your-workaholic-tendencies.html",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.inc.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": null
+    },
+    "domain": "www.inc.com",
+    "extension": "html",
+    "hash": "1Q1DCNP5W9B74W6NK0XH",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:08:02.987137+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221190805/https://connatix-d.openx.net/v/1.0/av?auid=539839091&schain=1.0,1!connatix.com,613179184565421,1,,,,&url=www.inc.com%2Fyoung-entrepreneur-council%2F6-ways-to-banish-your-workaholic-tendencies.html&cb=abef95a0-0ed0-4966-9c8a-dcf8a4f4fafc&vwd=514&vht=289&gdpr=0&gdpr_consent=undefined&us_privacy=&us_privacy=",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:32.448188+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:07:30.281369+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:29.592234+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.inc.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:07:22.237286+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:22.089180+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:07:22.440759+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:22.245144+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T19:07:32.437040+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:31.781474+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html",
+                    "--format=text"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T19:07:31.768914+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: Mercury was not able to get article text from the URL",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:30.968964+00:00",
+                "status": "failed"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:07:28.603876+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:27.838354+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "./{singlefile,dom}.html"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T19:07:30.946632+00:00",
+                "index_texts": [],
+                "output": "AssertionError: ",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:30.400849+00:00",
+                "status": "failed"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T19:07:29.580577+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:28.616868+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T19:07:27.820100+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:22.444817+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T19:07:30.397291+00:00",
+                "index_texts": null,
+                "output": "inc.com",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:30.393323+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518508/warc/1671649650",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T19:07:30.381869+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: 403 Forbidden (try changing WGET_USER_AGENT)",
+                "pwd": "/data/archive/1671645000.518508",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T19:07:30.285958+00:00",
+                "status": "failed"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221190805/https://connatix-d.openx.net/v/1.0/av?auid=539839091&schain=1.0,1!connatix.com,613179184565421,1,,,,&url=www.inc.com%2Fyoung-entrepreneur-council%2F6-ways-to-banish-your-workaholic-tendencies.html&cb=abef95a0-0ed0-4966-9c8a-dcf8a4f4fafc&vwd=514&vht=289&gdpr=0&gdpr_consent=undefined&us_privacy=&us_privacy=",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "inc.com",
+        "warc": null,
+        "wget": "ArchiveError: 403 Forbidden (try changing WGET_USER_AGENT)"
+    },
+    "link_dir": "/data/archive/1671645000.518508",
+    "newest_archive_date": "2022-12-21T19:07:32.448188+00:00",
+    "num_failures": 3,
+    "num_outputs": 9,
+    "oldest_archive_date": "2022-12-21T19:07:22.089180+00:00",
+    "path": "/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "46ddb7ff-e57e-4b70-ba22-86786b504b98",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518508",
+    "title": "inc.com",
+    "updated": "2022-12-21T19:07:22.089044+00:00",
+    "updated_date": "2022-12-21 19:07",
+    "url": "https://www.inc.com/young-entrepreneur-council/6-ways-to-banish-your-workaholic-tendencies.html"
+}

@@ -1,0 +1,17 @@
+{
+    "Status-Code": 200,
+    "Age": "0",
+    "Cache-Control": "public, max-age=0, must-revalidate",
+    "Connection": "keep-alive",
+    "Content-Length": "0",
+    "Content-Type": "text/html; charset=utf-8",
+    "Date": "Wed, 21 Dec 2022 18:49:09 GMT",
+    "Etag": "\"qv8gumelicy71\"",
+    "Server": "Vercel",
+    "Strict-Transport-Security": "max-age=63072000",
+    "X-Frame-Options": "DENY",
+    "X-Matched-Path": "/companies/[id]",
+    "X-Powered-By": "Next.js",
+    "X-Vercel-Cache": "MISS",
+    "X-Vercel-Id": "iad1::iad1::8x445-1671648549199-c3e02b13ead3"
+}

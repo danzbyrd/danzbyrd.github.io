@@ -1,0 +1,3 @@
+'use strict';var ITER=ITER||{};ITER.UTIL=ITER.UTIL||{};
+ITER.UTIL.HTTP=ITER.UTIL.HTTP||function(){var k=function(c,a,e,d){return new Promise(function(f,g){var b=new XMLHttpRequest;b.open(c,a,!0);h(b,e);"undefined"!==typeof d?b.send(d):b.send();b.onreadystatechange=function(){4===b.readyState&&(200===b.status?f(b.responseText):g(Error(b.status)))}})},h=function(c,a){a&&(a.accept&&0<a.accept.trim().length&&c.setRequestHeader("Accept",a.accept),a.contentType&&0<a.contentType.trim().length&&c.setRequestHeader("Content-Type",a.contentType))};return{request:function(c,
+a,e,d){return k(c,a,e,d)}}}();

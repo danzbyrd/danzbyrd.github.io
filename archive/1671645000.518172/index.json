@@ -1,0 +1,362 @@
+{
+    "archive_path": "archive/1671645000.518172",
+    "base_url": "insights.mindvalley.com",
+    "basename": "",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/insights.mindvalley.com",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=insights.mindvalley.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": "insights.mindvalley.com/href.html"
+    },
+    "domain": "insights.mindvalley.com",
+    "extension": "",
+    "hash": "1ZK5VAJBYS4QFTJ1TM4S",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:27:58.629594+00:00",
+                "index_texts": null,
+                "output": "https://web.archive.org/web/20221221202758/https://insights.mindvalley.com/",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:46.038573+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:27:30.802650+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:29.493790+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=insights.mindvalley.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:25:00.321002+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:25:00.144858+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:25:00.500760+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:25:00.370339+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T20:27:46.006634+00:00",
+                "index_texts": [],
+                "output": "media",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:44.628943+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T20:27:44.625321+00:00",
+                "index_texts": null,
+                "output": "mercury",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:43.020406+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:26:28.016444+00:00",
+                "index_texts": null,
+                "output": "output.pdf",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:26:26.476268+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpy3g0l5wz",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T20:27:43.015604+00:00",
+                "index_texts": [
+                    "  \n          Attach Learning Objects Across The Web\n         \n          Connect your Insights to digital media to take notes, review and\n          share content.\n         \n          Instantly publish your thoughts on movies, articles, books, podcasts\n          and videos with a global network.\n           \n          Seamlessly Integrated With Your Mindvalley Account\n         \n          With Insights, Mindvalley students can easily browse notes and share\n          their 'aha' moments.\n         \n          Effortlessly tag Mindvalley programs & attach Insights to individual\n          Quest chapters.\n         \n          Journal privately, or take your Insights public to discuss your\n          breakthroughs with your peers.\n         \n        Subscribe To The Smartest & Like-Minded Brains\n       \n        Follow fellow students and share articles, videos and stories from any\n        publication, \n        page or app with your community.\n       \n                  Lorenza Vel\u00e1quez\n                 \n                  Software Architect\n                 \n                  Spain\n                 \n                  62 Followers\n                  \u2022\n                  120 Insights\n                  \n                Awesome idea to combine meditation ..\n               Incredible Meditation \n                    Meditation\n                  \n                    Anxiety\n                  \n                    Relax\n                  \n                    +2\n                   I've been doing this meditation everyday for almost a year, now.  So far,  it is the only thing to consistently help my anxiety and depression.  It's changed my life. I cannot over express my gratitude. Thank you all, so much.  I love the way the guided meditation is designed with 6 phases which lets us e..    \n        Create A Free Account & Get Started\n       \n        Unlock all features instantly and start sharing your insights with the\n        world.\n          "
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:31.446003+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T20:27:29.489572+00:00",
+                "index_texts": null,
+                "output": "screenshot.png",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:26:28.030369+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://insights.mindvalley.com/",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T20:26:26.470679+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:25:00.505116+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T20:27:31.442515+00:00",
+                "index_texts": null,
+                "output": "Mindvalley Insights",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:31.426438+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518172/warc/1671654450",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://insights.mindvalley.com/"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T20:27:31.422244+00:00",
+                "index_texts": null,
+                "output": "insights.mindvalley.com/href.html",
+                "pwd": "/data/archive/1671645000.518172",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T20:27:30.807140+00:00",
+                "status": "succeeded"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "https://web.archive.org/web/20221221202758/https://insights.mindvalley.com/",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "media",
+        "pdf": "output.pdf",
+        "screenshot": "screenshot.png",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley Insights",
+        "warc": null,
+        "wget": "insights.mindvalley.com/href.html"
+    },
+    "link_dir": "/data/archive/1671645000.518172",
+    "newest_archive_date": "2022-12-21T20:27:46.038573+00:00",
+    "num_failures": 0,
+    "num_outputs": 12,
+    "oldest_archive_date": "2022-12-21T20:25:00.144858+00:00",
+    "path": "/",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "a9d18291-a5a0-4a22-92af-8c3f554e5ed6",
+    "sources": [],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518172",
+    "title": "Mindvalley Insights",
+    "updated": "2022-12-21T20:25:00.144569+00:00",
+    "updated_date": "2022-12-21 20:25",
+    "url": "https://insights.mindvalley.com/"
+}

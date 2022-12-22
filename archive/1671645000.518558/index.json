@@ -1,0 +1,365 @@
+{
+    "archive_path": "archive/1671645000.518558",
+    "base_url": "www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl",
+    "basename": "81511779",
+    "bookmarked_date": "2022-12-21 17:50",
+    "canonical": {
+        "archive_org_path": "https://web.archive.org/web/www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl",
+        "dom_path": "output.html",
+        "favicon_path": "favicon.ico",
+        "git_path": "git/",
+        "google_favicon_path": "https://www.google.com/s2/favicons?domain=www.zoominfo.com",
+        "headers_path": "headers.json",
+        "index_path": "index.html",
+        "media_path": "media/",
+        "mercury_path": "mercury/content.html",
+        "pdf_path": "output.pdf",
+        "readability_path": "readability/content.html",
+        "screenshot_path": "screenshot.png",
+        "singlefile_path": "singlefile.html",
+        "warc_path": "warc/",
+        "wget_path": null
+    },
+    "domain": "www.zoominfo.com",
+    "extension": "",
+    "hash": "ZB0YHSJXVXXR3VSSMV1R",
+    "history": {
+        "archive_org": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://web.archive.org/save/https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T17:56:13.105613+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: Failed to find \"content-location\" URL header in Archive.org response.",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:06.793269+00:00",
+                "status": "failed"
+            }
+        ],
+        "dom": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--dump-dom",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T17:56:02.684243+00:00",
+                "index_texts": null,
+                "output": "output.html",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:02.324401+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "favicon": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--output",
+                    "favicon.ico",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.google.com/s2/favicons?domain=www.zoominfo.com"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T17:51:22.042769+00:00",
+                "index_texts": null,
+                "output": "favicon.ico",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:51:21.890777+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "git": [],
+        "headers": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--head",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T17:51:22.365987+00:00",
+                "index_texts": null,
+                "output": "headers.json",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:51:22.049362+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "media": [
+            {
+                "cmd": [
+                    "yt-dlp",
+                    "--write-description",
+                    "--write-info-json",
+                    "--write-annotations",
+                    "--write-thumbnail",
+                    "--no-call-home",
+                    "--write-sub",
+                    "--all-subs",
+                    "--write-auto-sub",
+                    "--convert-subs=srt",
+                    "--yes-playlist",
+                    "--continue",
+                    "--ignore-errors",
+                    "--no-abort-on-error",
+                    "--geo-bypass",
+                    "--add-metadata",
+                    "--max-filesize=750m",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "2022.10.04",
+                "end_ts": "2022-12-21T17:56:06.789138+00:00",
+                "index_texts": [],
+                "output": "ArchiveError: Failed to save media",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:05.686842+00:00",
+                "status": "failed"
+            }
+        ],
+        "mercury": [
+            {
+                "cmd": [
+                    "/node/node_modules/@postlight/mercury-parser/cli.js",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl",
+                    "--format=text"
+                ],
+                "cmd_version": "1.0.0",
+                "end_ts": "2022-12-21T17:56:05.671761+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: Mercury was not able to get article text from the URL",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:04.949009+00:00",
+                "status": "failed"
+            }
+        ],
+        "pdf": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--print-to-pdf",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T17:54:02.205809+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:52:02.125377+00:00",
+                "status": "failed"
+            }
+        ],
+        "readability": [
+            {
+                "cmd": [
+                    "/node/node_modules/readability-extractor/readability-extractor",
+                    "/tmp/tmpsvtgtnyp",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "0.0.2",
+                "end_ts": "2022-12-21T17:56:04.944349+00:00",
+                "index_texts": [
+                    "Mindvalley Org ChartView Email Formats for MindvalleyMindvalley Company MetricsCompany InsightsEmployee Growth RateAcquisitions & SubsidiariesJul 18, 2022Modern QigongMay 09, 2012Unlimited AbundanceSee More Acquisitions & SubsidiariesMindvalley News & MediaSubscribe to Mindvalley NewsFrequently Asked Questions regarding MindvalleySee more information about Mindvalley"
+                ],
+                "output": "readability",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:02.884840+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "screenshot": [
+            {
+                "cmd": [
+                    "/usr/bin/chromium",
+                    "--headless",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    "--disable-software-rasterizer",
+                    "--run-all-compositor-stages-before-draw",
+                    "--hide-scrollbars",
+                    "--single-process",
+                    "--no-zygote",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)",
+                    "--window-size=1440,2000",
+                    "--timeout=120000",
+                    "--screenshot",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "Chromium 106.0.5249.91 built",
+                "end_ts": "2022-12-21T17:56:02.318815+00:00",
+                "index_texts": null,
+                "output": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl']' timed out after 120 seconds",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:54:02.209998+00:00",
+                "status": "failed"
+            }
+        ],
+        "singlefile": [
+            {
+                "cmd": [
+                    "/node/node_modules/single-file/cli/single-file",
+                    "--browser-executable-path=/usr/bin/chromium-browser",
+                    "--browser-args=[\"--headless\", \"--no-sandbox\", \"--disable-gpu\", \"--disable-dev-shm-usage\", \"--disable-software-rasterizer\", \"--run-all-compositor-stages-before-draw\", \"--hide-scrollbars\", \"--single-process\", \"--no-zygote\", \"--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)\", \"--window-size=1440,2000\"]",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl",
+                    "singlefile.html"
+                ],
+                "cmd_version": "0.3.16",
+                "end_ts": "2022-12-21T17:52:02.120903+00:00",
+                "index_texts": null,
+                "output": "singlefile.html",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:51:22.372484+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "title": [
+            {
+                "cmd": [
+                    "curl",
+                    "--silent",
+                    "--location",
+                    "--compressed",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) curl/curl 7.74.0 (x86_64-pc-linux-gnu)",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "curl 7.74.0 (x86_64-pc-linux-gnu)",
+                "end_ts": "2022-12-21T17:56:02.881383+00:00",
+                "index_texts": null,
+                "output": "Mindvalley - Overview, News & Competitors | ZoomInfo.com",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:02.847980+00:00",
+                "status": "succeeded"
+            }
+        ],
+        "wget": [
+            {
+                "cmd": [
+                    "wget",
+                    "--no-verbose",
+                    "--adjust-extension",
+                    "--convert-links",
+                    "--force-directories",
+                    "--backup-converted",
+                    "--span-hosts",
+                    "--no-parent",
+                    "-e",
+                    "robots=off",
+                    "--timeout=120",
+                    "--restrict-file-names=windows",
+                    "--warc-file=/data/archive/1671645000.518558/warc/1671645362",
+                    "--page-requisites",
+                    "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/0.6.3 (+https://github.com/ArchiveBox/ArchiveBox/) wget/GNU Wget 1.21",
+                    "--compression=auto",
+                    "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+                ],
+                "cmd_version": "GNU Wget 1.21",
+                "end_ts": "2022-12-21T17:56:02.842525+00:00",
+                "index_texts": null,
+                "output": "ArchiveError: Wget failed or got an error from the server",
+                "pwd": "/data/archive/1671645000.518558",
+                "schema": "ArchiveResult",
+                "start_ts": "2022-12-21T17:56:02.688238+00:00",
+                "status": "failed"
+            }
+        ]
+    },
+    "icons": null,
+    "is_archived": true,
+    "is_static": false,
+    "latest": {
+        "archive_org": "ArchiveError: Failed to find \"content-location\" URL header in Archive.org response.",
+        "dom": "output.html",
+        "favicon": "favicon.ico",
+        "git": null,
+        "media": "ArchiveError: Failed to save media",
+        "pdf": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--print-to-pdf', 'https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl']' timed out after 120 seconds",
+        "screenshot": "TimeoutExpired: Command '['/usr/bin/chromium', '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-software-rasterizer', '--run-all-compositor-stages-before-draw', '--hide-scrollbars', '--single-process', '--no-zygote', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/605.1.15 ArchiveBox/{VERSION} (+https://github.com/ArchiveBox/ArchiveBox/)', '--window-size=1440,2000', '--timeout=120000', '--screenshot', 'https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl']' timed out after 120 seconds",
+        "singlefile": "singlefile.html",
+        "title": "Mindvalley - Overview, News & Competitors | ZoomInfo.com",
+        "warc": null,
+        "wget": "ArchiveError: Wget failed or got an error from the server"
+    },
+    "link_dir": "/data/archive/1671645000.518558",
+    "newest_archive_date": "2022-12-21T17:56:06.793269+00:00",
+    "num_failures": 6,
+    "num_outputs": 6,
+    "oldest_archive_date": "2022-12-21T17:51:21.890777+00:00",
+    "path": "/c/mindvalley-llc/81511779",
+    "schema": "Link",
+    "scheme": "https",
+    "snapshot_id": "606b92d8-72d3-4f6e-a4e5-b8d42b6287e4",
+    "sources": [
+        "/data/sources/1671645000.28451-crawl-www.mindvalley.com.txt"
+    ],
+    "tags": null,
+    "tags_str": "",
+    "timestamp": "1671645000.518558",
+    "title": "Mindvalley - Overview, News & Competitors | ZoomInfo.com",
+    "updated": "2022-12-21T17:51:21.890658+00:00",
+    "updated_date": "2022-12-21 17:51",
+    "url": "https://www.zoominfo.com/c/mindvalley-llc/81511779?__cf_chl_jschl_tk__=pmd_DzA70TKDMOJpNDnVbiyo0XzRPmvG_DKdozVpcBiy94w-1630397300-0-gqNtZGzNAiWjcnBszQfl"
+}

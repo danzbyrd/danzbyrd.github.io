@@ -1,0 +1,1765 @@
+/* global ajax_request_package, tinymce */
+
+var mixComments = {
+	init: function () {
+		jQuery(".post-comments .toggle-comments, .post-comments .btn-comment").on("click", function (event) {
+			jQuery("#disqus_thread").toggle();
+			jQuery(".section-detail .comments-area").toggle();
+			event.preventDefault();
+			return false;
+		});
+
+		if (window.location.hash === '#comments') {
+			jQuery("#disqus_thread").toggle();
+		}
+	}
+
+};
+
+var mixPopupWindow = {
+	init: function () {
+		//open the share link in popup rather than new window
+		jQuery('.popup-window').on('click', function () {
+			window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+			return false;
+		});
+
+	}
+};
+
+var mixUserCollections = {
+	init: function () {
+		mixUserCollections.likeClick();
+		mixUserCollections.addToCollectionControls();
+		mixUserCollections.deleteUserCollections();
+	},
+	addToCollectionControls: function () {
+		/**
+		 * This is the button that shows the controls.
+		 * It says something like "+ Add to". When clicked,
+		 * it shows the list of collections and ability to
+		 * create a new collection.
+		 */
+		var popoverContent = jQuery('.add-to-collection-controls-wrapper').html();
+
+		jQuery(".add-to-collection-button").each(function () {
+			var postId = jQuery(this).data('postid');
+			var htmlLoading = "<div class='add-to-collection-popover add-to-collection-popover-" + postId + "'><div class='loading'>Loading <img src='/wp-content/themes/mixergy-2015-v2/assets/img/ajax-loading-pulsing-bars.gif' alt='loading animation' /></div></div>";
+
+			jQuery(".add-to-collection-button-" + postId).popover(
+				{
+					content: htmlLoading,
+					trigger: "manual",
+					placement: "bottom",
+					html: true
+				}
+			);
+
+		});
+
+
+		jQuery(".add-to-collection-button").on("click", function (e) {
+			e.preventDefault();
+			var postId = jQuery(this).data('postid');
+
+			/*
+			 * Make sure the customer is logged in
+			 */
+			if (ajax_request_package.user_id === "0") {
+				console.log("Not logged in. Redirecting to: " + ajax_request_package.member_only_url);
+				window.location.assign(ajax_request_package.member_only_url);
+				return;
+			}
+
+			if (jQuery('.add-to-collection-controls-wrapper-' + postId).length) {
+				jQuery('.add-to-collection-button-' + postId).popover('hide');
+			} else {
+				/*
+				 * We're going to show the popover with the default 
+				 * "loading" html and replace it with real content
+				 * after we get it back from the server.
+				 */
+				jQuery('.add-to-collection-button-' + postId).popover('show');
+
+
+
+				console.log("Requesting add-to list for post.", postId);
+
+				var data = {
+					'action': 'get_add_to_html',
+					'post_id': postId,
+					'nonce': ajax_request_package.add_to_user_collection_nonce,
+				};
+
+				console.log("Sending data to: " + ajax_request_package.ajax_url, data);
+
+				jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+					console.log("Received response");
+					console.log(response);
+					response = JSON.parse(response);
+					console.log(response);
+
+					if (response["success"]) {
+						console.log("Success!");
+
+						var addToHtml = response["package"]["html"];
+						var postId = response["package"]["post_id"];
+						console.log('addToHtml', addToHtml);
+						console.log('postId', postId);
+						console.log('.popover-content .add-to-collection-popover-' + postId);
+
+						jQuery('.popover-content .add-to-collection-popover-' + postId).html(addToHtml);
+					} else {
+						console.log("Failed");
+						console.log(response["message"]);
+						mixAlerts.showPopupAlert('error', response["message"]);
+					}
+				});
+
+			}
+
+			return false;
+		});
+
+		/**
+		 * This button is within the "Add to" controls. When
+		 * clicked, it shows the create collection options.
+		 */
+		jQuery("body").on("click", '.create-new-collection-option', function (e) {
+			e.preventDefault();
+
+			console.log("Showing create new collection form.");
+
+			jQuery(this).hide();
+			jQuery('.create-new-collection-controls').show();
+			jQuery('.create-new-collection-controls .new-collection-name').focus();
+
+			return false;
+		});
+
+		/**
+		 * This handles the checkboxes which are next to each
+		 * collection name. When checked, it'll automatically
+		 * add/remove the collection from the customer's list.
+		 * 
+		 * Note: the event is associated with jQuery(document),
+		 * so that dynamically added list items will also be
+		 * associated with this event. Dynamically added list
+		 * items are included when a new list is created.
+		 */
+		jQuery(document).on("change", ".add-to-collection-controls .list-item input[type='checkbox']", function (e) {
+			console.log("Checkbox state changed.");
+			var listId = jQuery(this).val();
+			var listName = jQuery('label[for=add-to-collection-' + listId + ']').text();
+			var postId = jQuery(this).closest('.add-to-collection-controls').data('postid');
+
+			console.log("Collection name (id): " + listName + ' (' + listId + ')');
+			console.log("New state: " + (this.checked ? 'checked' : 'not checked'));
+
+			jQuery(".add-to-collection-controls .list-item input").attr('disabled', 'disabled');
+
+			var data = {
+				'action': 'edit_posts_in_collection',
+				'post_id': postId,
+				'list_id': listId,
+				'nonce': ajax_request_package.add_to_user_collection_nonce,
+			};
+
+			if (this.checked) {
+				data['requested_action'] = 'add';
+			} else {
+				data['requested_action'] = 'delete';
+			}
+
+			console.log("Data package built.");
+			console.log(data);
+
+			console.log("Changing UI to working state.");
+			jQuery('.add-to-collection-controls .processing-request').show();
+
+			console.log("Sending request to: " + ajax_request_package.ajax_url);
+
+			jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+				console.log("Received response");
+				console.log(response);
+				response = JSON.parse(response);
+				console.log(response);
+
+				if (response["success"]) {
+					console.log("Success!");
+
+					if (data['requested_action'] === 'add') {
+						jQuery('.add-to-collection-controls .response').text('Added');
+						jQuery('.add-to-collection-controls .response').addClass('added');
+					} else {
+						jQuery('.add-to-collection-controls .response').text('Removed');
+						jQuery('.add-to-collection-controls .response').addClass('removed');
+					}
+
+					jQuery('.add-to-collection-controls .response').show('fast');
+					setTimeout(function () {
+						jQuery('.add-to-collection-controls .response').hide('fast');
+						jQuery('.add-to-collection-controls .response').removeClass('added');
+						jQuery('.add-to-collection-controls .response').removeClass('removed');
+					}, 2000);
+
+
+				} else {
+					console.log("Failed");
+					console.log(response["message"]);
+					mixAlerts.showPopupAlert('error', response["message"]);
+				}
+
+				console.log("Removing working state from UI.");
+				jQuery('.add-to-collection-controls .processing-request').hide();
+				jQuery(".add-to-collection-controls .list-item input").removeAttr('disabled');
+			});
+		});
+
+		/**
+		 * Handles the creation of a new collection and
+		 * will also automatically add the post to the
+		 * newly created list.
+		 * 
+		 * When it's done, the list of collections will
+		 * get the newly created collection added to it
+		 * with a checkbox next to it, like the other
+		 * collections in the list.
+		 */
+		jQuery('body').on("click", '.create-new-collection-controls .btn.create', function () {
+			console.log("Creating new list.");
+			var listName = jQuery('.create-new-collection-controls .new-collection-name').val();
+			var postId = jQuery(this).closest('.add-to-collection-controls').data('postid');
+
+			if (jQuery.trim(listName) === '') {
+				jQuery('.create-new-collection-controls .new-collection-name').addClass('error');
+				alert('Enter a name for your new collection');
+				return false;
+			} else {
+				jQuery('.create-new-collection-controls .new-collection-name').removeClass('error');
+			}
+
+			console.log("New collection name " + listName);
+
+			jQuery(".create-new-collection-controls .new-collection-name").attr('disabled', 'disabled');
+			jQuery(".create-new-collection-controls .btn.create").attr('disabled', 'disabled');
+
+			var data = {
+				'action': 'create_new_collection_and_add',
+				'post_id': postId,
+				'list_name': listName,
+				'nonce': ajax_request_package.add_to_user_collection_nonce,
+			};
+
+			console.log("Data package built.");
+			console.log(data);
+
+			console.log("Changing UI to working state.");
+			jQuery('.add-to-collection-controls .processing-request').show();
+
+			console.log("Sending request to: " + ajax_request_package.ajax_url);
+
+			jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+				console.log("Received response");
+				console.log(response);
+				response = JSON.parse(response);
+				console.log(response);
+
+				if (response["success"]) {
+					console.log("Success!");
+					console.log("Appending checkbox html: " + response["checkbox_html"]);
+
+					if (response["checkbox_html"] !== undefined) {
+						jQuery('.add-to-collection-controls .lists').append(response["checkbox_html"]);
+						jQuery('.create-new-collection-controls .new-collection-name').val('');
+					}
+
+					jQuery('.add-to-collection-controls .response').text('Created');
+					jQuery('.add-to-collection-controls .response').addClass('added');
+
+					jQuery('.add-to-collection-controls .response').show('fast');
+					setTimeout(function () {
+						jQuery('.add-to-collection-controls .response').hide('fast');
+						jQuery('.add-to-collection-controls .response').removeClass('added');
+					}, 2000);
+
+
+				} else {
+					console.log("Failed");
+					console.log(response["message"]);
+					mixAlerts.showPopupAlert('error', response["message"]);
+				}
+
+				console.log("Removing working state from UI.");
+				jQuery('.add-to-collection-controls .processing-request').hide();
+				jQuery(".create-new-collection-controls .new-collection-name").removeAttr('disabled');
+				jQuery(".create-new-collection-controls .btn.create").removeAttr('disabled');
+			});
+		});
+
+	},
+	likeClick: function () {
+
+		/*
+		 * Using namespace ".like" in the binding of "click.like" to 
+		 * make it possible to unbind from an anonymous function.
+		 */
+		jQuery(".mixergy-like.has-not-liked").on("click.like", function (e) {
+			e.preventDefault();
+
+			console.log("Like button was clicked.");
+
+			/*
+			 * Set options for someone who isn't logged in.
+			 */
+			if (ajax_request_package.user_id === "0") {
+				ajax_request_package.user_collection_likes_list_id = 0;
+			}
+
+			/*
+			 * We'll use this in the ajax response function to unbind the click.like event.
+			 */
+			var clickedLikeButton = jQuery(this);
+
+			var data = {
+				'action': 'edit_posts_in_collection',
+				'requested_action': 'add',
+				'post_id': jQuery(this).data("post-id"),
+				'list_id': ajax_request_package.user_collection_likes_list_id,
+				'nonce': ajax_request_package.add_to_user_collection_nonce,
+			};
+
+			console.log("Data package built.");
+			console.log(data);
+
+			if (data['post_id'] !== undefined && data['post_id'] !== 0) {
+				console.log("Changing UI to working state.");
+
+				jQuery(this).parent().prepend("<img id='mixergy-likes-loader-post-" + data['post_id'] + "' class='mixergy-like-loader pull-left' src='/wp-content/themes/mixergy-2015-v2/assets/img/ajaxloader.gif' />");
+				jQuery("#mixergy-likes-loader-post-" + data['post_id']).show();
+
+				if (jQuery(this).hasClass('mini')) {
+					jQuery("#mixergy-likes-loader-post-" + data['post_id']).addClass('mini');
+				}
+				jQuery(this).css('visibility', 'hidden');
+
+				console.log("Sending request to: " + ajax_request_package.ajax_url);
+
+				jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+					console.log("Received response");
+					console.log(response);
+					console.log(data);
+					response = JSON.parse(response);
+					console.log(response);
+
+					if (response["success"]) {
+						console.log("Success!");
+						jQuery(".mixergy-likes-count-post-" + data['post_id']).text(response["mixergy_likes"]);
+						jQuery(".mixergy-likes-post-" + data['post_id']).removeClass('has-not-liked');
+						jQuery(".mixergy-likes-post-" + data['post_id']).addClass('has-liked');
+
+						jQuery(".mixergy-likes-message-post-" + data['post_id']).text(response["like_wording"]);
+
+						clickedLikeButton.unbind("click.like");
+
+					} else {
+						console.log("Failed");
+						console.log(response["message"]);
+						mixAlerts.showPopupAlert('error', response["message"]);
+					}
+
+					console.log("Removing working state from UI.", data['post_id']);
+					jQuery("#mixergy-likes-loader-post-" + data['post_id']).remove();
+					jQuery(".mixergy-likes-post-" + data['post_id']).css('visibility', 'visible');
+
+
+					if (ajax_request_package.user_id === "0" && jQuery('.like-button-logged-out-message').length) {
+						console.log("Showing 'thanks for liking' popover.", data['post_id']);
+						var popoverContent = jQuery('.like-button-logged-out-message').html();
+						jQuery(".mixergy-likes-post-" + data['post_id']).popover(
+							{
+								content: popoverContent,
+								trigger: "focus",
+								placement: "top",
+								html: true
+							}
+						);
+						jQuery('body').on('click', function () {
+							jQuery(".mixergy-likes-post-" + data['post_id']).popover('hide');
+						});
+						jQuery(".mixergy-likes-post-" + data['post_id']).popover('show');
+					}
+				});
+			}
+			return false;
+		});
+
+		jQuery(".mixergy-like.has-liked, .mixergy-like.has-liked .glyphicon-triangle-top").on('click', function (e) {
+			e.preventDefault();
+			return false;
+		});
+
+	},
+	deleteUserCollections: function () {
+		jQuery(document).on('click', '.delete-user-collection', function (e) {
+			/**
+			 * copy the collection id from the delete button to the 
+			 * conformation button in the confirmation popup 
+			 * and then show the popup                 * 
+			 */
+			var collectionId = jQuery(this).data('collection-id');
+			jQuery('#modal-delete-user-collection-button').data('collection-id', collectionId);
+			jQuery('#modal-delete-user-collection').modal('show');
+		});
+
+		jQuery(document).on('click', '#modal-delete-user-collection-button', function (e) {
+
+			e.preventDefault();
+
+			var collectionId = jQuery(this).data('collection-id');
+			if (typeof (collectionId) === "undefined") {
+				console.log('no collection id found');
+				return;
+			}
+
+			/*
+			 * Make sure the customer is logged in
+			 */
+			if (ajax_request_package.user_id === "0") {
+				console.log("Not logged in. Redirecting to: " + ajax_request_package.member_only_url);
+				window.location.assign(ajax_request_package.member_only_url);
+				return;
+			}
+
+
+			var data = {
+				'action': 'delete_user_collection',
+				'collection_id': collectionId,
+				'nonce': ajax_request_package.add_to_user_collection_nonce,
+			};
+
+			jQuery(".create-new-collection-controls .new-collection-name").attr('disabled', 'disabled');
+			jQuery(".create-new-collection-controls .btn.create").attr('disabled', 'disabled');
+			jQuery('.add-to-collection-controls .processing-request').show();
+
+			jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+				console.log("Received response");
+				console.log(response);
+				console.log(data);
+				response = JSON.parse(response);
+				console.log(response);
+
+				if (response["success"]) {
+					console.log("Success!");
+					console.log("removing checkbox");
+
+					/**
+					 * Remove the checkbox along with its parent element 
+					 */
+					if (response["checkbox_id"] !== undefined) {
+						jQuery('#' + response["checkbox_id"]).parent().fadeOut(1000, function () {
+							jQuery(this).remove();
+						});
+					}
+
+					jQuery('.add-to-collection-controls .response').text('deleted');
+					jQuery('.add-to-collection-controls .response').addClass('added');
+
+					jQuery('.add-to-collection-controls .response').show('fast');
+					setTimeout(function () {
+						jQuery('.add-to-collection-controls .response').hide('fast');
+						jQuery('.add-to-collection-controls .response').removeClass('added');
+					}, 2000);
+
+
+				} else {
+					console.log("Failed");
+					console.log(response["message"]);
+					mixAlerts.showPopupAlert('error', response["message"]);
+				}
+
+				console.log("Removing working state from UI.");
+				jQuery('.add-to-collection-controls .processing-request').hide();
+				jQuery(".create-new-collection-controls .new-collection-name").removeAttr('disabled');
+				jQuery(".create-new-collection-controls .btn.create").removeAttr('disabled');
+			});
+		});
+	},
+};
+var mixBgSet = {
+	init: function () {
+		jQuery.each(jQuery('.bg-set'), function () {
+			var bgUrl = jQuery(this).data('bg-url');
+
+			if (typeof bgUrl !== 'undefined' && bgUrl !== '') {
+				jQuery(this).css('background-image', 'url(' + bgUrl + ')');
+				jQuery(this).css('background-size', 'cover');
+				jQuery(this).css('background-repeat', 'no-repeat');
+				jQuery(this).css('background-position', 'center center');
+			}
+		});
+
+	},
+};
+
+var mixMediaPlayer = {
+	init: function () {
+		mixMediaPlayer.fixAudioPlayerSizeAfterTabSwitch();
+		mixMediaPlayer.fixAudioPlayerSizeForAmp();
+	},
+	/**
+	 * The audio media player behind the tab will not be sized
+	 * right initially because it'll be hidden and have
+	 * bad width values. When we switch the tab, the media
+	 * player will need to have the resize() event 
+	 * triggered, so that it'll look correct in the newly
+	 * visible tab.
+	 * 
+	 * @returns {undefined}
+	 */
+	fixAudioPlayerSizeAfterTabSwitch: function () {
+		jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+			/*
+			 * e.target // newly activated tab
+			 * e.relatedTarget // previous active tab
+			 */
+			if (jQuery(e.target).attr('href') === '#audio-main') {
+				jQuery('.smart-track-player').resize();
+				jQuery('.mejs-container').resize();
+			}
+		});
+	},
+	fixAudioPlayerSizeForAmp: function () {
+		if (jQuery('.audio-player-iframe').length) {
+			setInterval(function () {
+				jQuery('.mejs-container').resize();
+			}, 1000);
+		}
+	},
+};
+
+var mixAddToCollections = {
+	init: function () {
+
+		jQuery('#add-to-collection-button').on("click", function () {
+			var data = {
+				'action': 'mixergy_add_to_collection',
+				'post_id': ajax_request_package.post_id,
+				'nonce': ajax_request_package.add_to_collection_nonce,
+				'collection_id': jQuery('#add-to-collection-list').val(),
+				'description': jQuery('#add-to-collection-description').val(),
+			};
+			jQuery('#add-to-collection-button').attr('disabled', 'disabled');
+			jQuery('#add-to-collection-button').text('Loading...');
+			jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+				alert(response);
+				jQuery('#add-to-collection-button').removeAttr('disabled');
+				jQuery('#add-to-collection-button').text('Add to Collection');
+			});
+		});
+
+	},
+};
+
+
+var mixHeadroom = {
+	init: function () {
+		if (jQuery.isFunction(jQuery.fn.headroom)) {
+			jQuery("nav").headroom({
+				"offset": 205,
+				"tolerance": 5,
+				"classes": {
+					"initial": "animated",
+					"pinned": "slideDown",
+					"unpinned": "slideUp"
+				}
+			});
+		}
+		/* commented out because height issue with admin bar and nav bar 
+		 * may be issue with css
+		 jQuery("#wpadminbar").headroom({
+		 "offset": 205,
+		 "tolerance": 5,
+		 "classes": {
+		 "initial": "animated",
+		 "pinned": "slideDown",
+		 "unpinned": "slideUp"
+		 }
+		 }); */
+	},
+};
+
+/**
+ * A place for customizing HTML elements
+ * @type type
+ */
+var mixElements = {
+	init: function () {
+		mixElements.clickable();
+		mixElements.combineTablists();
+	},
+	/**
+	 * Will make HTML elements clickable and 
+	 * link to the URL in data-clickurl. HTML
+	 * element must have a class of "clickable"
+	 * 
+	 * Example usage: 
+	 * <div class="clickable" data-clickurl="http://example.com/page">content</div>
+	 * 
+	 * @returns {undefined}
+	 */
+	clickable: function () {
+		jQuery('.clickable').each(function (i) {
+			jQuery(this).click(function (e) {
+				/**
+				 * Checking if an element within the clickable element
+				 * wants to cancel the clickable event. This works for
+				 * the like button that's within a card that has a clickable
+				 * class. The like button includes cancel-clickable in
+				 * all the classes, to prevent the card click from working.
+				 */
+				console.log('Clickable event triggered.');
+				if (jQuery(e.target).hasClass("cancel-clickable") || jQuery(e.target).closest('.cancel-clickable').length) {
+					/**
+					 * returning false to enable further event handlers to work.
+					 * 
+					 */
+					console.log('cancel-clickable class detected.');
+				} else {
+					/*
+					 * We only want to capture left clicks, not right
+					 * or middle clicks.
+					 * http://stackoverflow.com/a/2725963/461119
+					 * 
+					 * e.which === undefined is used for capturing 
+					 * automated clicks during testing.
+					 */
+					if (e.which === 1 || e.which === undefined) {
+						console.log('Detected left click. Redirecting.');
+						window.location.href = jQuery(this).data('clickurl');
+					} else {
+						console.log('Detected other click: ' + e.which);
+					}
+				}
+			});
+		});
+	},
+	/**
+	 * The tabs for the media player section (with
+	 * video, audio, mobile download) is split into
+	 * two UL items. That means when a tab is clicked
+	 * within one UL, it doesn't reset the active tab
+	 * in the other UL. We have to manually adjust 
+	 * for the active tab, when a LI is clicked.
+	 * 
+	 * @returns {undefined}
+	 */
+	combineTablists: function () {
+		jQuery('.combine-tablist li').on('click', function () {
+			jQuery('.combine-tablist li').removeClass('active');
+		});
+	},
+};
+
+mixTranscript = {
+	expanded: false,
+	offset: 0,
+	headerHeight: 0,
+	footerOffset: 0,
+	windowHeight: 0,
+	transcriptBottomOffset: 0,
+	init: function () {
+		//Only run on pages with a Transcription
+		if (jQuery('.transcript-view').length) {
+			mixTranscript.handleExpandedToggle();
+
+			if (window.location.hash === '#transcript') {
+				jQuery('.expand-script').click();
+			}
+
+		}
+	},
+	/**
+	 * Handles the expanding of the transcript
+	 * which is normally in a scrollable div.
+	 * 
+	 * The default is for both expand/compress
+	 * buttons to be hidden. On load, the compress
+	 * should be triggered. This makes sure a page
+	 * refresh will show the proper state and links.
+	 * 
+	 * @returns {undefined}
+	 */
+	handleExpandedToggle: function () {
+		function calculatePositions() {
+			mixTranscript.offset = jQuery('.transcript').offset().top;
+			mixTranscript.headerHeight = jQuery('.transcript header').outerHeight();
+			mixTranscript.windowHeight = jQuery(window).height();
+			mixTranscript.transcriptBottomOffset = jQuery('.transcript').offset().top + jQuery('.transcript').outerHeight();
+		}
+
+		function stickFooter() {
+			jQuery('.transcript footer').addClass('sticky');
+			jQuery('.transcript footer').css('width', jQuery('.transcript').outerWidth() - 2);
+		}
+
+		function unstickFooter() {
+			jQuery('.transcript footer').removeClass('sticky');
+			jQuery('.transcript footer').css('width', "100%");
+		}
+
+		calculatePositions();
+
+		jQuery(window).resize(function (event) {
+			calculatePositions();
+		});
+
+		function shouldFooterBeSticky() {
+			if (mixTranscript.expanded) {
+				if (
+					window.pageYOffset + mixTranscript.windowHeight < mixTranscript.transcriptBottomOffset &&
+					window.pageYOffset > mixTranscript.offset - (mixTranscript.windowHeight / 2)
+				) {
+
+					stickFooter();
+				} else {
+					unstickFooter();
+				}
+
+			}
+
+		}
+
+		jQuery(window).scroll(function (event) {
+			shouldFooterBeSticky();
+		});
+
+		jQuery('.expand-script').click(function (event) {
+			scrollPosition = jQuery(document).scrollTop();
+			jQuery('.transcript-view').addClass('expanded');
+
+			jQuery('.compress-script').css('display', 'block');
+			jQuery('.expand-script').css('display', 'none');
+
+			jQuery(document).scrollTop(scrollPosition);
+
+			mixTranscript.footerOffset = jQuery('.transcript footer').offset().top;
+
+			mixTranscript.expanded = true;
+			calculatePositions();
+			shouldFooterBeSticky();
+
+			event.preventDefault();
+			return false;
+		});
+
+		jQuery('.compress-script').click(function (event) {
+			if (jQuery('.transcript-view').hasClass('expanded')) {
+				jQuery(document).scrollTop(mixTranscript.offset - 50);
+			}
+
+			jQuery('.transcript-view').removeClass('expanded');
+
+			jQuery('.expand-script').css('display', 'block');
+			jQuery('.compress-script').css('display', 'none');
+
+
+			mixTranscript.expanded = false;
+			
+			unstickFooter();
+
+			event.preventDefault();
+			return false;
+		});
+
+		/**
+		 * trigger the compress script right away
+		 * so the correct style will be applied.
+		 */
+		jQuery('.compress-script').click();
+
+	},
+};
+
+var mixWistia = {
+	/**
+	 * Will contain the handles to control each video.
+	 * Store the handle in this array using the embed
+	 * code as the key. Like so:
+	 * 
+	 * mixWistia.wistiaVideoApi[embedCode] = Wistia.embed(embedCode + '', wistiaArguments);
+	 * 
+	 * @type Array
+	 */
+	wistiaVideoApi: [],
+	wistiaVideoCurrentPosition: [],
+	init: function () {
+		mixWistia.jumpToPlaybackPointInit();
+		mixWistia.createVideosInit();
+		mixWistia.playbackSpeedInit();
+	},
+	/**
+	 * Finds all the wistia embed elements that need to
+	 * have a script complete the embedding process. This
+	 * is not intended for iframe embed codes.
+	 * 
+	 * For this to work, the div needs to have a class of
+	 * "wistia_embed" and "scripted". It also needs to have
+	 * the embed has as the attribute value for "data-embed-hash".
+	 * 
+	 * One of the places this is used for is the Interview posts.
+	 */
+	createVideosInit: function () {
+		jQuery('.wistia_embed.scripted').each(function (index) {
+			var embedCode = jQuery(this).data('embedHash');
+			var stillUrl = jQuery(this).data('stillUrl');
+
+
+			if (embedCode !== undefined && embedCode !== '') {
+				var wistiaArguments = {
+					fullscreenButton: true,
+					videoFoam: true,
+					playButton: false,
+				};
+
+				if (stillUrl !== undefined && stillUrl !== '') {
+					wistiaArguments.stillUrl = stillUrl;
+					wistiaArguments.stillSnap = true;
+				}
+
+				console.log(wistiaArguments);
+
+				mixWistia.wistiaVideoApi[embedCode] = Wistia.embed(embedCode + '', wistiaArguments);
+				mixWistia.wistiaVideoCurrentPosition[embedCode] = 0;
+
+				mixWistia.wistiaVideoApi[embedCode].bind("timechange", function (t) {
+					mixWistia.wistiaVideoCurrentPosition[embedCode] = t;
+				});
+
+				if (jQuery('.wistia-playback-chapters').length) {
+					setInterval(mixWistia.updateChapterCompletion, 500);
+				}
+
+				setInterval(function () {
+					/*
+					 * The thumbnail should have the pointer cursor. The
+					 * problem is, the ID of the element we're looking for
+					 * has a dynamic name, based on some number.
+					 * 
+					 * Example: wistia_29.thumbnail
+					 * 
+					 * To get that ID, we need to use jQuery's 
+					 * Attribute Contains Selector http://api.jquery.com/attribute-contains-selector/
+					 * 
+					 * We're doing this in the interval to account for
+					 * switching back and forth between player types (html/flash).
+					 */
+					jQuery(".wistia_embed.scripted div[id*='.thumbnail").css('cursor', 'pointer');
+
+
+					/*
+					 * We want to show the player controls only if this 
+					 * is the HTML5 player. Since it's possible to switch
+					 * between the flash and HTML5 player, we'll need to
+					 * keep an eye on this.
+					 */
+					var wistiaCssDisplay = jQuery('.wistia-playback-speed.hash-' + embedCode).css('display');
+
+					if (mixWistia.wistiaVideoApi[embedCode].embedType !== 'flash') {
+						if (wistiaCssDisplay === 'none') {
+							/*
+							 * Detected a change to HTML
+							 */
+							console.log('Changed to HTML player', embedCode, mixWistia.wistiaVideoApi[embedCode].embedType);
+
+							jQuery('.wistia-playback-speed.hash-' + embedCode).css('display', 'block');
+							jQuery('.wistia-playback-speed.hash-' + embedCode + ' .speed-button.default').addClass('selected');
+
+							/*
+							 * We must rebind to the timechange event when 
+							 * the player has changed back to HTML.
+							 */
+							mixWistia.wistiaVideoApi[embedCode].bind("timechange", function (t) {
+								mixWistia.wistiaVideoCurrentPosition[embedCode] = t;
+							});
+						}
+					} else {
+						if (wistiaCssDisplay === 'block') {
+							/*
+							 * Detected a change to Flash
+							 */
+							console.log('Changed to Flash player', embedCode, mixWistia.wistiaVideoApi[embedCode].embedType);
+
+							jQuery('.wistia-playback-speed.hash-' + embedCode).css('display', 'none');
+							jQuery('.wistia-playback-speed.hash-' + embedCode + ' .speed-button').removeClass('selected');
+						}
+					}
+				}, 2000);
+			}
+		});
+
+	},
+	/**
+	 * Will jump to the number of seconds that data-timecode 
+	 * has set in a link that has a class of both wistia-control and chapter.
+	 * 
+	 * Example usage: <a href="#" class="wistia-control chapter" data-timecode="35">Jump to 35 second point</a>
+	 * 
+	 */
+	jumpToPlaybackPointInit: function () {
+		/**
+		 * This version of chapter jumping will only work with 
+		 * the first wistia object on the page.
+		 */
+		jQuery('.wistia-control.chapter').each(function (index) {
+			jQuery(this).click(function (e) {
+				jQuery('.wistia_embed')[0].wistiaApi.time(jQuery(this).data('timecode')).play();
+				e.preventDefault();
+				return false;
+			});
+		});
+		/**
+		 * This is a more advanced version that will allow you
+		 * to pick the embed code to target.
+		 */
+		jQuery('.wistia-playback-chapters .chapter').each(function (index) {
+			/**
+			 * We're using "touchend", in addition to "click" because
+			 * iOS treats the a touch as a hover, instead of a click.
+			 * Without touchend, customers have to double tap.
+			 */
+			jQuery(this).on('click touchend', (function (e) {
+				var embedCode = jQuery(this).data('embedHash');
+				var startTime = jQuery(this).data('startTime');
+
+				mixWistia.wistiaVideoApi[embedCode].time(startTime).play();
+
+				mixWistia.updateChapterCompletion();
+
+				e.preventDefault();
+				return false;
+			}));
+		});
+	},
+	updateChapterCompletion: function () {
+		jQuery('.wistia-playback-chapters .chapter').each(function (index) {
+			var embedCode = jQuery(this).data('embedHash');
+			var startTime = parseInt(jQuery(this).data('startTime'));
+			var endTime = parseInt(jQuery(this).data('endTime'));
+			var currentPosition = mixWistia.wistiaVideoCurrentPosition[embedCode];
+
+			if (currentPosition > 0 && endTime < currentPosition) {
+				//Chapter has completed
+				if (jQuery(this).hasClass('played') === false) {
+					jQuery(this).addClass('played');
+
+					jQuery(this).removeClass('unplayed');
+					jQuery(this).removeClass('playing');
+				}
+
+			} else if (currentPosition > 0 && startTime <= currentPosition) {
+				//Chapter is currently playing
+				if (jQuery(this).hasClass('playing') === false) {
+					jQuery(this).addClass('playing');
+
+					jQuery(this).removeClass('unplayed');
+					jQuery(this).removeClass('played');
+				}
+			} else {
+				//Chapter hasn't played yet
+				if (jQuery(this).hasClass('unplayed') === false) {
+					jQuery(this).addClass('unplayed');
+
+					jQuery(this).removeClass('playing');
+					jQuery(this).removeClass('played');
+				}
+			}
+
+		});
+	},
+	/**
+	 * Associates the code to the playback speed buttons.
+	 */
+	playbackSpeedInit: function () {
+		jQuery('.wistia-playback-speed .speed-button').click(function (e) {
+			var playbackGroup = jQuery(this).parents('.wistia-playback-speed');
+			var embedCode = jQuery(playbackGroup).data('embedHash');
+
+			if (embedCode !== '') {
+				var wistiaEmbed = jQuery('#wistia_' + embedCode)[0].wistiaApi;
+
+				wistiaEmbed.playbackRate(jQuery(this).data('speed'));
+
+				jQuery('.speed-button', playbackGroup).removeClass('active');
+				jQuery(this).addClass('active');
+			}
+			e.preventDefault();
+			return false;
+		});
+	},
+};
+
+mixSearch = {
+	init: function () {
+		if (jQuery.isFunction(jQuery.fn.SumoSelect)) {
+			mixSearch.advancedDropdowns();
+		}
+	},
+	advancedDropdowns: function () {
+
+		jQuery('.search-form .classifications').SumoSelect({
+			csvDispCount: 2,
+			captionFormat: '{0} categories selected',
+			placeholder: 'Category',
+			outputAsCSV: true,
+		});
+
+		jQuery('.search-form .post-types').SumoSelect({
+			csvDispCount: 2,
+			captionFormat: 'Everything',
+			placeholder: 'Post types',
+			outputAsCSV: true,
+		});
+
+		jQuery('select.hide-until-sumo').removeClass('hide-until-sumo');
+	},
+};
+
+mixFrontEndTagging = {
+	format: function (item) {
+		var descriptionHtml = '';
+		if (item.title !== '') {
+			descriptionHtml = " - " + item.title;
+		}
+		return "<div class='original-text' style=''><strong>" + item.text + "</strong>" + descriptionHtml + "</div>";
+	},
+	init: function () {
+		if (jQuery('.front-end-tagging').length === 0) {
+			return;
+		}
+		jQuery('.front-end-tagging .save-tag').on("click", mixFrontEndTagging.tagsSave);
+		jQuery('.front-end-tagging .tag-list').select2({
+			placeholder: "Select a tag",
+			templateResult: mixFrontEndTagging.format,
+			escapeMarkup: function (markup) {
+				return markup;
+			},
+		});
+
+
+		jQuery('.front-end-tagging .tag-list').on("change", function (e) {
+			var postId = jQuery(this).data('postid');
+
+			jQuery('#front-end-tagging-post-' + postId + ' .save-tag').click();
+		});
+
+		/*
+		 * Some pages have the tool hidden until the admin clicks a link
+		 * to reveal the tool. That link has a class of front-end-tagging-show-tool
+		 * Only automatically reveal when that link doesn't exist.
+		 * 
+		 * As of this comment, course & interview detail pages have the
+		 * link to reveal it. Search results have the tool automatically showing.
+		 */
+		if (jQuery('.front-end-tagging-show-tool').length === 0) {
+			jQuery('.front-end-tagging').css('display', 'block');
+		} else {
+			jQuery('.front-end-tagging-show-tool').click(function (e) {
+				jQuery('.front-end-tagging').css('display', 'block');
+				e.preventDefault();
+				return false;
+			});
+		}
+
+	},
+	/**
+	 * Save the tags with wp ajax when save button is clicked 
+	 */
+	tagsSave: function (e) {
+		var postId = jQuery(this).data('postid');
+		var dropdownElement = jQuery('#front-end-tagging-post-' + postId + ' .tag-list');
+
+		var data = {
+			'action': 'mixergy_front_end_tagging_save_terms',
+			'post_id': postId,
+			'taxonomy': jQuery(this).data('taxonomy'),
+			'tags': dropdownElement.val(),
+		};
+
+		console.log('Saving tags with the following data...');
+		console.log(data);
+
+		jQuery('.front-end-tagging .save-tag').attr("disabled", true);
+		jQuery('.front-end-tagging .tag-list').prop('disabled', true);
+		jQuery(this).text("Saving");
+
+
+		jQuery.post(ajax_request_package.ajax_url, data, mixFrontEndTagging.tagSaveCallback, "JSON");
+
+		e.preventDefault();
+		return false;
+	},
+	/**
+	 * Function callback for tagSave
+	 * 
+	 * @param {json object} response
+	 */
+	tagSaveCallback: function (response) {
+		console.log(response);
+		if (response.success === false) {
+			alert("There was a problem with the request\n\n" + response.data);
+		}
+		jQuery('.front-end-tagging .save-tag').text("Save");
+		jQuery('.front-end-tagging .save-tag').removeAttr('disabled');
+		jQuery('.front-end-tagging .tag-list').prop('disabled', false);
+	}
+};
+
+/**
+ * Swiftype search options
+ */
+var swiftypeConfig = {
+	filters: {
+		posts: {
+			object_type: ['post', 'interview', 'course']
+		}
+	}
+};
+
+/**
+ * Alerts displayed in the browser
+ */
+var mixAlerts = {
+	init: function () {
+		mixAlerts.saveDismiss();
+	},
+	/**
+	 * Opens an alert within the browser. Currently,
+	 * it's really basic but future improvements will
+	 * show an HTML alert that refelcts the alertType
+	 * better.
+	 * 
+	 * @param {string} alertType - Using bootstrap style alerts: success, warning, error, info.
+	 * @param {string} message
+	 * @returns {undefined}
+	 */
+	showPopupAlert: function (alertType, message) {
+		/*
+		 * Currently ignoring alertType. When the 
+		 * HTML version will be created, it'll matter
+		 * what the alertType is.
+		 */
+		alert(message);
+	},
+	saveDismiss: function () {
+		jQuery('body').on('click', '.mixergy-alert-dismiss', function () {
+			var dismissId = jQuery(this).data('dismissId');
+			var dismissKey = jQuery(this).data('dismissKey');
+
+			console.log('Handling dismiss request.');
+
+			console.log('Dismissing the message.');
+			jQuery(this).closest('.mixergy-alert').css('display', 'none');
+
+			if (typeof dismissId !== 'undefined' && typeof dismissKey !== 'undefined') {
+				event.preventDefault();
+
+				console.log('Found dismiss id and key.', dismissId, dismissKey);
+
+				console.log('Saving the cookie.');
+				var timeStamp = Math.floor(Date.now() / 1000);
+				var cookieExpires = new Date();
+				cookieExpires.setFullYear(cookieExpires.getFullYear() + 10);
+
+				mixTools.setCookie('dismiss_alert_' + dismissId, timeStamp, cookieExpires);
+
+				console.log('Sending dismiss to server.');
+
+				var data = {
+					'action': 'mixergy_dismiss_alert',
+					'dismiss_alert_id': dismissId,
+					'dismiss_alert_key': dismissKey,
+				};
+
+				console.log('Making request.', ajax_request_package.ajax_url, data);
+
+				jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+					console.log("Received response");
+					console.log(response);
+					response = JSON.parse(response);
+					console.log(response);
+
+					if (response["success"]) {
+						console.log("Success!");
+					} else {
+						console.log("Failed");
+						console.log("Returned message: " + response["message"]);
+					}
+				});
+
+				return false;
+
+			}
+
+		});
+	},
+};
+
+var bbpressAjaxReplies = {
+	percentInterval: 0,
+	percentComplete: 0,
+	init: function () {
+		jQuery(document).on('submit', ".bbp-reply-form > #new-post", bbpressAjaxReplies.handleNewReply);
+	},
+	handleNewReply: function (event) {
+		var replyText = '';
+
+		/*
+		 * We're going to make sure there are enough characters to submit this.
+		 * In order to properly check, we'll need to serialize the form, so
+		 * the visual/html tabs will sync up and dump their data into the
+		 * #bbp_reply_content element. Otherwise, the content in the active tab
+		 * won't be the same as the inactive tab.
+		 */
+		jQuery(this).serialize();
+		replyText = jQuery('#bbp_reply_content').val();
+		console.log('#bbp_reply_content', replyText, replyText.length);
+
+		if (replyText.length < 1) {
+			console.log('Too few characters', replyText, replyText.length);
+			mixAlerts.showPopupAlert('error', "You clicked the reply button with a blank message. Add something to the message area above and then click the button again.");
+			event.preventDefault();
+			return false;
+		}
+
+
+		jQuery("#bbp_reply_submit").data('original-text', jQuery("#bbp_reply_submit").text());
+		jQuery("#bbp_reply_submit").text("Loading 0%");
+		jQuery("#bbp_reply_submit").attr("disabled", "disabled");
+
+		bbpressAjaxReplies.percentComplete = 0;
+		bbpressAjaxReplies.percentInterval = setInterval(function () {
+			console.log('Processing request.', bbpressAjaxReplies.percentComplete, bbpressAjaxReplies.percentInterval);
+			if (bbpressAjaxReplies.percentComplete > -1) {
+				console.log('Valid request.', bbpressAjaxReplies.percentComplete, bbpressAjaxReplies.percentInterval);
+
+				bbpressAjaxReplies.percentComplete += Math.ceil(Math.random() * 4);
+
+				if (bbpressAjaxReplies.percentComplete < 100) {
+					jQuery("#bbp_reply_submit").text("Loading " + bbpressAjaxReplies.percentComplete + "%");
+				} else {
+					clearInterval(bbpressAjaxReplies.percentInterval);
+					jQuery("#bbp_reply_submit").html("Loading <img src='/wp-content/themes/mixergy-2015-v2/assets/img/ajax-loading-pulsing-bars.gif' alt='loading animation' />");
+				}
+			}
+		}, 100);
+
+		//Don't use the ajax option if we're editing a post.
+		if (window.location.href.indexOf('mixergy.com/dojo/reply/') !== -1) {
+			return true;
+		}
+
+		event.preventDefault();
+
+		jQuery.post(
+			jQuery(this).attr("action"),
+			jQuery(this).serialize(),
+			bbpressAjaxReplies.handleAjaxResponse
+		);
+		try {
+			/*
+			 * we're putting this in a try block because the code
+			 * will fail if the Visual tab is not selected.
+			 */
+			tinymce.activeEditor.getBody().setAttribute('contenteditable', false);
+		} catch (ex) {
+
+		}
+		jQuery('textarea.wp-editor-area').attr("disabled", "disabled");
+
+		return false;
+	},
+	handleAjaxResponse: function (data) {
+		/**
+		 * We need to take the customer to the newly created
+		 * post but the header hides the post when we scroll
+		 * up. So we need to scroll past the newly created
+		 * post and then scroll down.
+		 */
+		var oldLastPostId = jQuery('.fullpost').last().attr('id');
+
+		var response = jQuery(data);
+		var content = response.find(".container-fluid.postitems");
+
+		//removes all div except the given class name and its *children*
+		jQuery(".container-fluid.postitems").contents().filter(function () {
+			return this.className != "bbp-reply-form";
+		}).remove();
+
+		content.find(".bbp-reply-form").remove();
+		jQuery(".container-fluid.postitems").prepend(content.children());
+		window.location.hash = ''; //in case it's already set to the last post.
+		window.location.hash = oldLastPostId;
+		setTimeout(function () {
+			window.location.hash = jQuery('.fullpost').last().attr('id');
+		}, 500);
+
+
+		//reset the form fields
+		jQuery("#bbp_reply_to").val("0");
+		try {
+			/*
+			 * we're putting this in a try block because the code
+			 * will fail if the Visual tab is not selected.
+			 */
+			tinymce.activeEditor.getBody().setAttribute('contenteditable', true);
+			tinymce.activeEditor.setContent('');
+		} catch (ex) {
+
+		}
+		jQuery('textarea.wp-editor-area').removeAttr('disabled');
+		jQuery('textarea.wp-editor-area').val('');
+
+		var sidebar = response.find("#sidebar");
+		jQuery('#sidebar').html(sidebar.children());
+
+		jQuery('.bbp-reply-header').last().attr("tabindex", -1).focus();
+
+		var url = jQuery('.bbp-reply-permalink').last().attr("href");
+		history.pushState('data', '', url);
+
+		clearInterval(bbpressAjaxReplies.percentInterval);
+		bbpressAjaxReplies.percentComplete = -1;
+
+		jQuery("#bbp_reply_submit").text(jQuery("#bbp_reply_submit").data('original-text'));
+		jQuery("#bbp_reply_submit").removeAttr("disabled");
+
+		//rebuild the bbmylike design.
+		try {
+			bbmylike_like_others_tooltip();
+		} catch (ex) {
+
+		}
+
+	}
+};
+
+var mixUpdateLikeHistory = {
+	init: function () {
+		mixUpdateLikeHistory.updatePhrasing();
+	},
+	updatePhrasing: function () {
+		var likeHistory;
+
+		console.log('About to scan for posts that have already been liked');
+
+		likeHistory = mixTools.getCookie('like_history');
+
+		console.log('Current like history: ' + likeHistory);
+
+		if (likeHistory !== '') {
+			likeHistory = likeHistory.split(',');
+
+			var currentCount = 0;
+			for (var i = 0; i < likeHistory.length; i++) {
+				console.log('Looking for post: ' + likeHistory[i]);
+				/*
+				 * Make sure the post is actually on this page
+				 */
+				if (jQuery('.mixergy-likes-count-post-' + likeHistory[i]).length) {
+					console.log('Post exists. Time to update.');
+
+					currentCount = parseInt(jQuery('.mixergy-likes-count-post-' + likeHistory[i]).text());
+
+					console.log('Found a count of: ' + currentCount);
+
+					if (isNaN(currentCount)) {
+						/*
+						 * This could happen on a page that still has the cached
+						 * value of no likes (like an archive page). We'll need
+						 * to update the count to show at least 1 like.
+						 */
+						jQuery('.mixergy-likes-count-post-' + likeHistory[i]).text(1);
+						currentCount = 1;
+					}
+
+					console.log('Changing text');
+					if (currentCount === 1) {
+						jQuery('.mixergy-likes-message-post-' + likeHistory[i]).text('like, yours');
+					} else if (currentCount > 1) {
+						jQuery('.mixergy-likes-message-post-' + likeHistory[i]).text('likes, with yours');
+					}
+					console.log('Cleaning up the button');
+					jQuery(".mixergy-likes-post-" + likeHistory[i]).removeClass('has-not-liked');
+					jQuery(".mixergy-likes-post-" + likeHistory[i]).addClass('has-liked');
+					jQuery(".mixergy-likes-post-" + likeHistory[i]).unbind("click.like");
+
+				}
+			}
+		}
+
+	}
+};
+
+var mixGuestPass = {
+	init: function () {
+		jQuery('.guest-pass-request-link').click(mixGuestPass.getGuestUrl);
+	},
+	getGuestUrl: function (event) {
+		event.preventDefault();
+
+		console.log('Requesting guest pass URL.');
+
+		var data = {
+			'action': 'mixergy_get_guest_pass_url',
+			'post_id': ajax_request_package.post_id,
+			'hash': ajax_request_package.hash,
+		};
+
+		console.log('Data package.', data);
+
+
+		jQuery('.guest-pass-request .content').hide();
+		jQuery('.guest-pass-request .loading').show();
+
+		console.log('Making request.');
+
+		jQuery.post(ajax_request_package.ajax_url, data, function (response) {
+			console.log("Received response");
+			console.log(response);
+			response = JSON.parse(response);
+			console.log(response);
+
+			if (response["success"]) {
+				console.log("Success!");
+
+				jQuery('.guest-pass-request').hide();
+				jQuery('.guest-pass-details').show();
+				jQuery('.guest-pass-link').val(response.package.guest_url);
+			} else {
+				console.log("Failed");
+				console.log("Returned message: " + response["message"]);
+				mixAlerts.showPopupAlert('error', response["message"]);
+			}
+		});
+
+		return false;
+	},
+};
+
+var mixFramework = {
+	init: function () {
+		mixFramework.selectAllOnFocus();
+		mixFramework.showWorkingOnClick();
+		mixFramework.expirePostRedirect();
+	},
+	selectAllOnFocus: function () {
+		jQuery('.select-all-on-focus').focus(function () {
+			console.log('Selecting all text');
+			jQuery(this).select();
+		});
+	},
+	showWorkingOnClick: function () {
+		jQuery('body').on('click', '.show-working-on-click', function () {
+			console.log('show-working-on-click has been clicked');
+			jQuery(this).prepend('<img src="/wp-content/themes/mixergy-2015-v2/assets/img/ajax-loading-pulsing-bars.gif" alt="loading animation" class="loading-animation" />');
+		});
+	},
+	expirePostRedirect: function () {
+		if (
+			typeof ajax_request_package !== 'undefined' &&
+			typeof ajax_request_package.post_expires_timestamp !== 'undefined' &&
+			typeof ajax_request_package.post_expires_redirect_url !== 'undefined' &&
+			jQuery.isNumeric(ajax_request_package.post_expires_timestamp) &&
+			ajax_request_package.post_expires_redirect_url !== ''
+		) {
+
+			function redirectWhenPageHasExpired() {
+				var expiresInThisManySeconds,
+					currentDateInSeconds;
+
+				currentDateInSeconds = Math.floor(Date.now() / 1000); //remove milliseconds.
+
+				expiresInThisManySeconds = parseInt(ajax_request_package.post_expires_timestamp) - currentDateInSeconds;
+
+				console.log(
+					"Post with expiration date detected",
+					ajax_request_package,
+					ajax_request_package.post_expires_timestamp,
+					ajax_request_package.post_expires_redirect_url,
+					"Seconds: " + expiresInThisManySeconds,
+					"Minutes: " + expiresInThisManySeconds / 60,
+					"Hours: " + expiresInThisManySeconds / 60 / 60
+				);
+
+				if (expiresInThisManySeconds < 0) {
+					console.warn("Expired page, redirecting", ajax_request_package.post_expires_redirect_url);
+					location.replace(ajax_request_package.post_expires_redirect_url);
+				} else {
+					console.info("Page hasn't expired yet", ajax_request_package.post_expires_redirect_url);
+				}
+
+			}
+
+			redirectWhenPageHasExpired();
+
+			setInterval(redirectWhenPageHasExpired, 30000);
+
+		} else {
+			console.log("Post does not have an expiration date");
+		}
+	},
+};
+
+var mixStripeUpdateCard = {
+	init: function () {
+
+		if (typeof mixwp_stripe !== "undefined") {
+			console.log('Detected a Stripe card update page.', mixwp_stripe);
+
+			Stripe.setPublishableKey(mixwp_stripe.publish_key);
+
+			mixStripeUpdateCard.setFormProcessingState(false);
+			mixStripeUpdateCard.clearUpdateError();
+
+			jQuery(document).on("click", "#update_credit_card_button", mixStripeUpdateCard.updateForm);
+		}
+	},
+	updateForm: function () {
+		mixStripeUpdateCard.setFormProcessingState("processing");
+		mixStripeUpdateCard.clearUpdateError();
+
+		/*
+		 * message shown after form submit
+		 */
+		jQuery('#stripe-update-card-message').hide();
+
+		/*
+		 * Send the information to Stripe 
+		 */
+		Stripe.card.createToken({
+			object: "card",
+			name: jQuery('#card_name').val(),
+			number: jQuery('#card_numner').val(),
+			cvc: jQuery('#cvc').val(),
+			exp_month: jQuery('#exp_month').val(),
+			exp_year: jQuery('#exp_year').val(),
+			address_zip: jQuery('#billing_zip').val()
+		}, function (status, response) {
+
+			if (response.error) {
+				mixStripeUpdateCard.showUpdateError(response.error.message);
+				mixStripeUpdateCard.setFormProcessingState(false);
+			} else {
+				/*
+				 * Protect the card holder by erasing the card information
+				 * which is no longer needed. It'll prevent someone from
+				 * clicking the back button to see the info.
+				 */
+				jQuery('#update-credit-card').trigger("reset");
+
+				/**
+				 * Insert the token into the form so it gets submitted to the server
+				 */
+				jQuery('#update-credit-card').append("<input type='hidden' name='stripeToken' value='" + response['id'] + "'/>");
+
+				mixStripeUpdateCard.stripePaymentFormSubmit();
+			}
+		});
+		event.preventDefault();
+		return false;
+	},
+	stripePaymentFormSubmit: function () {
+		mixStripeUpdateCard.setFormProcessingState('loading');
+		jQuery('#update-credit-card').submit();
+	},
+	showUpdateError: function (message) {
+		jQuery('#stripe-update-card-error-message').css('display', 'block');
+		jQuery('#stripe-update-card-error-message').text(message);
+	},
+	clearUpdateError: function () {
+		jQuery('#stripe-update-card-error-message').css('display', 'none');
+		jQuery('#stripe-update-card-error-message').text('');
+	},
+	/**
+	 * Will update the form button while things
+	 * are/aren't processing.
+	 * 
+	 * @param {string} isProcessing values "processing", "loading", false
+	 */
+	setFormProcessingState: function (isProcessing) {
+		if (isProcessing === "processing") {
+			jQuery("#update_credit_card_button").prop("disabled", true);
+			jQuery("#update_credit_card_button").find('.original-text').hide();
+			jQuery("#update_credit_card_button").find('.waiting-text').show();
+			jQuery("#update_credit_card_button").find('.processing').show();
+			jQuery("#update_credit_card_button").find('.approved').hide();
+			jQuery('body').addClass('whirl');
+			jQuery('body').addClass('duo');
+		} else if (isProcessing === 'loading') {
+			jQuery("#update_credit_card_button").prop("disabled", true);
+			jQuery("#update_credit_card_button").find('.original-text').hide();
+			jQuery("#update_credit_card_button").find('.waiting-text').show();
+			jQuery("#update_credit_card_button").find('.processing').hide();
+			jQuery("#update_credit_card_button").find('.approved').show();
+
+		} else {
+			jQuery("#update_credit_card_button").prop("disabled", false);
+			jQuery("#update_credit_card_button").find('.original-text').show();
+			jQuery("#update_credit_card_button").find('.waiting-text').hide();
+			jQuery("#update_credit_card_button").find('.processing').hide();
+			jQuery("#update_credit_card_button").find('.approved').hide();
+			jQuery('body').removeClass('whirl');
+			jQuery('body').removeClass('duo');
+		}
+	},
+};
+
+var mixPrepopulateFields = {
+	init: function () {
+		mixPrepopulateFields.mixergyChallenge();
+	},
+	/**
+	 * Will prepopulate the email of the form for
+	 * this page, if the customer is logged in.
+	 * https://mixergy.com/challenge/
+	 */
+	mixergyChallenge: function () {
+		if (jQuery('body.page-id-45581').length && ajax_request_package.user_email !== '') {
+			jQuery('input[name="input_2"').val(ajax_request_package.user_email);
+		}
+	},
+}
+
+var mixWelcomeHeaderNewCustomers = {
+	analyticsEventCategory: 'Home header - lead magnet',
+	init: function () {
+		mixWelcomeHeaderNewCustomers.decideIfWeShow9InterviewOffer();
+	},
+	decideIfWeShow9InterviewOffer: function () {
+		if (jQuery('.header-9-interviews-banner').length === 0) {
+			return;
+		}
+		if (mixTools.getCookie('accepted-9-interview-offer') !== '') {
+			jQuery('.banner-search-hidden').show();
+			jQuery('.header-9-interviews-banner').hide();
+		} else {
+			jQuery('.banner-search-hidden').hide();
+			jQuery('.header-9-interviews-banner').show();
+			mixAnalytics.trackEvent(mixWelcomeHeaderNewCustomers.analyticsEventCategory, '9 interviews offer', 'Yellow view');
+
+			jQuery('.header-9-interviews-banner .btn-interviews').click(function () {
+				/*
+				 * We're queuing the event because mobile customers
+				 * get the popup in a new window, instead of modal.
+				 * 
+				 * This issue makes the analytics slightly unreliable
+				 * but, together with the leadpages stats, we should get
+				 * a good view of how people interact with the offer.
+				 */
+				mixAnalytics.queueEvent(mixWelcomeHeaderNewCustomers.analyticsEventCategory, '9 interviews offer', 'Yellow popup queued log');
+				mixAnalytics.trackEvent(mixWelcomeHeaderNewCustomers.analyticsEventCategory, '9 interviews offer', 'Yellow popup immediate log');
+			});
+		}
+	}
+};
+
+mixHeuristics = {
+	init: function () {
+		mixHeuristics.relatedContentCards();
+		mixHeuristics.footerLinks();
+		mixHeuristics.linkList();
+		mixHeuristics.menuBar();
+	},
+	relatedContentCards: function () {
+		jQuery('.related-content-cards .card').click(function () {
+			mixAnalytics.queueEvent('Heuristics', 'Related content cards', 'click');
+		});
+	},
+	footerLinks: function () {
+		jQuery('#footer a').click(function () {
+			mixAnalytics.queueEvent('Heuristics', 'Footer', jQuery(this).text());
+		});
+	},
+	linkList: function () {
+		jQuery('.link-list a').click(function () {
+			mixAnalytics.queueEvent('Heuristics', 'Link list', jQuery(this).text());
+		});
+	},
+	menuBar: function () {
+		jQuery('.wrapping-header-container .navbar a').click(function () {
+			mixAnalytics.queueEvent('Heuristics', 'Menu bar', jQuery(this).text());
+		});
+	},
+};
+
+
+var mixGoogleAnalyticsEmailLinks = {
+	init: function () {
+		mixGoogleAnalyticsEmailLinks.processWorkshopUtmCodesAsEvents();
+	},
+	processWorkshopUtmCodesAsEvents: function () {
+		var source, medium, campaign, term, content;
+
+		source = mixTools.getQueryParameterByName("utm_source");
+		medium = mixTools.getQueryParameterByName("utm_medium");
+		campaign = mixTools.getQueryParameterByName("utm_campaign");
+		term = mixTools.getQueryParameterByName("utm_term");
+		content = mixTools.getQueryParameterByName("utm_content");
+
+		console.log("mix utm ga", source, medium, campaign, term, content);
+
+		if (medium === "email") {
+			var action, category, label;
+
+			action = "All-" + campaign;
+			category = source + '-' + medium;
+			label = term;
+
+			console.log("mix utm ga email", action, category, label);
+
+			//Make sure GA is loaded
+			if (typeof (_gaq) !== 'undefined') {
+				_gaq.push(['_trackEvent', category, action, label, 1]);
+				console.log('Request made using _gaq');
+			} else if (typeof (gtag) !== 'undefined') {
+				gtag('event', action, {
+					'event_category': category,
+					'event_label': label,
+					'non_interaction': true,
+				});
+				console.log('Request made using gtag');
+			} else {
+				console.log('GA was not loaded!');
+			}
+
+
+		}
+
+	},
+};
+
+jQuery(document).ready(function () {
+	mixComments.init();
+	mixPopupWindow.init();
+	mixBgSet.init();
+	mixMediaPlayer.init();
+	mixAddToCollections.init();
+	mixHeadroom.init();
+	mixElements.init();
+	mixUserCollections.init();
+	mixTranscript.init();
+	mixWistia.init();
+	mixSearch.init();
+	mixFrontEndTagging.init();
+	mixAlerts.init();
+	bbpressAjaxReplies.init();
+	mixUpdateLikeHistory.init();
+	mixGuestPass.init();
+	mixFramework.init();
+	mixStripeUpdateCard.init();
+	mixPrepopulateFields.init();
+	mixWelcomeHeaderNewCustomers.init();
+	mixHeuristics.init();
+	mixGoogleAnalyticsEmailLinks.init();
+});

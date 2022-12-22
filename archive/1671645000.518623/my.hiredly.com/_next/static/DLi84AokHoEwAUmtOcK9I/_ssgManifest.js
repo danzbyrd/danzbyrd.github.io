@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fadvice\u002F[slug]","\u002Fcompanies\u002F[id]","\u002Fembedded_companies\u002F[id]","\u002Fembedded_jobs\u002F[id]","\u002Fjob-search\u002F[filter]","\u002Fjob-search\u002F[filter]\u002F[secondFilter]","\u002Fjobs\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

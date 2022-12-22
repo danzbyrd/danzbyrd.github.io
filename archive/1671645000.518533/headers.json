@@ -1,0 +1,10 @@
+{
+    "Status-Code": 200,
+    "Server": "nginx/1.14.0",
+    "Date": "Wed, 21 Dec 2022 18:59:03 GMT",
+    "Content-Type": "text/html",
+    "Connection": "keep-alive",
+    "Cache-Control": "no-store, no-cache, must-revalidate",
+    "Set-Cookie": "ITR_COOKIE_DEVID=9f3d33e675f4414a9df647dc2f4a290e0d; Expires=Sat, 31-Jan-2050 23:59:59 GMT; Path=/;, ITR_COOKIE_USRID=9f3d33e675f4414a9df647dc2f4a290e0d; Expires=Sat, 31-Jan-2050 23:59:59 GMT; Path=/;",
+    "Content-Encoding": "gzip"
+}
